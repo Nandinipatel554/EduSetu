@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Functions - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="lesson-section">
+
+        <!-- Header -->
+        <div class="lesson-header">
+            <p>C++ LEARNING</p>
+            <h1>C++ <span>Functions</span></h1>
+            <p>Learn how to create and use functions in C++.</p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="lesson-card">
+            <h2>📘 What is a Function?</h2>
+
+            <p>
+                A function is a block of code that performs a specific task.
+            </p>
+
+            <p>
+                Functions help us divide a large program into smaller,
+                reusable parts.
+            </p>
+        </div>
+
+        <!-- Basic Function -->
+        <div class="lesson-card">
+            <h2>🔹 Creating a Function</h2>
+
+            <p>
+                A simple function can be created like this:
+            </p>
+
+            <pre>
+void greet() {
+    cout &lt;&lt; "Hello EduSetu!";
+}
+            </pre>
+
+            <p>
+                Here, <strong>greet()</strong> is the name of the function.
+                The <strong>void</strong> means that the function does not
+                return a value.
+            </p>
+        </div>
+
+        <!-- Calling Function -->
+        <div class="lesson-card">
+            <h2>📞 Calling a Function</h2>
+
+            <p>
+                Creating a function is not enough. We need to
+                <strong>call</strong> it to execute its code.
+            </p>
+
+            <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+void greet() {
+    cout &lt;&lt; "Hello EduSetu!";
+}
+
+int main() {
+
+    greet();
+
+    return 0;
+}
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                Hello EduSetu!
+            </div>
+        </div>
+
+        <!-- Parameters -->
+        <div class="lesson-card">
+            <h2>📥 Function Parameters</h2>
+
+            <p>
+                Parameters allow us to pass data to a function.
+            </p>
+
+            <pre>
+void greet(string name) {
+    cout &lt;&lt; "Hello " &lt;&lt; name;
+}
+
+int main() {
+
+    greet("Sakshi");
+
+    return 0;
+}
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                Hello Sakshi
+            </div>
+        </div>
+
+        <!-- Return Value -->
+        <div class="lesson-card">
+            <h2>📤 Returning a Value</h2>
+
+            <p>
+                A function can return a value using the
+                <strong>return</strong> statement.
+            </p>
+
+            <pre>
+int add(int a, int b) {
+
+    return a + b;
+}
+
+int main() {
+
+    int result = add(10, 5);
+
+    cout &lt;&lt; result;
+
+    return 0;
+}
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                15
+            </div>
+        </div>
+
+        <!-- Function Types -->
+        <div class="lesson-card">
+            <h2>🧠 Important Parts of a Function</h2>
+
+            <div class="data-type-table">
+
+                <div class="data-row data-heading">
+                    <span>Part</span>
+                    <span>Meaning</span>
+                </div>
+
+                <div class="data-row">
+                    <span>Return Type</span>
+                    <span>Type of value returned by the function</span>
+                </div>
+
+                <div class="data-row">
+                    <span>Function Name</span>
+                    <span>Name used to call the function</span>
+                </div>
+
+                <div class="data-row">
+                    <span>Parameters</span>
+                    <span>Data passed to the function</span>
+                </div>
+
+                <div class="data-row">
+                    <span>Return</span>
+                    <span>Sends a value back</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Practice -->
+        <div class="practice-card">
+
+            <h2>🧩 Practice Question</h2>
+
+            <p>
+                Create a function named <strong>square()</strong>
+                that takes an integer and returns its square.
+            </p>
+
+            <button onclick="showHint()">
+                Show Hint
+            </button>
+
+            <p id="hint" class="hint-text"></p>
+
+        </div>
+
+        <!-- Try Yourself -->
+        <div class="coding-card">
+
+            <h2>💻 Try It Yourself</h2>
+
+            <p>
+                Write your C++ code below.
+            </p>
+
+            <textarea
+                id="codeInput"
+                placeholder="Write your C++ code here..."
+            ></textarea>
+
+            <button onclick="showCode()">
+                Check Solution
+            </button>
+
+            <pre id="solutionBox"></pre>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-navigation">
+
+            <a href="cpp-basics.html">
+                ← Back to C++ Basics
+            </a>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function showHint() {
+
+            document.getElementById("hint").textContent =
+                "Hint: Use int square(int n) and return n * n.";
+
+        }
+
+        function showCode() {
+
+            const userCode =
+                document.getElementById("codeInput").value;
+
+            document.getElementById("solutionBox").textContent =
+                userCode;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

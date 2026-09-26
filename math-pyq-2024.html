@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematics PYQs - 2024 | EduSetu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #cbd5e1;
+        }
+
+        .info {
+            background: #172554;
+            border-left: 4px solid #38bdf8;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .question-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .question-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .question {
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #0f172a;
+            border-radius: 8px;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 7px;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #334155;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .back-btn:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>📐 Mathematics PYQs</h1>
+        <p>Previous Year Questions - 2024</p>
+    </header>
+
+    <div class="info">
+        <strong>EduSetu Practice Section</strong><br>
+        Practice these mathematics questions to revise important
+        concepts before your examination.
+    </div>
+
+    <!-- Question 1 -->
+    <div class="question-card">
+        <h3>Question 1</h3>
+
+        <p class="question">
+            Find the derivative of y = 3x² + 4x - 7.
+        </p>
+
+        <button onclick="showAnswer(1)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer1">
+            Given:
+
+            <br><br>
+
+            y = 3x² + 4x - 7
+
+            <br><br>
+
+            Differentiating with respect to x:
+
+            <br><br>
+
+            dy/dx = 6x + 4
+
+            <br><br>
+
+            <strong>Answer: 6x + 4</strong>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-card">
+        <h3>Question 2</h3>
+
+        <p class="question">
+            Evaluate ∫ (3x² + 2x) dx.
+        </p>
+
+        <button onclick="showAnswer(2)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer2">
+            Integrating each term:
+
+            <br><br>
+
+            ∫ 3x² dx = x³
+
+            <br>
+
+            ∫ 2x dx = x²
+
+            <br><br>
+
+            Therefore:
+
+            <br><br>
+
+            <strong>x³ + x² + C</strong>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-card">
+        <h3>Question 3</h3>
+
+        <p class="question">
+            Find the determinant of the matrix
+            [[4, 2], [3, 5]].
+        </p>
+
+        <button onclick="showAnswer(3)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer3">
+            For a 2 × 2 matrix:
+
+            <br><br>
+
+            Determinant = ad - bc
+
+            <br><br>
+
+            = (4 × 5) - (2 × 3)
+
+            <br><br>
+
+            = 20 - 6
+
+            <br><br>
+
+            <strong>= 14</strong>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question-card">
+        <h3>Question 4</h3>
+
+        <p class="question">
+            Find the mean of the numbers 10, 20, 30, 40 and 50.
+        </p>
+
+        <button onclick="showAnswer(4)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer4">
+            Mean = Sum of observations / Number of observations
+
+            <br><br>
+
+            Sum = 10 + 20 + 30 + 40 + 50 = 150
+
+            <br><br>
+
+            Number of observations = 5
+
+            <br><br>
+
+            Mean = 150 / 5
+
+            <br><br>
+
+            <strong>Answer = 30</strong>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question-card">
+        <h3>Question 5</h3>
+
+        <p class="question">
+            Solve the equation 3x - 6 = 12.
+        </p>
+
+        <button onclick="showAnswer(5)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer5">
+            Given:
+
+            <br><br>
+
+            3x - 6 = 12
+
+            <br><br>
+
+            3x = 12 + 6
+
+            <br><br>
+
+            3x = 18
+
+            <br><br>
+
+            x = 6
+
+            <br><br>
+
+            <strong>Answer: x = 6</strong>
+        </div>
+    </div>
+
+    <a href="previous-year-questions.html" class="back-btn">
+        ← Back to Previous Year Questions
+    </a>
+
+</div>
+
+<script>
+
+function showAnswer(number) {
+
+    const answer = document.getElementById("answer" + number);
+
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+    } else {
+        answer.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

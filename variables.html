@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSetu | Variables & Data Types</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Edu<span>Setu</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="cpp-resources.html">C++</a></li>
+                <li><a href="cpp-basics.html">C++ Basics</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="lesson-section">
+
+            <div class="lesson-header">
+
+                <p class="section-label">C++ BASICS</p>
+
+                <h1>
+                    Variables & <span>Data Types</span>
+                </h1>
+
+                <p>
+                    Learn how C++ stores different types of data.
+                </p>
+
+            </div>
+
+
+            <!-- What is Variable -->
+            <div class="lesson-card">
+
+                <h2>🔤 What is a Variable?</h2>
+
+                <p>
+                    A variable is a named memory location used
+                    to store a value.
+                </p>
+
+                <p>
+                    For example, if we want to store a student's
+                    age, we can create an integer variable.
+                </p>
+
+            </div>
+
+
+            <!-- Example -->
+            <div class="lesson-card">
+
+                <h2>💻 Example</h2>
+
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+    int age = 20;
+
+    cout &lt;&lt; age;
+
+    return 0;
+}
+                </code></pre>
+
+            </div>
+
+
+            <!-- Output -->
+            <div class="lesson-card">
+
+                <h2>🖥️ Output</h2>
+
+                <div class="output-box">
+                    20
+                </div>
+
+            </div>
+
+
+            <!-- Data Types -->
+            <div class="lesson-card">
+
+                <h2>📦 Common Data Types</h2>
+
+                <div class="data-type-table">
+
+                    <div class="data-row data-heading">
+                        <span>Data Type</span>
+                        <span>Example</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>int</span>
+                        <span>10</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>float</span>
+                        <span>10.5</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>double</span>
+                        <span>25.678</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>char</span>
+                        <span>'A'</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>string</span>
+                        <span>"Hello"</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>bool</span>
+                        <span>true / false</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Practice -->
+            <div class="practice-card">
+
+                <h2>🧩 Practice Question</h2>
+
+                <p>
+                    Create a C++ program that stores your
+                    <strong>name</strong> and <strong>age</strong>
+                    in two variables and prints them.
+                </p>
+
+                <button onclick="showAnswer()">
+                    Show Hint
+                </button>
+
+                <p id="hint" class="hint-text"></p>
+
+            </div>
+
+            <!-- Try It Yourself -->
+
+<div class="coding-card">
+
+    <h2>💻 Try It Yourself</h2>
+
+    <p>
+        Write a C++ program that stores your name and age
+        in variables and prints both values.
+    </p>
+
+    <textarea
+        id="codeInput"
+        placeholder="Write your C++ code here..."
+    ></textarea>
+
+    <button onclick="showSolution()">
+        Check Solution
+    </button>
+
+    <pre id="solutionBox"></pre>
+
+</div>
+
+
+            <div class="lesson-navigation">
+
+                <a href="cpp-basics.html">
+                    ← Back to C++ Basics
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <div class="logo">
+                    Edu<span>Setu</span>
+                </div>
+
+                <p>
+                    Bridging the digital education gap.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 EduSetu. Built for digital inclusion.</p>
+        </div>
+
+    </footer>
+
+
+    <script>
+
+function showAnswer() { 
+
+    document.getElementById("hint").textContent = 
+        'Hint: Use string for name and int for age.'; 
+
+}
+
+
+function showSolution() {
+
+    const userCode = document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent = userCode;
+
+}
+
+</script>
+
+</body>
+
+</html>

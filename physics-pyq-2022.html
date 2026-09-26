@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Physics PYQs - 2022 | EduSetu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #cbd5e1;
+        }
+
+        .info {
+            background: #172554;
+            border-left: 4px solid #38bdf8;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .question-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .question-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .question {
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #0f172a;
+            border-radius: 8px;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 7px;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #334155;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .back-btn:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>⚡ Physics PYQs</h1>
+        <p>Previous Year Questions - 2022</p>
+    </header>
+
+    <div class="info">
+        <strong>EduSetu Practice Section</strong><br>
+        Practice these physics questions to revise important concepts
+        before your examination.
+    </div>
+
+    <!-- Question 1 -->
+    <div class="question-card">
+        <h3>Question 1</h3>
+
+        <p class="question">
+            Define momentum and write its mathematical expression.
+        </p>
+
+        <button type="button" onclick="showAnswer(1)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer1">
+            Momentum is the product of the mass and velocity of an object.
+
+            <br><br>
+
+            Mathematical expression:
+
+            <br><br>
+
+            <strong>p = mv</strong>
+
+            <br><br>
+
+            SI unit of momentum is <strong>kg·m/s</strong>.
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-card">
+        <h3>Question 2</h3>
+
+        <p class="question">
+            Define potential energy and give its expression near the Earth's surface.
+        </p>
+
+        <button type="button" onclick="showAnswer(2)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer2">
+            Potential energy is the energy possessed by an object due to
+            its position or configuration.
+
+            <br><br>
+
+            Near the Earth's surface:
+
+            <br><br>
+
+            <strong>PE = mgh</strong>
+
+            <br><br>
+
+            where m = mass, g = acceleration due to gravity and
+            h = height.
+
+            <br><br>
+
+            SI unit is <strong>Joule (J)</strong>.
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-card">
+        <h3>Question 3</h3>
+
+        <p class="question">
+            What is thermal expansion?
+        </p>
+
+        <button type="button" onclick="showAnswer(3)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer3">
+            Thermal expansion is the increase in the dimensions of a
+            substance when its temperature increases.
+
+            <br><br>
+
+            Solids, liquids and gases can undergo thermal expansion.
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question-card">
+        <h3>Question 4</h3>
+
+        <p class="question">
+            Define amplitude of a wave.
+        </p>
+
+        <button type="button" onclick="showAnswer(4)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer4">
+            Amplitude is the maximum displacement of a vibrating particle
+            from its mean or equilibrium position.
+
+            <br><br>
+
+            It is generally represented by the symbol <strong>A</strong>.
+
+            <br><br>
+
+            Its SI unit depends on the physical quantity represented by
+            the wave.
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question-card">
+        <h3>Question 5</h3>
+
+        <p class="question">
+            Define electric current and write its SI unit.
+        </p>
+
+        <button type="button" onclick="showAnswer(5)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer5">
+            Electric current is the rate of flow of electric charge
+            through a conductor.
+
+            <br><br>
+
+            Formula:
+
+            <br><br>
+
+            <strong>I = Q/t</strong>
+
+            <br><br>
+
+            SI unit of electric current is <strong>Ampere (A)</strong>.
+        </div>
+    </div>
+
+    <a href="previous-year-questions.html" class="back-btn">
+        ← Back to Previous Year Questions
+    </a>
+
+</div>
+
+<script>
+
+function showAnswer(number) {
+
+    const answer = document.getElementById("answer" + number);
+
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+    } else {
+        answer.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

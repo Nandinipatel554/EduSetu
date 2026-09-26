@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSetu | Coding Cheat Sheets</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6fb;
+            color: #222;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            color: white;
+            padding: 35px;
+            border-radius: 18px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+        }
+
+        .cheat-box {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 25px rgba(40, 50, 100, 0.08);
+        }
+
+        .cheat-box h2 {
+            color: #4f46e5;
+            margin-bottom: 18px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        .code-card {
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+        }
+
+        .code-card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        pre {
+            background: #1e1e2e;
+            color: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            line-height: 1.6;
+        }
+
+        .tip {
+            background: #eef2ff;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            color: #3730a3;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #4f46e5;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        .back-btn:hover {
+            background: #3730a3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>💻 Coding Cheat Sheets</h1>
+            <p>Quick C++ syntax and commands for fast coding revision.</p>
+        </div>
+
+
+        <!-- Basic Syntax -->
+        <div class="cheat-box">
+
+            <h2>🔹 Basic C++ Syntax</h2>
+
+            <div class="code-card">
+                <h3>Hello World</h3>
+
+                <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello World";
+    return 0;
+}</code></pre>
+            </div>
+
+            <div class="code-card">
+                <h3>Input & Output</h3>
+
+                <pre><code>int age;
+
+cin &gt;&gt; age;
+cout &lt;&lt; age;</code></pre>
+            </div>
+
+        </div>
+
+
+        <!-- Conditions -->
+        <div class="cheat-box">
+
+            <h2>🔹 Conditions</h2>
+
+            <div class="code-card">
+                <h3>If-Else</h3>
+
+                <pre><code>if (condition) {
+    // code
+}
+else {
+    // code
+}</code></pre>
+            </div>
+
+            <div class="code-card">
+                <h3>Switch</h3>
+
+                <pre><code>switch(choice) {
+
+    case 1:
+        cout &lt;&lt; "One";
+        break;
+
+    case 2:
+        cout &lt;&lt; "Two";
+        break;
+
+    default:
+        cout &lt;&lt; "Invalid";
+}</code></pre>
+            </div>
+
+        </div>
+
+
+        <!-- Loops -->
+        <div class="cheat-box">
+
+            <h2>🔹 Loops</h2>
+
+            <div class="code-card">
+                <h3>For Loop</h3>
+
+                <pre><code>for(int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; i;
+}</code></pre>
+            </div>
+
+            <div class="code-card">
+                <h3>While Loop</h3>
+
+                <pre><code>while(condition) {
+    // code
+}</code></pre>
+            </div>
+
+        </div>
+
+
+        <!-- Functions -->
+        <div class="cheat-box">
+
+            <h2>🔹 Functions</h2>
+
+            <div class="code-card">
+
+                <pre><code>int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    cout &lt;&lt; add(2, 3);
+}</code></pre>
+
+            </div>
+
+            <div class="tip">
+                💡 Function = reusable block of code.
+            </div>
+
+        </div>
+
+
+        <!-- Arrays -->
+        <div class="cheat-box">
+
+            <h2>🔹 Arrays</h2>
+
+            <div class="code-card">
+
+                <h3>Declare & Access</h3>
+
+                <pre><code>int arr[5] = {10, 20, 30, 40, 50};
+
+cout &lt;&lt; arr[0];</code></pre>
+
+            </div>
+
+            <div class="code-card">
+
+                <h3>Traverse Array</h3>
+
+                <pre><code>for(int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; arr[i] &lt;&lt; " ";
+}</code></pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Strings -->
+        <div class="cheat-box">
+
+            <h2>🔹 Strings</h2>
+
+            <div class="code-card">
+
+                <pre><code>string name = "Sakshi";
+
+cout &lt;&lt; name;
+cout &lt;&lt; name.length();</code></pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- STL -->
+        <div class="cheat-box">
+
+            <h2>🔹 Useful STL</h2>
+
+            <div class="code-card">
+
+                <h3>Vector</h3>
+
+                <pre><code>#include &lt;vector&gt;
+
+vector&lt;int&gt; v;
+
+v.push_back(10);
+v.push_back(20);
+
+v.pop_back();</code></pre>
+
+            </div>
+
+            <div class="code-card">
+
+                <h3>Sort</h3>
+
+                <pre><code>#include &lt;algorithm&gt;
+
+sort(v.begin(), v.end());</code></pre>
+
+            </div>
+
+            <div class="code-card">
+
+                <h3>Reverse</h3>
+
+                <pre><code>reverse(v.begin(), v.end());</code></pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Common Operators -->
+        <div class="cheat-box">
+
+            <h2>🔹 Common Operators</h2>
+
+            <div class="code-card">
+
+                <pre><code>+   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+%   Remainder
+
+==  Equal
+!=  Not Equal
+&gt;   Greater
+&lt;   Smaller
+&gt;=  Greater or Equal
+&lt;=  Smaller or Equal
+
+&amp;&amp;  AND
+||  OR
+!   NOT</code></pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Back -->
+        <a href="offline-resources.html" class="back-btn">
+            ← Back to Offline Resources
+        </a>
+
+
+        <footer>
+            © 2026 EduSetu | Coding Cheat Sheets
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

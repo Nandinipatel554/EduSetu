@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Physics - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .modern-page .physics-diagram {
+            background: #0b1120;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            overflow-x: auto;
+        }
+
+        .modern-page .physics-diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .modern-page .formula {
+            background: #111827;
+            border: 1px solid #3b82f6;
+            color: #ffffff;
+            padding: 15px 22px;
+            margin: 15px 0;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .modern-page .diagram-title {
+            color: #93c5fd;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .modern-page .practice-input {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: 2px solid #334155;
+            border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        #hintBox {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #172554;
+            border-left: 4px solid #3b82f6;
+            border-radius: 8px;
+            color: #dbeafe;
+            line-height: 1.7;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="lesson-section modern-page">
+
+    <!-- Header -->
+    <div class="lesson-header">
+
+        <h1>⚛️ Modern Physics</h1>
+
+        <p>
+            Learn about photons, photoelectric effect, atoms,
+            radioactivity and nuclear physics.
+        </p>
+
+    </div>
+
+
+    <!-- 1 Photoelectric Effect -->
+    <div class="lesson-card">
+
+        <h2>1. Photoelectric Effect</h2>
+
+        <p>
+            The photoelectric effect is the emission of electrons from
+            a metal surface when light of sufficient frequency falls on it.
+        </p>
+
+        <div class="formula">
+            E = hf
+        </div>
+
+        <p>
+            Here, <b>E</b> is photon energy, <b>h</b> is Planck's constant
+            and <b>f</b> is frequency of light.
+        </p>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Photoelectric Effect
+            </div>
+
+            <svg width="750" height="360" viewBox="0 0 750 360">
+
+                <!-- Metal plate -->
+                <rect x="500" y="70"
+                      width="35"
+                      height="230"
+                      rx="5"
+                      fill="#64748b"/>
+
+                <text x="545" y="190"
+                      fill="#ffffff"
+                      font-size="18">
+                    Metal Surface
+                </text>
+
+                <!-- Light rays -->
+                <line x1="100" y1="90"
+                      x2="490" y2="130"
+                      stroke="#facc15"
+                      stroke-width="4"/>
+
+                <line x1="100" y1="140"
+                      x2="490" y2="160"
+                      stroke="#facc15"
+                      stroke-width="4"/>
+
+                <line x1="100" y1="190"
+                      x2="490" y2="190"
+                      stroke="#facc15"
+                      stroke-width="4"/>
+
+                <polygon points="490,130 470,121 473,140"
+                         fill="#facc15"/>
+
+                <polygon points="490,160 470,151 473,170"
+                         fill="#facc15"/>
+
+                <polygon points="490,190 470,181 473,200"
+                         fill="#facc15"/>
+
+                <text x="120" y="60"
+                      fill="#facc15"
+                      font-size="20">
+                    Light / Photons
+                </text>
+
+                <!-- Electrons -->
+                <circle cx="580" cy="120" r="7"
+                        fill="#60a5fa"/>
+
+                <circle cx="610" cy="165" r="7"
+                        fill="#60a5fa"/>
+
+                <circle cx="580" cy="215" r="7"
+                        fill="#60a5fa"/>
+
+                <circle cx="625" cy="250" r="7"
+                        fill="#60a5fa"/>
+
+                <!-- Electron arrows -->
+                <line x1="540" y1="120"
+                      x2="650" y2="80"
+                      stroke="#22c55e"
+                      stroke-width="3"/>
+
+                <line x1="540" y1="165"
+                      x2="670" y2="145"
+                      stroke="#22c55e"
+                      stroke-width="3"/>
+
+                <line x1="540" y1="215"
+                      x2="650" y2="240"
+                      stroke="#22c55e"
+                      stroke-width="3"/>
+
+                <text x="600" y="50"
+                      fill="#22c55e"
+                      font-size="18">
+                    Emitted Electrons
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 2 Photon -->
+    <div class="lesson-card">
+
+        <h2>2. Photon and Energy</h2>
+
+        <p>
+            A photon is a small packet of electromagnetic energy.
+            The energy of a photon depends on its frequency.
+        </p>
+
+        <div class="formula">
+            E = hf
+        </div>
+
+        <p>
+            Higher frequency means higher photon energy.
+        </p>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Photon Concept
+            </div>
+
+            <svg width="700" height="300" viewBox="0 0 700 300">
+
+                <!-- Wave -->
+                <path d="
+                    M50 150
+                    C80 80, 110 80, 140 150
+                    C170 220, 200 220, 230 150
+                    C260 80, 290 80, 320 150
+                    C350 220, 380 220, 410 150
+                    C440 80, 470 80, 500 150
+                    C530 220, 560 220, 590 150
+                    C620 80, 650 80, 680 150
+                "
+                fill="none"
+                stroke="#60a5fa"
+                stroke-width="5"/>
+
+                <circle cx="180" cy="115"
+                        r="13"
+                        fill="#facc15"/>
+
+                <circle cx="400" cy="185"
+                        r="13"
+                        fill="#facc15"/>
+
+                <circle cx="590" cy="115"
+                        r="13"
+                        fill="#facc15"/>
+
+                <text x="275" y="50"
+                      fill="#ffffff"
+                      font-size="22">
+                    Electromagnetic Wave
+                </text>
+
+                <text x="155" y="260"
+                      fill="#facc15"
+                      font-size="18">
+                    Photon
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3 de Broglie -->
+    <div class="lesson-card">
+
+        <h2>3. de Broglie Wavelength</h2>
+
+        <p>
+            According to de Broglie's hypothesis, moving particles also
+            have wave-like properties.
+        </p>
+
+        <div class="formula">
+            λ = h / p
+        </div>
+
+        <p>
+            For a particle of mass <b>m</b> and velocity <b>v</b>:
+        </p>
+
+        <div class="formula">
+            λ = h / mv
+        </div>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Matter Wave Concept
+            </div>
+
+            <svg width="700" height="320" viewBox="0 0 700 320">
+
+                <!-- Particle -->
+                <circle cx="150" cy="160"
+                        r="35"
+                        fill="#60a5fa"/>
+
+                <text x="133" y="168"
+                      fill="#ffffff"
+                      font-size="18">
+                    m
+                </text>
+
+                <!-- Arrow -->
+                <line x1="190" y1="160"
+                      x2="600" y2="160"
+                      stroke="#22c55e"
+                      stroke-width="5"/>
+
+                <polygon points="600,160 575,148 575,172"
+                         fill="#22c55e"/>
+
+                <text x="340" y="135"
+                      fill="#22c55e"
+                      font-size="20">
+                    Particle Motion
+                </text>
+
+                <!-- Wave -->
+                <path d="
+                    M200 230
+                    C230 190, 260 190, 290 230
+                    C320 270, 350 270, 380 230
+                    C410 190, 440 190, 470 230
+                    C500 270, 530 270, 560 230
+                "
+                fill="none"
+                stroke="#facc15"
+                stroke-width="4"/>
+
+                <text x="300" y="295"
+                      fill="#facc15"
+                      font-size="18">
+                    Matter Wave
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 4 Bohr Model -->
+    <div class="lesson-card">
+
+        <h2>4. Bohr Model of Atom</h2>
+
+        <p>
+            In Bohr's model, electrons revolve around the nucleus in
+            specific allowed energy levels.
+        </p>
+
+        <p>
+            Electrons can move from one energy level to another by
+            absorbing or emitting energy.
+        </p>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Bohr Model — Energy Levels
+            </div>
+
+            <svg width="700" height="400" viewBox="0 0 700 400">
+
+                <!-- Nucleus -->
+                <circle cx="350" cy="200"
+                        r="45"
+                        fill="#ef4444"/>
+
+                <text x="327" y="207"
+                      fill="#ffffff"
+                      font-size="18">
+                    Nucleus
+                </text>
+
+                <!-- Orbit 1 -->
+                <circle cx="350" cy="200"
+                        r="90"
+                        fill="none"
+                        stroke="#60a5fa"
+                        stroke-width="3"/>
+
+                <!-- Orbit 2 -->
+                <circle cx="350" cy="200"
+                        r="145"
+                        fill="none"
+                        stroke="#22c55e"
+                        stroke-width="3"/>
+
+                <!-- Orbit 3 -->
+                <circle cx="350" cy="200"
+                        r="200"
+                        fill="none"
+                        stroke="#facc15"
+                        stroke-width="3"/>
+
+                <!-- Electrons -->
+                <circle cx="350" cy="110"
+                        r="9"
+                        fill="#ffffff"/>
+
+                <circle cx="495" cy="200"
+                        r="9"
+                        fill="#ffffff"/>
+
+                <circle cx="350" cy="0"
+                        r="9"
+                        fill="#ffffff"/>
+
+                <text x="445" y="110"
+                      fill="#60a5fa"
+                      font-size="18">
+                    n = 1
+                </text>
+
+                <text x="505" y="190"
+                      fill="#22c55e"
+                      font-size="18">
+                    n = 2
+                </text>
+
+                <text x="565" y="80"
+                      fill="#facc15"
+                      font-size="18">
+                    n = 3
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 5 Radioactivity -->
+    <div class="lesson-card">
+
+        <h2>5. Radioactivity</h2>
+
+        <p>
+            Radioactivity is the spontaneous emission of radiation from
+            unstable atomic nuclei.
+        </p>
+
+        <p>Three common types are:</p>
+
+        <ul>
+            <li><b>Alpha (α)</b> particles</li>
+            <li><b>Beta (β)</b> particles</li>
+            <li><b>Gamma (γ)</b> rays</li>
+        </ul>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Radioactive Radiation
+            </div>
+
+            <svg width="750" height="350" viewBox="0 0 750 350">
+
+                <!-- Source -->
+                <rect x="70" y="125"
+                      width="100"
+                      height="100"
+                      rx="10"
+                      fill="#ef4444"/>
+
+                <text x="92" y="185"
+                      fill="#ffffff"
+                      font-size="18">
+                    Source
+                </text>
+
+                <!-- Alpha -->
+                <line x1="170" y1="150"
+                      x2="650" y2="80"
+                      stroke="#60a5fa"
+                      stroke-width="6"/>
+
+                <polygon points="650,80 625,76 630,95"
+                         fill="#60a5fa"/>
+
+                <text x="400" y="80"
+                      fill="#60a5fa"
+                      font-size="20">
+                    α Alpha
+                </text>
+
+                <!-- Beta -->
+                <line x1="170" y1="175"
+                      x2="650" y2="175"
+                      stroke="#22c55e"
+                      stroke-width="6"/>
+
+                <polygon points="650,175 625,163 625,187"
+                         fill="#22c55e"/>
+
+                <text x="400" y="165"
+                      fill="#22c55e"
+                      font-size="20">
+                    β Beta
+                </text>
+
+                <!-- Gamma -->
+                <line x1="170" y1="200"
+                      x2="650" y2="280"
+                      stroke="#facc15"
+                      stroke-width="6"/>
+
+                <polygon points="650,280 630,265 626,285"
+                         fill="#facc15"/>
+
+                <text x="400" y="275"
+                      fill="#facc15"
+                      font-size="20">
+                    γ Gamma
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 6 Nuclear Fission -->
+    <div class="lesson-card">
+
+        <h2>6. Nuclear Fission</h2>
+
+        <p>
+            Nuclear fission is the process in which a heavy nucleus splits
+            into smaller nuclei and releases a large amount of energy.
+        </p>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Nuclear Fission
+            </div>
+
+            <svg width="750" height="350" viewBox="0 0 750 350">
+
+                <!-- Neutron -->
+                <circle cx="90" cy="175"
+                        r="12"
+                        fill="#60a5fa"/>
+
+                <line x1="105" y1="175"
+                      x2="270" y2="175"
+                      stroke="#60a5fa"
+                      stroke-width="4"/>
+
+                <polygon points="270,175 250,164 250,186"
+                         fill="#60a5fa"/>
+
+                <text x="50" y="145"
+                      fill="#60a5fa"
+                      font-size="18">
+                    Neutron
+                </text>
+
+                <!-- Heavy nucleus -->
+                <circle cx="350" cy="175"
+                        r="70"
+                        fill="#ef4444"/>
+
+                <text x="315" y="182"
+                      fill="#ffffff"
+                      font-size="20">
+                    Heavy
+                </text>
+
+                <!-- Split nuclei -->
+                <circle cx="520" cy="110"
+                        r="45"
+                        fill="#22c55e"/>
+
+                <circle cx="520" cy="245"
+                        r="45"
+                        fill="#f59e0b"/>
+
+                <!-- Energy -->
+                <line x1="390" y1="145"
+                      x2="470" y2="110"
+                      stroke="#facc15"
+                      stroke-width="4"/>
+
+                <line x1="390" y1="205"
+                      x2="470" y2="245"
+                      stroke="#facc15"
+                      stroke-width="4"/>
+
+                <text x="575" y="180"
+                      fill="#facc15"
+                      font-size="20">
+                    Energy + Neutrons
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 7 Nuclear Fusion -->
+    <div class="lesson-card">
+
+        <h2>7. Nuclear Fusion</h2>
+
+        <p>
+            Nuclear fusion is the process in which two light nuclei combine
+            to form a heavier nucleus and release a large amount of energy.
+        </p>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Nuclear Fusion
+            </div>
+
+            <svg width="750" height="350" viewBox="0 0 750 350">
+
+                <!-- First nucleus -->
+                <circle cx="170" cy="175"
+                        r="55"
+                        fill="#60a5fa"/>
+
+                <text x="145" y="182"
+                      fill="#ffffff"
+                      font-size="18">
+                    Nucleus
+                </text>
+
+                <!-- Second nucleus -->
+                <circle cx="330" cy="175"
+                        r="55"
+                        fill="#22c55e"/>
+
+                <text x="305" y="182"
+                      fill="#ffffff"
+                      font-size="18">
+                    Nucleus
+                </text>
+
+                <!-- Arrow -->
+                <line x1="390" y1="175"
+                      x2="470" y2="175"
+                      stroke="#facc15"
+                      stroke-width="6"/>
+
+                <polygon points="470,175 445,162 445,188"
+                         fill="#facc15"/>
+
+                <!-- Product -->
+                <circle cx="570" cy="175"
+                        r="75"
+                        fill="#ef4444"/>
+
+                <text x="535" y="182"
+                      fill="#ffffff"
+                      font-size="18">
+                    Heavy
+                </text>
+
+                <text x="515" y="285"
+                      fill="#facc15"
+                      font-size="20">
+                    Energy Released
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 8 Important Formulas -->
+    <div class="lesson-card">
+
+        <h2>8. Important Formulas</h2>
+
+        <p><b>Photon Energy:</b></p>
+
+        <div class="formula">
+            E = hf
+        </div>
+
+        <p><b>Energy of Photon using wavelength:</b></p>
+
+        <div class="formula">
+            E = hc / λ
+        </div>
+
+        <p><b>de Broglie Wavelength:</b></p>
+
+        <div class="formula">
+            λ = h / p
+        </div>
+
+        <p><b>Mass-Energy Relation:</b></p>
+
+        <div class="formula">
+            E = mc²
+        </div>
+
+    </div>
+
+
+    <!-- 9 Example -->
+    <div class="lesson-card">
+
+        <h2>9. Example</h2>
+
+        <p>
+            Calculate the energy of a photon having frequency
+            <b>5 × 10¹⁴ Hz</b>.
+        </p>
+
+        <p>
+            Use:
+        </p>
+
+        <div class="formula">
+            E = hf
+        </div>
+
+        <p>
+            Planck's constant:
+        </p>
+
+        <p>
+            h = 6.626 × 10⁻³⁴ J·s
+        </p>
+
+        <p>
+            Therefore:
+        </p>
+
+        <div class="formula">
+            E = 6.626 × 10⁻³⁴ × 5 × 10¹⁴
+        </div>
+
+        <p>
+            <b>
+                E ≈ 3.313 × 10⁻¹⁹ J
+            </b>
+        </p>
+
+    </div>
+
+
+    <!-- Practice -->
+    <div class="lesson-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            A photon has a frequency of
+            <b>5 × 10¹⁴ Hz</b>.
+        </p>
+
+        <p>
+            Using:
+        </p>
+
+        <div class="formula">
+            E = hf
+        </div>
+
+        <p>
+            Find its energy in the form
+            <b>× 10⁻¹⁹ J</b>.
+        </p>
+
+        <button onclick="showHint()">
+            💡 Show Hint
+        </button>
+
+        <div id="hintBox">
+
+            Use:
+            <br><br>
+
+            <b>
+                E = (6.626 × 10⁻³⁴)(5 × 10¹⁴)
+            </b>
+
+        </div>
+
+        <input
+            type="text"
+            id="answerBox"
+            class="practice-input"
+            placeholder="Enter only the number, e.g. 3.313"
+        >
+
+        <br><br>
+
+        <button onclick="checkAnswer()">
+            Check Answer
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+
+
+    <!-- Navigation -->
+    <div class="lesson-navigation">
+
+        <a href="physics-resources.html">
+            ← Back to Physics
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hintBox").style.display = "block";
+
+}
+
+
+function checkAnswer() {
+
+    let answer = document.getElementById("answerBox").value
+        .trim();
+
+    let value = parseFloat(answer);
+
+    if (!isNaN(value) && Math.abs(value - 3.313) < 0.01) {
+
+        document.getElementById("result").innerHTML =
+            "Correct! Energy ≈ 3.313 × 10⁻¹⁹ J ✅";
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+            "Try again. Use E = hf carefully.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

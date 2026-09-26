@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trees - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>Trees with <span>C++</span></h1>
+        <p>Learn the basics of Trees in Data Structures step by step.</p>
+    </div>
+
+
+    <!-- What is Tree -->
+    <div class="lesson-card">
+        <h2>🌳 What is a Tree?</h2>
+
+        <p>
+            A Tree is a non-linear data structure in which data is arranged
+            in a hierarchical structure.
+        </p>
+
+        <p>
+            Unlike an array or linked list, a tree can have multiple
+            connections between its elements.
+        </p>
+
+        <pre>
+        1
+       / \
+      2   3
+     / \
+    4   5
+        </pre>
+    </div>
+
+
+    <!-- Node -->
+    <div class="lesson-card">
+        <h2>📌 What is a Node?</h2>
+
+        <p>
+            Each element of a tree is called a <b>Node</b>.
+        </p>
+
+        <p>
+            A node contains data and links to its child nodes.
+        </p>
+
+        <pre>
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+};
+        </pre>
+    </div>
+
+
+    <!-- Root -->
+    <div class="lesson-card">
+        <h2>🌱 Root Node</h2>
+
+        <p>
+            The topmost node of a tree is called the <b>Root</b>.
+        </p>
+
+        <pre>
+        10  ← Root
+       /  \
+      20   30
+        </pre>
+    </div>
+
+
+    <!-- Parent Child -->
+    <div class="lesson-card">
+        <h2>👨‍👩‍👧 Parent and Child</h2>
+
+        <p>
+            A node directly connected below another node is called its
+            <b>Child</b>.
+        </p>
+
+        <p>
+            The node above it is called the <b>Parent</b>.
+        </p>
+
+        <pre>
+        10
+       /  \
+      20   30
+
+10 → Parent
+20, 30 → Children
+        </pre>
+    </div>
+
+
+    <!-- Leaf -->
+    <div class="lesson-card">
+        <h2>🍃 Leaf Node</h2>
+
+        <p>
+            A node that does not have any child is called a
+            <b>Leaf Node</b>.
+        </p>
+
+        <pre>
+        10
+       /  \
+      20   30
+          /
+         40
+
+20, 40 → Leaf Nodes
+        </pre>
+    </div>
+
+
+    <!-- Binary Tree -->
+    <div class="lesson-card">
+        <h2>🌳 Binary Tree</h2>
+
+        <p>
+            A Binary Tree is a tree in which each node can have
+            at most <b>two children</b>.
+        </p>
+
+        <p>
+            These children are called:
+        </p>
+
+        <ul>
+            <li>Left Child</li>
+            <li>Right Child</li>
+        </ul>
+
+        <pre>
+        10
+       /  \
+      20   30
+     /
+    40
+        </pre>
+    </div>
+
+
+    <!-- Tree Traversal -->
+    <div class="lesson-card">
+        <h2>🔄 Tree Traversal</h2>
+
+        <p>
+            Traversal means visiting all the nodes of a tree.
+        </p>
+
+        <p>Important tree traversals are:</p>
+
+        <ul>
+            <li>Preorder</li>
+            <li>Inorder</li>
+            <li>Postorder</li>
+        </ul>
+    </div>
+
+
+    <!-- Preorder -->
+    <div class="lesson-card">
+        <h2>1️⃣ Preorder Traversal</h2>
+
+        <p>
+            Order:
+            <b>Root → Left → Right</b>
+        </p>
+
+        <pre>
+        1
+       / \
+      2   3
+
+Preorder = 1 2 3
+        </pre>
+    </div>
+
+
+    <!-- Inorder -->
+    <div class="lesson-card">
+        <h2>2️⃣ Inorder Traversal</h2>
+
+        <p>
+            Order:
+            <b>Left → Root → Right</b>
+        </p>
+
+        <pre>
+        1
+       / \
+      2   3
+
+Inorder = 2 1 3
+        </pre>
+    </div>
+
+
+    <!-- Postorder -->
+    <div class="lesson-card">
+        <h2>3️⃣ Postorder Traversal</h2>
+
+        <p>
+            Order:
+            <b>Left → Right → Root</b>
+        </p>
+
+        <pre>
+        1
+       / \
+      2   3
+
+Postorder = 2 3 1
+        </pre>
+    </div>
+
+
+    <!-- Important -->
+    <div class="lesson-card">
+        <h2>⭐ Important Points</h2>
+
+        <ul>
+            <li>Tree is a non-linear data structure.</li>
+            <li>The topmost node is called Root.</li>
+            <li>A node can have a Parent and Children.</li>
+            <li>A node without children is called a Leaf Node.</li>
+            <li>Binary Tree can have at most two children.</li>
+            <li>Main traversals are Preorder, Inorder and Postorder.</li>
+        </ul>
+    </div>
+
+
+    <!-- Practice -->
+    <div class="practice-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            Consider the following tree:
+        </p>
+
+        <pre>
+        10
+       /  \
+      20   30
+     / \
+    40  50
+        </pre>
+
+        <p>
+            Find the <b>Preorder Traversal</b> of this tree.
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- Try Yourself -->
+    <div class="practice-card">
+
+        <h2>💻 Try Yourself</h2>
+
+        <p>
+            Write the preorder traversal of the above tree.
+        </p>
+
+        <textarea id="codeInput"
+            placeholder="Write your answer here..."></textarea>
+
+        <button onclick="showCode()">Submit</button>
+
+        <pre id="solutionBox"></pre>
+
+    </div>
+
+
+    <div class="lesson-navigation">
+        <a href="dsa.html">← Back to DSA</a>
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+    document.getElementById("hint").textContent =
+        "Hint: Preorder means Root → Left → Right. Start from 10.";
+}
+
+function showCode() {
+
+    const userCode =
+        document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent =
+        userCode;
+}
+
+</script>
+
+</body>
+</html>

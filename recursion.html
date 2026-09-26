@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion - DSA with C++ | EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <!-- HEADER -->
+    <div class="lesson-header">
+        <h1>Recursion <span>with C++</span></h1>
+        <p>Learn recursion from the basics with simple examples.</p>
+    </div>
+
+
+    <!-- WHAT IS RECURSION -->
+    <div class="lesson-card">
+
+        <h2>🔁 What is Recursion?</h2>
+
+        <p>
+            Recursion ek technique hai jisme ek function
+            <strong>khud ko hi call</strong> karta hai.
+        </p>
+
+        <p>
+            Har recursive function me generally do important parts hote hain:
+        </p>
+
+        <ul>
+            <li><strong>Base Case</strong> — recursion ko stop karta hai.</li>
+            <li><strong>Recursive Call</strong> — function ko dobara call karta hai.</li>
+        </ul>
+
+        <h3>Simple Example:</h3>
+
+        <pre>
+void printNumber(int n) {
+
+    if(n == 0) {
+        return;
+    }
+
+    cout &lt;&lt; n &lt;&lt; " ";
+
+    printNumber(n - 1);
+}
+        </pre>
+
+        <p>
+            Agar <strong>printNumber(5)</strong> call karein:
+        </p>
+
+        <pre>
+5 4 3 2 1
+        </pre>
+
+    </div>
+
+
+    <!-- BASE CASE -->
+    <div class="lesson-card">
+
+        <h2>🛑 1. Base Case</h2>
+
+        <p>
+            Base case wo condition hoti hai jahan recursion
+            <strong>stop</strong> ho jata hai.
+        </p>
+
+        <pre>
+if(n == 0) {
+    return;
+}
+        </pre>
+
+        <p>
+            Base case nahi hoga to function continuously call hota rahega.
+        </p>
+
+    </div>
+
+
+    <!-- RECURSIVE CALL -->
+    <div class="lesson-card">
+
+        <h2>🔄 2. Recursive Call</h2>
+
+        <p>
+            Recursive call me function khud ko dobara call karta hai.
+        </p>
+
+        <pre>
+printNumber(n - 1);
+        </pre>
+
+        <p>
+            Yahan har call me <strong>n ki value 1 se decrease</strong> ho rahi hai.
+        </p>
+
+    </div>
+
+
+    <!-- DRY RUN -->
+    <div class="lesson-card">
+
+        <h2>🧪 3. Dry Run</h2>
+
+        <p>
+            Function:
+        </p>
+
+        <pre>
+void printNumber(int n) {
+
+    if(n == 0) {
+        return;
+    }
+
+    cout &lt;&lt; n &lt;&lt; " ";
+
+    printNumber(n - 1);
+}
+        </pre>
+
+        <p>
+            Call:
+        </p>
+
+        <pre>
+printNumber(3);
+        </pre>
+
+        <h3>Step-by-step:</h3>
+
+        <pre>
+printNumber(3)
+    ↓
+print 3
+    ↓
+printNumber(2)
+    ↓
+print 2
+    ↓
+printNumber(1)
+    ↓
+print 1
+    ↓
+printNumber(0)
+    ↓
+return
+        </pre>
+
+        <div class="output-box">
+            Output: 3 2 1
+        </div>
+
+    </div>
+
+
+    <!-- FACTORIAL -->
+    <div class="lesson-card">
+
+        <h2>✖️ 4. Factorial using Recursion</h2>
+
+        <p>
+            Factorial of n:
+        </p>
+
+        <pre>
+n! = n × (n-1) × (n-2) ... × 1
+        </pre>
+
+        <p>
+            Example:
+        </p>
+
+        <pre>
+5! = 5 × 4 × 3 × 2 × 1
+   = 120
+        </pre>
+
+        <h3>C++ Code:</h3>
+
+        <pre>
+int factorial(int n) {
+
+    if(n == 0 || n == 1) {
+        return 1;
+    }
+
+    return n * factorial(n - 1);
+}
+        </pre>
+
+        <h3>Dry Run:</h3>
+
+        <pre>
+factorial(5)
+
+5 × factorial(4)
+      ↓
+    4 × factorial(3)
+          ↓
+        3 × factorial(2)
+              ↓
+            2 × factorial(1)
+                  ↓
+                  1
+
+Answer = 120
+        </pre>
+
+    </div>
+
+
+    <!-- FIBONACCI -->
+    <div class="lesson-card">
+
+        <h2>🌀 5. Fibonacci using Recursion</h2>
+
+        <p>
+            Fibonacci series me:
+        </p>
+
+        <pre>
+0 1 1 2 3 5 8 ...
+        </pre>
+
+        <p>
+            Har term previous two terms ka sum hota hai.
+        </p>
+
+        <h3>C++ Code:</h3>
+
+        <pre>
+int fib(int n) {
+
+    if(n == 0 || n == 1) {
+        return n;
+    }
+
+    return fib(n - 1) + fib(n - 2);
+}
+        </pre>
+
+        <p>
+            Example:
+        </p>
+
+        <pre>
+fib(5)
+
+= fib(4) + fib(3)
+= 3 + 2
+= 5
+        </pre>
+
+    </div>
+
+
+    <!-- IMPORTANT POINTS -->
+    <div class="lesson-card">
+
+        <h2>⭐ Important Points</h2>
+
+        <ul>
+            <li>Recursion me function khud ko call karta hai.</li>
+            <li>Base case recursion ko stop karta hai.</li>
+            <li>Recursive call problem ko smaller part me le jaata hai.</li>
+            <li>Har recursive function me stopping condition important hai.</li>
+        </ul>
+
+    </div>
+
+
+    <!-- PRACTICE -->
+    <div class="practice-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            Ek recursive function banao jo
+            <strong>n se 1 tak numbers print</strong> kare.
+        </p>
+
+        <p>
+            Example:
+        </p>
+
+        <pre>
+Input: 5
+
+Output:
+5 4 3 2 1
+        </pre>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- TRY YOURSELF -->
+    <div class="lesson-card">
+
+        <h2>💻 Try It Yourself</h2>
+
+        <p>
+            Apna C++ recursion code yahan likho:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your C++ code here..."
+        ></textarea>
+
+        <br><br>
+
+        <button onclick="showCode()">
+            Show My Code
+        </button>
+
+        <pre id="solutionBox"></pre>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <div class="lesson-navigation">
+
+        <a href="dsa.html">
+            ← Back to DSA
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hint").textContent =
+        "Hint: Pehle base case socho. Jab n == 0 ho to return karo, warna n print karke function ko n - 1 ke saath call karo.";
+
+}
+
+
+function showCode() {
+
+    const userCode =
+        document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent =
+        userCode;
+
+}
+
+</script>
+
+</body>
+</html>

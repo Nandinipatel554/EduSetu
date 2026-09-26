@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Previous Year Questions - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .pyq-page {
+            min-height: 100vh;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #0f172a, #111827, #172554);
+            color: #f8fafc;
+        }
+
+        .pyq-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .pyq-header h1 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .pyq-header p {
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        .pyq-card {
+            background: rgba(30, 41, 59, 0.95);
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .pyq-card:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6;
+        }
+
+        .pyq-card h2 {
+            color: #60a5fa;
+            margin-bottom: 12px;
+        }
+
+        .pyq-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .year-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .year-buttons button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .year-buttons button:hover {
+            background: #1d4ed8;
+        }
+
+        .question-box {
+            background: #111827;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .question-box h3 {
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .question-box p {
+            color: #cbd5e1;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            padding: 14px;
+            background: #172554;
+            border-left: 4px solid #3b82f6;
+            border-radius: 8px;
+            color: #dbeafe;
+        }
+
+        .question-box button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .question-box button:hover {
+            background: #1d4ed8;
+        }
+
+        .pyq-navigation {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .pyq-navigation a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .pyq-navigation a:hover {
+            color: #93c5fd;
+        }
+
+        @media (max-width: 768px) {
+
+            .pyq-page {
+                padding: 45px 5%;
+            }
+
+            .pyq-header h1 {
+                font-size: 32px;
+            }
+
+            .pyq-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="pyq-page">
+
+    <!-- Header -->
+    <div class="pyq-header">
+
+        <h1>📚 Previous Year Questions</h1>
+
+        <p>
+            Practice important previous year questions
+            subject-wise and year-wise.
+        </p>
+
+    </div>
+
+
+    <!-- C++ -->
+    <div class="pyq-card">
+
+        <h2>💻 C++ & Programming</h2>
+
+        <p>
+            Practice questions related to C++ basics,
+            OOP, arrays, functions and programming concepts.
+        </p>
+
+        <div class="year-buttons">
+    <button onclick="window.location.href='cpp-pyq-2025.html'">
+        2025
+    </button>
+
+    <button onclick="window.location.href='cpp-pyq-2024.html'">
+        2024
+    </button>
+
+           <button onclick="window.location.href='cpp-pyq-2023.html'">
+    2023
+</button>
+
+            <button onclick="window.location.href='cpp-pyq-2022.html'">
+    2022
+</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Mathematics -->
+    <div class="pyq-card">
+
+        <h2>📐 Mathematics</h2>
+
+        <p>
+            Practice Algebra, Matrices, Calculus,
+            Probability and Numerical Methods questions.
+        </p>
+
+        <div class="year-buttons">
+
+            <button onclick="window.location.href='math-pyq-2025.html'">
+            2025
+        </button>
+        
+                    <button onclick="window.location.href='math-pyq-2024.html'">
+            2024
+         </button>
+
+          <button onclick="window.location.href='math-pyq-2023.html'">
+    2023
+</button>
+
+            <button onclick="window.location.href='math-pyq-2022.html'">
+    2022
+</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Physics -->
+    <div class="pyq-card">
+
+        <h2>⚛️ Physics</h2>
+
+        <p>
+            Practice Mechanics, Thermodynamics, Waves,
+            Electromagnetism, Optics and Modern Physics.
+        </p>
+
+        <div class="year-buttons">
+
+          <button onclick="window.location.href='physics-pyq-2025.html'">
+    2025
+</button>
+
+            <button onclick="window.location.href='physics-pyq-2024.html'">
+    2024
+</button>
+
+            <button onclick="window.location.href='physics-pyq-2023.html'">
+    2023
+</button>
+
+           <button onclick="window.location.href='physics-pyq-2022.html'">
+    2022
+</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Subject-wise practice -->
+    <div class="pyq-card">
+
+        <h2>📝 Subject-wise Practice</h2>
+
+        <p>
+            Try these sample questions before attempting
+            complete previous year papers.
+        </p>
+
+
+        <!-- Question 1 -->
+        <div class="question-box">
+
+            <h3>Question 1 — C++</h3>
+
+            <p>
+                Which concept allows the same function name
+                to have different parameters?
+            </p>
+
+            <button onclick="toggleAnswer('answer1')">
+                Show Answer
+            </button>
+
+            <div id="answer1" class="answer">
+                <b>Answer:</b> Function Overloading
+            </div>
+
+        </div>
+
+
+        <!-- Question 2 -->
+        <div class="question-box">
+
+            <h3>Question 2 — Mathematics</h3>
+
+            <p>
+                What is the derivative of x²?
+            </p>
+
+            <button onclick="toggleAnswer('answer2')">
+                Show Answer
+            </button>
+
+            <div id="answer2" class="answer">
+                <b>Answer:</b> 2x
+            </div>
+
+        </div>
+
+
+        <!-- Question 3 -->
+        <div class="question-box">
+
+            <h3>Question 3 — Physics</h3>
+
+            <p>
+                What is the SI unit of force?
+            </p>
+
+            <button onclick="toggleAnswer('answer3')">
+                Show Answer
+            </button>
+
+            <div id="answer3" class="answer">
+                <b>Answer:</b> Newton (N)
+            </div>
+
+        </div>
+
+    </div>
+
+
+   <!-- Year-wise Practice -->
+<div class="pyq-card">
+
+    <h2>📅 Year-wise Practice</h2>
+
+    <p>
+        Select a year to practice a combined paper
+        covering C++, Mathematics and Physics.
+    </p>
+
+    <div class="year-buttons">
+
+        <button onclick="window.location.href='combined-pyq-2025.html'">
+            📄 2025 Paper
+        </button>
+
+        <button onclick="window.location.href='combined-pyq-2024.html'">
+            📄 2024 Paper
+        </button>
+
+        <button onclick="window.location.href='combined-pyq-2023.html'">
+            📄 2023 Paper
+        </button>
+
+    </div>
+
+</div>
+
+
+
+    <!-- Navigation -->
+    <div class="pyq-navigation">
+
+        <a href="resources.html">
+            ← Back to Resources
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function toggleAnswer(id) {
+
+    let answer = document.getElementById(id);
+
+    if (answer.style.display === "block") {
+
+        answer.style.display = "none";
+
+    } else {
+
+        answer.style.display = "block";
+
+    }
+
+}
+
+
+
+</script>
+
+</body>
+</html>

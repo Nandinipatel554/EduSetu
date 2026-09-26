@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>Matrices</h1>
+        <p>Learn the basics of matrices step by step.</p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>What is a Matrix?</h2>
+        <p>
+            A matrix is a rectangular arrangement of numbers or elements
+            organized into rows and columns.
+        </p>
+
+        <p><strong>Example:</strong></p>
+
+        <p class="math-question">
+            A = [ 1&nbsp;&nbsp;2&nbsp;&nbsp;3 ]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 4&nbsp;&nbsp;5&nbsp;&nbsp;6 ]
+        </p>
+
+        <p>
+            This matrix has <strong>2 rows</strong> and <strong>3 columns</strong>.
+            Therefore, its order is <strong>2 × 3</strong>.
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>1. Rows and Columns</h2>
+
+        <p>
+            A <strong>row</strong> contains elements arranged horizontally,
+            while a <strong>column</strong> contains elements arranged vertically.
+        </p>
+
+        <p class="math-question">
+            A = [ 1&nbsp;&nbsp;2 ]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 3&nbsp;&nbsp;4 ]
+        </p>
+
+        <p>
+            Here there are 2 rows and 2 columns.
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>2. Order of a Matrix</h2>
+
+        <p>
+            The order of a matrix is written as:
+        </p>
+
+        <p class="math-question">
+            Number of Rows × Number of Columns
+        </p>
+
+        <p>
+            Example: A matrix with 3 rows and 4 columns has order
+            <strong>3 × 4</strong>.
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>3. Types of Matrices</h2>
+
+        <p><strong>Row Matrix:</strong> Has only one row.</p>
+
+        <p class="math-question">
+            [ 2&nbsp;&nbsp;4&nbsp;&nbsp;6 ]
+        </p>
+
+        <p><strong>Column Matrix:</strong> Has only one column.</p>
+
+        <p class="math-question">
+            [ 2 ]<br>
+            [ 4 ]<br>
+            [ 6 ]
+        </p>
+
+        <p><strong>Square Matrix:</strong> Number of rows equals number of columns.</p>
+
+        <p class="math-question">
+            [ 1&nbsp;&nbsp;2 ]<br>
+            [ 3&nbsp;&nbsp;4 ]
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>4. Matrix Addition</h2>
+
+        <p>
+            Two matrices can be added when they have the same order.
+            Corresponding elements are added.
+        </p>
+
+        <p class="math-question">
+            [ 1&nbsp;&nbsp;2 ] + [ 3&nbsp;&nbsp;4 ]<br>
+            [ 5&nbsp;&nbsp;6 ]&nbsp;&nbsp;&nbsp;[ 7&nbsp;&nbsp;8 ]
+        </p>
+
+        <p><strong>Result:</strong></p>
+
+        <p class="math-question">
+            [ 4&nbsp;&nbsp;6 ]<br>
+            [ 12&nbsp;&nbsp;14 ]
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>5. Matrix Transpose</h2>
+
+        <p>
+            Transpose changes rows into columns and columns into rows.
+        </p>
+
+        <p class="math-question">
+            A = [ 1&nbsp;&nbsp;2&nbsp;&nbsp;3 ]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 4&nbsp;&nbsp;5&nbsp;&nbsp;6 ]
+        </p>
+
+        <p><strong>Transpose:</strong></p>
+
+        <p class="math-question">
+            Aᵀ = [ 1&nbsp;&nbsp;4 ]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 2&nbsp;&nbsp;5 ]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 3&nbsp;&nbsp;6 ]
+        </p>
+    </div>
+
+    <div class="practice-card">
+        <h2>Practice Question</h2>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            Find the order of the following matrix:
+        </p>
+
+        <p class="math-question">
+            A = [ 2&nbsp;&nbsp;4&nbsp;&nbsp;6 ]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 1&nbsp;&nbsp;3&nbsp;&nbsp;5 ]
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>Try Yourself</h2>
+
+        <p>
+            Write your answer below:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your answer here..."
+        ></textarea>
+
+        <button onclick="showAnswer()">Submit</button>
+
+        <div id="solutionBox">
+            Your answer will appear here.
+        </div>
+    </div>
+
+    <div class="lesson-navigation">
+        <a href="math-resources.html">← Back to Mathematics</a>
+    </div>
+
+</section>
+
+<script>
+function showHint() {
+    document.getElementById("hint").textContent =
+        "Hint: Count the number of rows and columns. Write the answer as rows × columns.";
+}
+
+function showAnswer() {
+    const answer = document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent = answer;
+}
+</script>
+
+</body>
+</html>

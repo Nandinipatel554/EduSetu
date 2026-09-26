@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loops - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="lesson-section">
+
+        <!-- Header -->
+        <div class="lesson-header">
+            <p>C++ LEARNING</p>
+            <h1>C++ <span>Loops</span></h1>
+            <p>Learn how to repeat a block of code using loops.</p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="lesson-card">
+            <h2>📘 What are Loops?</h2>
+
+            <p>
+                A loop is used to execute the same block of code
+                multiple times.
+            </p>
+
+            <p>
+                Instead of writing the same code again and again,
+                we can use a loop.
+            </p>
+        </div>
+
+        <!-- For Loop -->
+        <div class="lesson-card">
+            <h2>🔄 For Loop</h2>
+
+            <p>
+                A <strong>for loop</strong> is commonly used when we
+                know how many times we want to repeat something.
+            </p>
+
+            <pre>
+for (int i = 1; i &lt;= 5; i++) {
+    cout &lt;&lt; i &lt;&lt; " ";
+}
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                1 2 3 4 5
+            </div>
+
+            <p>
+                Here, <strong>i</strong> starts from 1 and increases by
+                1 after every iteration.
+            </p>
+        </div>
+
+        <!-- While Loop -->
+        <div class="lesson-card">
+            <h2>🔁 While Loop</h2>
+
+            <p>
+                A <strong>while loop</strong> runs as long as its
+                condition is true.
+            </p>
+
+            <pre>
+int i = 1;
+
+while (i &lt;= 5) {
+    cout &lt;&lt; i &lt;&lt; " ";
+    i++;
+}
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                1 2 3 4 5
+            </div>
+        </div>
+
+        <!-- Do While -->
+        <div class="lesson-card">
+            <h2>🔃 Do-While Loop</h2>
+
+            <p>
+                A <strong>do-while loop</strong> executes the code
+                at least once before checking the condition.
+            </p>
+
+            <pre>
+int i = 1;
+
+do {
+    cout &lt;&lt; i &lt;&lt; " ";
+    i++;
+} while (i &lt;= 5);
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                1 2 3 4 5
+            </div>
+        </div>
+
+        <!-- Loop Comparison -->
+        <div class="lesson-card">
+            <h2>🧠 Types of Loops</h2>
+
+            <div class="data-type-table">
+
+                <div class="data-row data-heading">
+                    <span>Loop</span>
+                    <span>Use</span>
+                </div>
+
+                <div class="data-row">
+                    <span>for</span>
+                    <span>When repetitions are known</span>
+                </div>
+
+                <div class="data-row">
+                    <span>while</span>
+                    <span>When condition controls repetition</span>
+                </div>
+
+                <div class="data-row">
+                    <span>do-while</span>
+                    <span>Runs at least once</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Important Concept -->
+        <div class="lesson-card">
+            <h2>💡 Understanding Increment</h2>
+
+            <p>
+                The <strong>++</strong> operator increases a variable
+                by 1.
+            </p>
+
+            <pre>
+int i = 1;
+
+i++;
+
+cout &lt;&lt; i;
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                2
+            </div>
+        </div>
+
+        <!-- Practice -->
+        <div class="practice-card">
+
+            <h2>🧩 Practice Question</h2>
+
+            <p>
+                Write a C++ program using a
+                <strong>for loop</strong> to print numbers from
+                <strong>1 to 10</strong>.
+            </p>
+
+            <button onclick="showHint()">
+                Show Hint
+            </button>
+
+            <p id="hint" class="hint-text"></p>
+
+        </div>
+
+        <!-- Try Yourself -->
+        <div class="coding-card">
+
+            <h2>💻 Try It Yourself</h2>
+
+            <p>
+                Write your C++ code below.
+            </p>
+
+            <textarea
+                id="codeInput"
+                placeholder="Write your C++ code here..."
+            ></textarea>
+
+            <button onclick="showCode()">
+                Check Solution
+            </button>
+
+            <pre id="solutionBox"></pre>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-navigation">
+
+            <a href="cpp-basics.html">
+                ← Back to C++ Basics
+            </a>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function showHint() {
+
+            document.getElementById("hint").textContent =
+                "Hint: Use for (int i = 1; i <= 10; i++).";
+
+        }
+
+        function showCode() {
+
+            const userCode =
+                document.getElementById("codeInput").value;
+
+            document.getElementById("solutionBox").textContent =
+                userCode;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>EduSetu | College Resources</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+    .college-section {
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 20px;
+    }
+
+    .college-heading {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .college-heading .section-label {
+        color: #6c63ff;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .college-heading h1 {
+        font-size: 38px;
+        margin: 10px 0;
+    }
+
+    .college-heading h1 span {
+        color: #6c63ff;
+    }
+
+    .college-heading p {
+        color: #666;
+    }
+
+    .college-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .college-card {
+        background: white;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .college-icon {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .college-card h3 {
+        margin: 10px 0;
+    }
+
+    .college-card p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .college-info {
+        margin-top: 15px;
+        padding: 12px;
+        background: #f5f4ff;
+        border-radius: 10px;
+        line-height: 1.5;
+    }
+
+    .college-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 16px;
+        background: #6c63ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+    .college-btn:hover {
+        opacity: 0.9;
+    }
+
+    .back-btn {
+        display: block;
+        width: fit-content;
+        margin: 35px auto 0;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #6c63ff;
+        font-weight: 600;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Navbar -->
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            Edu<span>Setu</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+            <a href="dashboard.html" class="login-btn">
+                Dashboard
+            </a>
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- College Resources -->
+<main>
+
+    <section class="college-section">
+
+        <div class="college-heading">
+
+            <p class="section-label">COLLEGE RESOURCES</p>
+
+            <h1>
+                College <span>Resources</span> 🎓
+            </h1>
+
+            <p>
+                Access notices, assignments, exam dates
+                and important college study materials.
+            </p>
+
+        </div>
+
+
+        <div class="college-grid">
+
+
+            <!-- College Notices -->
+            <div class="college-card">
+
+                <div class="college-icon">📢</div>
+
+                <h3>College Notices</h3>
+
+                <p>
+                    Stay updated with important announcements,
+                    campus events and official college circulars.
+                </p>
+
+                <div class="college-info">
+                    Check JIT Campus Updates regularly for
+                    new announcements and official notices.
+                </div>
+
+                <a href="https://www.jitborawan.ac.in/"
+                   target="_blank"
+                   class="college-btn">
+                    View JIT Notices →
+                </a>
+
+            </div>
+
+
+            <!-- Assignments -->
+            <div class="college-card">
+
+                <div class="college-icon">📝</div>
+
+                <h3>Assignments</h3>
+
+                <p>
+                    Keep track of subject assignments, practical
+                    work, submission deadlines and academic tasks.
+                </p>
+
+                <div class="college-info">
+                    Maintain a subject-wise assignment list and
+                    follow submission instructions from faculty.
+                </div>
+
+                <a href="https://www.jitborawan.ac.in/"
+                   target="_blank"
+                   class="college-btn">
+                    Visit JIT Academic Info →
+                </a>
+
+            </div>
+
+
+            <!-- Exam Dates -->
+            <div class="college-card">
+
+                <div class="college-icon">📅</div>
+
+                <h3>Exam Dates</h3>
+
+                <p>
+                    Keep track of examination schedules,
+                    practicals and other important academic dates.
+                </p>
+
+                <div class="college-info">
+                    Check official JIT updates before planning
+                    your exam preparation and schedule.
+                </div>
+
+                <a href="https://www.jitborawan.ac.in/"
+                   target="_blank"
+                   class="college-btn">
+                    Check JIT Updates →
+                </a>
+
+            </div>
+
+
+            <!-- College Study Materials -->
+            <div class="college-card">
+
+                <div class="college-icon">📚</div>
+
+                <h3>College Study Materials</h3>
+
+                <p>
+                    Explore course information, departments,
+                    programs and academic resources available at JIT.
+                </p>
+
+                <div class="college-info">
+                    JIT provides information about its courses,
+                    departments, laboratories and academic programs.
+                </div>
+
+                <a href="https://www.jitborawan.ac.in/"
+                   target="_blank"
+                   class="college-btn">
+                    Explore JIT Academics →
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <a href="dashboard.html" class="back-btn">
+            ← Back to Dashboard
+        </a>
+
+    </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <div class="logo">
+                Edu<span>Setu</span>
+            </div>
+
+            <p>
+                Bridging the digital education gap.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 EduSetu. Built for digital inclusion.</p>
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>

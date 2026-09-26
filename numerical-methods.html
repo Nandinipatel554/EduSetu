@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Methods - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>Numerical Methods</h1>
+        <p>Learn basic numerical techniques used to solve mathematical problems.</p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>What are Numerical Methods?</h2>
+
+        <p>
+            Numerical methods are techniques used to find approximate
+            solutions to mathematical problems when an exact solution
+            is difficult or not convenient to calculate.
+        </p>
+
+        <p class="math-question">
+            Mathematical Problem → Numerical Method → Approximate Solution
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>1. Errors in Numerical Computation</h2>
+
+        <p>
+            Numerical calculations may contain small differences between
+            the exact value and the approximate value.
+        </p>
+
+        <p class="math-question">
+            Error = Exact Value − Approximate Value
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>2. Bisection Method</h2>
+
+        <p>
+            The Bisection Method is used to find a root of an equation.
+            The interval is repeatedly divided into two parts.
+        </p>
+
+        <p class="math-question">
+            [a, b] → Divide into two halves → Select the required interval
+        </p>
+
+        <p>
+            This process is repeated until the required approximation
+            is obtained.
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>3. Newton-Raphson Method</h2>
+
+        <p>
+            Newton-Raphson Method is an iterative method used to find
+            the root of an equation.
+        </p>
+
+        <p class="math-question">
+            xₙ₊₁ = xₙ − f(xₙ) / f'(xₙ)
+        </p>
+
+        <p>
+            We start with an initial approximation and repeatedly calculate
+            a better approximation.
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>4. Secant Method</h2>
+
+        <p>
+            The Secant Method is another iterative technique for finding
+            the root of an equation.
+        </p>
+
+        <p class="math-question">
+            xₙ₊₁ =
+            xₙ − f(xₙ)(xₙ − xₙ₋₁) /
+            [f(xₙ) − f(xₙ₋₁)]
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>5. Numerical Integration</h2>
+
+        <p>
+            Numerical integration is used to approximate the value of
+            a definite integral.
+        </p>
+
+        <p>
+            Common techniques include:
+        </p>
+
+        <p class="math-question">
+            Trapezoidal Rule<br><br>
+            Simpson's Rule
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>6. Trapezoidal Rule</h2>
+
+        <p>
+            The Trapezoidal Rule approximates the area under a curve
+            using trapezoids.
+        </p>
+
+        <p class="math-question">
+            ∫ₐᵇ f(x) dx ≈
+            (b − a) / 2 × [f(a) + f(b)]
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>Example</h2>
+
+        <p>
+            Suppose we want to find an approximate root of an equation.
+            We can choose an initial interval and repeatedly reduce it
+            using a numerical method such as the Bisection Method.
+        </p>
+
+        <p class="math-question">
+            Initial Interval → Smaller Interval → Approximate Root
+        </p>
+    </div>
+
+    <div class="practice-card">
+        <h2>Practice Question</h2>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            Which numerical method repeatedly divides an interval into
+            two parts to find the root of an equation?
+        </p>
+
+        <p class="math-question">
+            A) Newton-Raphson Method<br>
+            B) Bisection Method<br>
+            C) Secant Method<br>
+            D) Simpson's Rule
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>Try Yourself</h2>
+
+        <p>
+            Write your answer below:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your answer here..."
+        ></textarea>
+
+        <button onclick="showAnswer()">Submit</button>
+
+        <div id="solutionBox">
+            Your answer will appear here.
+        </div>
+    </div>
+
+    <div class="lesson-navigation">
+        <a href="math-resources.html">← Back to Mathematics</a>
+    </div>
+
+</section>
+
+<script>
+function showHint() {
+    document.getElementById("hint").textContent =
+        "Hint: Think about the method that repeatedly divides an interval into two halves.";
+}
+
+function showAnswer() {
+    const answer = document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent = answer;
+}
+</script>
+
+</body>
+</html>

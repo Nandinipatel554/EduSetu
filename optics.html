@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Optics - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .physics-diagram {
+            background: #0b1120;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            overflow-x: auto;
+        }
+
+        .physics-diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .formula {
+            background: #111827;
+            border: 1px solid #3b82f6;
+            color: #ffffff;
+            padding: 15px 22px;
+            margin: 15px 0;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .practice-input {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: 2px solid #334155;
+            border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        #hintBox {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #172554;
+            border-left: 4px solid #3b82f6;
+            border-radius: 8px;
+            color: #dbeafe;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .diagram-title {
+            color: #93c5fd;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>🔍 Optics</h1>
+        <p>Learn reflection, refraction, mirrors, lenses and image formation.</p>
+    </div>
+
+
+    <!-- 1 Reflection -->
+    <div class="lesson-card">
+
+        <h2>1. Reflection of Light</h2>
+
+        <p>
+            Reflection is the phenomenon in which light rays bounce back
+            into the same medium after striking a surface.
+        </p>
+
+        <p>
+            The angle of incidence is equal to the angle of reflection.
+        </p>
+
+        <div class="formula">
+            ∠i = ∠r
+        </div>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Ray Diagram — Reflection from a Plane Mirror
+            </div>
+
+            <svg width="700" height="350" viewBox="0 0 700 350">
+
+                <!-- Mirror -->
+                <line x1="500" y1="50"
+                      x2="500" y2="300"
+                      stroke="#e2e8f0"
+                      stroke-width="8"/>
+
+                <text x="515" y="180"
+                      fill="#ffffff"
+                      font-size="18">
+                    Plane Mirror
+                </text>
+
+                <!-- Normal -->
+                <line x1="300" y1="175"
+                      x2="500" y2="175"
+                      stroke="#94a3b8"
+                      stroke-width="2"
+                      stroke-dasharray="8,7"/>
+
+                <text x="390" y="165"
+                      fill="#cbd5e1"
+                      font-size="16">
+                    Normal
+                </text>
+
+                <!-- Incident ray -->
+                <line x1="120" y1="70"
+                      x2="500" y2="175"
+                      stroke="#60a5fa"
+                      stroke-width="4"/>
+
+                <polygon points="500,175 480,164 485,184"
+                         fill="#60a5fa"/>
+
+                <!-- Reflected ray -->
+                <line x1="500" y1="175"
+                      x2="650" y2="70"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <polygon points="650,70 630,77 641,91"
+                         fill="#22c55e"/>
+
+                <text x="190" y="90"
+                      fill="#60a5fa"
+                      font-size="17">
+                    Incident Ray
+                </text>
+
+                <text x="535" y="100"
+                      fill="#22c55e"
+                      font-size="17">
+                    Reflected Ray
+                </text>
+
+                <text x="355" y="210"
+                      fill="#facc15"
+                      font-size="17">
+                    i = r
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 2 Refraction -->
+    <div class="lesson-card">
+
+        <h2>2. Refraction of Light</h2>
+
+        <p>
+            Refraction is the bending of light when it passes from one
+            transparent medium to another because its speed changes.
+        </p>
+
+        <div class="formula">
+            n₁ sin i = n₂ sin r
+        </div>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Ray Diagram — Refraction from Air to Glass
+            </div>
+
+            <svg width="700" height="380" viewBox="0 0 700 380">
+
+                <!-- Glass -->
+                <rect x="50" y="190"
+                      width="600"
+                      height="140"
+                      fill="#172554"
+                      stroke="#60a5fa"
+                      stroke-width="2"/>
+
+                <text x="570" y="300"
+                      fill="#bfdbfe"
+                      font-size="20">
+                    Glass
+                </text>
+
+                <text x="570" y="80"
+                      fill="#ffffff"
+                      font-size="20">
+                    Air
+                </text>
+
+                <!-- Boundary -->
+                <line x1="50" y1="190"
+                      x2="650" y2="190"
+                      stroke="#ffffff"
+                      stroke-width="3"/>
+
+                <!-- Normal -->
+                <line x1="350" y1="80"
+                      x2="350" y2="320"
+                      stroke="#94a3b8"
+                      stroke-width="2"
+                      stroke-dasharray="8,7"/>
+
+                <!-- Incident ray -->
+                <line x1="170" y1="70"
+                      x2="350" y2="190"
+                      stroke="#60a5fa"
+                      stroke-width="4"/>
+
+                <polygon points="350,190 329,179 337,194"
+                         fill="#60a5fa"/>
+
+                <!-- Refracted ray -->
+                <line x1="350" y1="190"
+                      x2="455" y2="320"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <polygon points="455,320 435,311 447,301"
+                         fill="#22c55e"/>
+
+                <text x="180" y="100"
+                      fill="#60a5fa"
+                      font-size="17">
+                    Incident Ray
+                </text>
+
+                <text x="420" y="290"
+                      fill="#22c55e"
+                      font-size="17">
+                    Refracted Ray
+                </text>
+
+                <text x="365" y="130"
+                      fill="#ffffff"
+                      font-size="17">
+                    Normal
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3 Plane Mirror -->
+    <div class="lesson-card">
+
+        <h2>3. Plane Mirror</h2>
+
+        <p>
+            A plane mirror has a flat reflecting surface. The image formed
+            by a plane mirror is virtual, erect and of the same size as
+            the object.
+        </p>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Image Formation by Plane Mirror
+            </div>
+
+            <svg width="700" height="320" viewBox="0 0 700 320">
+
+                <!-- Mirror -->
+                <line x1="500" y1="40"
+                      x2="500" y2="280"
+                      stroke="#e2e8f0"
+                      stroke-width="8"/>
+
+                <!-- Object -->
+                <line x1="250" y1="220"
+                      x2="250" y2="100"
+                      stroke="#60a5fa"
+                      stroke-width="7"/>
+
+                <polygon points="250,75 235,105 265,105"
+                         fill="#60a5fa"/>
+
+                <!-- Image -->
+                <line x1="750" y1="220"
+                      x2="750" y2="100"
+                      stroke="#22c55e"
+                      stroke-width="7"
+                      opacity="0.7"/>
+
+                <polygon points="750,75 735,105 765,105"
+                         fill="#22c55e"
+                         opacity="0.7"/>
+
+                <!-- Dashed construction -->
+                <line x1="250" y1="100"
+                      x2="500" y2="100"
+                      stroke="#94a3b8"
+                      stroke-width="2"
+                      stroke-dasharray="7,7"/>
+
+                <line x1="500" y1="100"
+                      x2="750" y2="100"
+                      stroke="#94a3b8"
+                      stroke-width="2"
+                      stroke-dasharray="7,7"/>
+
+                <text x="210" y="255"
+                      fill="#60a5fa"
+                      font-size="18">
+                    Object
+                </text>
+
+                <text x="600" y="255"
+                      fill="#22c55e"
+                      font-size="18">
+                    Virtual Image
+                </text>
+
+                <text x="450" y="70"
+                      fill="#ffffff"
+                      font-size="18">
+                    Mirror
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 4 Concave Mirror -->
+    <div class="lesson-card">
+
+        <h2>4. Concave Mirror</h2>
+
+        <p>
+            A concave mirror has a reflecting surface curved inward.
+            It can form real or virtual images depending on the position
+            of the object.
+        </p>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Concave Mirror — Basic Ray Diagram
+            </div>
+
+            <svg width="750" height="350" viewBox="0 0 750 350">
+
+                <!-- Principal axis -->
+                <line x1="60" y1="230"
+                      x2="690" y2="230"
+                      stroke="#94a3b8"
+                      stroke-width="2"/>
+
+                <!-- Concave mirror -->
+                <path d="M620 70 Q500 230 620 390"
+                      fill="none"
+                      stroke="#e2e8f0"
+                      stroke-width="8"/>
+
+                <!-- Object -->
+                <line x1="180" y1="230"
+                      x2="180" y2="110"
+                      stroke="#60a5fa"
+                      stroke-width="6"/>
+
+                <polygon points="180,85 165,115 195,115"
+                         fill="#60a5fa"/>
+
+                <!-- F and C -->
+                <circle cx="430" cy="230" r="5" fill="#facc15"/>
+                <circle cx="350" cy="230" r="5" fill="#facc15"/>
+
+                <text x="420" y="255"
+                      fill="#facc15"
+                      font-size="18">
+                    F
+                </text>
+
+                <text x="340" y="255"
+                      fill="#facc15"
+                      font-size="18">
+                    C
+                </text>
+
+                <!-- Ray parallel to axis -->
+                <line x1="180" y1="110"
+                      x2="600" y2="110"
+                      stroke="#60a5fa"
+                      stroke-width="4"/>
+
+                <polygon points="600,110 580,101 580,119"
+                         fill="#60a5fa"/>
+
+                <!-- Reflected ray -->
+                <line x1="600" y1="110"
+                      x2="430" y2="230"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <polygon points="430,230 450,214 449,234"
+                         fill="#22c55e"/>
+
+                <text x="95" y="285"
+                      fill="#60a5fa"
+                      font-size="18">
+                    Object
+                </text>
+
+                <text x="390" y="200"
+                      fill="#22c55e"
+                      font-size="16">
+                    Reflected Ray
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 5 Convex Mirror -->
+    <div class="lesson-card">
+
+        <h2>5. Convex Mirror</h2>
+
+        <p>
+            A convex mirror has a reflecting surface curved outward.
+            It always forms a virtual, erect and diminished image.
+        </p>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Convex Mirror — Ray Diagram
+            </div>
+
+            <svg width="750" height="350" viewBox="0 0 750 350">
+
+                <!-- Axis -->
+                <line x1="50" y1="230"
+                      x2="700" y2="230"
+                      stroke="#94a3b8"
+                      stroke-width="2"/>
+
+                <!-- Convex mirror -->
+                <path d="M600 70 Q700 230 600 390"
+                      fill="none"
+                      stroke="#e2e8f0"
+                      stroke-width="8"/>
+
+                <!-- Object -->
+                <line x1="160" y1="230"
+                      x2="160" y2="110"
+                      stroke="#60a5fa"
+                      stroke-width="6"/>
+
+                <polygon points="160,85 145,115 175,115"
+                         fill="#60a5fa"/>
+
+                <!-- Reflected ray -->
+                <line x1="160" y1="110"
+                      x2="600" y2="110"
+                      stroke="#60a5fa"
+                      stroke-width="4"/>
+
+                <line x1="600" y1="110"
+                      x2="500" y2="135"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <!-- Virtual extension -->
+                <line x1="600" y1="110"
+                      x2="500" y2="135"
+                      stroke="#22c55e"
+                      stroke-width="2"
+                      stroke-dasharray="7,6"/>
+
+                <!-- Focus -->
+                <circle cx="500" cy="230"
+                        r="5"
+                        fill="#facc15"/>
+
+                <text x="490" y="255"
+                      fill="#facc15"
+                      font-size="18">
+                    F
+                </text>
+
+                <text x="120" y="285"
+                      fill="#60a5fa"
+                      font-size="18">
+                    Object
+                </text>
+
+                <text x="515" y="155"
+                      fill="#22c55e"
+                      font-size="16">
+                    Reflected Ray
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 6 Convex Lens -->
+    <div class="lesson-card">
+
+        <h2>6. Convex Lens</h2>
+
+        <p>
+            A convex lens is thicker at the centre and thinner at the edges.
+            It converges parallel rays of light toward its principal focus.
+        </p>
+
+        <div class="formula">
+            1/f = 1/v - 1/u
+        </div>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Convex Lens — Converging Rays
+            </div>
+
+            <svg width="750" height="350" viewBox="0 0 750 350">
+
+                <!-- Principal axis -->
+                <line x1="50" y1="230"
+                      x2="700" y2="230"
+                      stroke="#94a3b8"
+                      stroke-width="2"/>
+
+                <!-- Lens -->
+                <path d="M370 60 Q430 230 370 400"
+                      fill="none"
+                      stroke="#60a5fa"
+                      stroke-width="6"/>
+
+                <path d="M430 60 Q370 230 430 400"
+                      fill="none"
+                      stroke="#60a5fa"
+                      stroke-width="6"/>
+
+                <!-- Parallel rays -->
+                <line x1="70" y1="130"
+                      x2="400" y2="130"
+                      stroke="#f59e0b"
+                      stroke-width="4"/>
+
+                <line x1="70" y1="230"
+                      x2="400" y2="230"
+                      stroke="#f59e0b"
+                      stroke-width="4"/>
+
+                <line x1="70" y1="330"
+                      x2="400" y2="330"
+                      stroke="#f59e0b"
+                      stroke-width="4"/>
+
+                <!-- Converging rays -->
+                <line x1="400" y1="130"
+                      x2="540" y2="230"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <line x1="400" y1="230"
+                      x2="540" y2="230"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <line x1="400" y1="330"
+                      x2="540" y2="230"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <!-- Focus -->
+                <circle cx="540" cy="230"
+                        r="7"
+                        fill="#facc15"/>
+
+                <text x="530" y="260"
+                      fill="#facc15"
+                      font-size="18">
+                    F
+                </text>
+
+                <text x="340" y="45"
+                      fill="#ffffff"
+                      font-size="18">
+                    Convex Lens
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 7 Concave Lens -->
+    <div class="lesson-card">
+
+        <h2>7. Concave Lens</h2>
+
+        <p>
+            A concave lens is thinner at the centre and thicker at the edges.
+            It diverges parallel rays of light.
+        </p>
+
+        <div class="physics-diagram">
+
+            <div class="diagram-title">
+                Concave Lens — Diverging Rays
+            </div>
+
+            <svg width="750" height="350" viewBox="0 0 750 350">
+
+                <!-- Axis -->
+                <line x1="50" y1="230"
+                      x2="700" y2="230"
+                      stroke="#94a3b8"
+                      stroke-width="2"/>
+
+                <!-- Concave lens -->
+                <path d="M370 60 Q420 230 370 400"
+                      fill="none"
+                      stroke="#60a5fa"
+                      stroke-width="6"/>
+
+                <path d="M430 60 Q380 230 430 400"
+                      fill="none"
+                      stroke="#60a5fa"
+                      stroke-width="6"/>
+
+                <!-- Incoming parallel rays -->
+                <line x1="70" y1="130"
+                      x2="400" y2="130"
+                      stroke="#f59e0b"
+                      stroke-width="4"/>
+
+                <line x1="70" y1="230"
+                      x2="400" y2="230"
+                      stroke="#f59e0b"
+                      stroke-width="4"/>
+
+                <line x1="70" y1="330"
+                      x2="400" y2="330"
+                      stroke="#f59e0b"
+                      stroke-width="4"/>
+
+                <!-- Diverging rays -->
+                <line x1="400" y1="130"
+                      x2="570" y2="80"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <line x1="400" y1="230"
+                      x2="570" y2="230"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <line x1="400" y1="330"
+                      x2="570" y2="380"
+                      stroke="#22c55e"
+                      stroke-width="4"/>
+
+                <!-- Virtual extensions -->
+                <line x1="400" y1="130"
+                      x2="280" y2="165"
+                      stroke="#94a3b8"
+                      stroke-width="2"
+                      stroke-dasharray="7,6"/>
+
+                <line x1="400" y1="330"
+                      x2="280" y2="295"
+                      stroke="#94a3b8"
+                      stroke-width="2"
+                      stroke-dasharray="7,6"/>
+
+                <circle cx="280" cy="230"
+                        r="6"
+                        fill="#facc15"/>
+
+                <text x="270" y="260"
+                      fill="#facc15"
+                      font-size="18">
+                    F
+                </text>
+
+                <text x="350" y="45"
+                      fill="#ffffff"
+                      font-size="18">
+                    Concave Lens
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 8 Important Formulas -->
+    <div class="lesson-card">
+
+        <h2>8. Important Optics Formulas</h2>
+
+        <p><b>Mirror Formula:</b></p>
+
+        <div class="formula">
+            1/f = 1/v + 1/u
+        </div>
+
+        <p><b>Lens Formula:</b></p>
+
+        <div class="formula">
+            1/f = 1/v - 1/u
+        </div>
+
+        <p><b>Magnification:</b></p>
+
+        <div class="formula">
+            m = hᵢ / hₒ
+        </div>
+
+        <p><b>Refractive Index:</b></p>
+
+        <div class="formula">
+            n = c / v
+        </div>
+
+    </div>
+
+
+    <!-- 9 Example -->
+    <div class="lesson-card">
+
+        <h2>9. Example</h2>
+
+        <p>
+            A convex lens has focal length 10 cm. An object is placed
+            20 cm from the lens. Using the lens formula, find the image
+            position.
+        </p>
+
+        <div class="formula">
+            1/f = 1/v - 1/u
+        </div>
+
+        <p>
+            Using the Cartesian sign convention:
+        </p>
+
+        <p>
+            f = +10 cm
+        </p>
+
+        <p>
+            u = -20 cm
+        </p>
+
+        <p>
+            Therefore:
+        </p>
+
+        <p>
+            1/10 = 1/v + 1/20
+        </p>
+
+        <p>
+            1/v = 1/20
+        </p>
+
+        <p>
+            <b>v = +20 cm</b> ✅
+        </p>
+
+    </div>
+
+
+    <!-- Practice -->
+    <div class="lesson-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            A lens has a focal length of <b>20 cm</b> and an object is
+            placed at <b>-40 cm</b>. Using:
+        </p>
+
+        <div class="formula">
+            1/f = 1/v - 1/u
+        </div>
+
+        <p>
+            Find the image distance <b>v</b>.
+        </p>
+
+        <button onclick="showHint()">
+            💡 Show Hint
+        </button>
+
+        <div id="hintBox">
+            Put the values into the lens formula:
+            <br><br>
+            <b>
+                1/20 = 1/v - 1/(-40)
+            </b>
+        </div>
+
+        <input
+            type="text"
+            id="answerBox"
+            class="practice-input"
+            placeholder="Enter image distance in cm"
+        >
+
+        <br><br>
+
+        <button onclick="checkAnswer()">
+            Check Answer
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+
+
+    <div class="lesson-navigation">
+
+        <a href="physics-resources.html">
+            ← Back to Physics
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hintBox").style.display = "block";
+
+}
+
+
+function checkAnswer() {
+
+    let answer = document.getElementById("answerBox").value
+        .toLowerCase()
+        .replace(/\s/g, "");
+
+    if (
+        answer === "40" ||
+        answer === "40cm" ||
+        answer === "+40" ||
+        answer === "+40cm"
+    ) {
+
+        document.getElementById("result").innerHTML =
+            "Correct! Image distance = +40 cm ✅";
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+            "Try again. Use the lens formula carefully.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

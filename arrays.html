@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arrays - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="lesson-section">
+
+        <!-- Header -->
+        <div class="lesson-header">
+            <p>C++ LEARNING</p>
+            <h1>C++ <span>Arrays</span></h1>
+            <p>Learn how to store and work with multiple values.</p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="lesson-card">
+            <h2>📘 What is an Array?</h2>
+
+            <p>
+                An array is a collection of elements of the same data type
+                stored together.
+            </p>
+
+            <p>
+                For example, instead of creating five separate variables
+                for five numbers, we can store them in one array.
+            </p>
+
+            <pre>
+int marks[5] = {80, 75, 90, 85, 70};
+            </pre>
+        </div>
+
+        <!-- Declaration -->
+        <div class="lesson-card">
+            <h2>📝 Declaring an Array</h2>
+
+            <p>
+                We can declare an array by specifying its data type,
+                name, and size.
+            </p>
+
+            <pre>
+int numbers[5];
+            </pre>
+
+            <p>
+                Here:
+            </p>
+
+            <ul>
+                <li><strong>int</strong> → data type</li>
+                <li><strong>numbers</strong> → array name</li>
+                <li><strong>5</strong> → size of the array</li>
+            </ul>
+        </div>
+
+        <!-- Initialization -->
+        <div class="lesson-card">
+            <h2>📦 Array Initialization</h2>
+
+            <p>
+                We can give values to an array when creating it.
+            </p>
+
+            <pre>
+int numbers[5] = {10, 20, 30, 40, 50};
+            </pre>
+        </div>
+
+        <!-- Indexing -->
+        <div class="lesson-card">
+            <h2>🔢 Array Indexing</h2>
+
+            <p>
+                Array indexing starts from <strong>0</strong>.
+            </p>
+
+            <pre>
+int numbers[5] = {10, 20, 30, 40, 50};
+
+cout &lt;&lt; numbers[0];
+cout &lt;&lt; numbers[2];
+cout &lt;&lt; numbers[4];
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                10 30 50
+            </div>
+
+            <p>
+                So the indexes are:
+            </p>
+
+            <div class="data-type-table">
+
+                <div class="data-row data-heading">
+                    <span>Index</span>
+                    <span>Value</span>
+                </div>
+
+                <div class="data-row">
+                    <span>0</span>
+                    <span>10</span>
+                </div>
+
+                <div class="data-row">
+                    <span>1</span>
+                    <span>20</span>
+                </div>
+
+                <div class="data-row">
+                    <span>2</span>
+                    <span>30</span>
+                </div>
+
+                <div class="data-row">
+                    <span>3</span>
+                    <span>40</span>
+                </div>
+
+                <div class="data-row">
+                    <span>4</span>
+                    <span>50</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Traversal -->
+        <div class="lesson-card">
+            <h2>🔄 Traversing an Array</h2>
+
+            <p>
+                We can use a loop to access every element of an array.
+            </p>
+
+            <pre>
+int numbers[5] = {10, 20, 30, 40, 50};
+
+for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; numbers[i] &lt;&lt; " ";
+}
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                10 20 30 40 50
+            </div>
+        </div>
+
+        <!-- Taking Input -->
+        <div class="lesson-card">
+            <h2>⌨️ Taking Array Input</h2>
+
+            <p>
+                We can also take array elements from the user using
+                <strong>cin</strong>.
+            </p>
+
+            <pre>
+int numbers[5];
+
+for (int i = 0; i &lt; 5; i++) {
+    cin &gt;&gt; numbers[i];
+}
+
+for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; numbers[i] &lt;&lt; " ";
+}
+            </pre>
+        </div>
+
+        <!-- Important Points -->
+        <div class="lesson-card">
+            <h2>💡 Important Points</h2>
+
+            <ul>
+                <li>Array stores multiple values of the same type.</li>
+                <li>Array indexing starts from 0.</li>
+                <li>The last index is size - 1.</li>
+                <li>Loops are commonly used to traverse arrays.</li>
+            </ul>
+        </div>
+
+        <!-- Practice -->
+        <div class="practice-card">
+
+            <h2>🧩 Practice Question</h2>
+
+            <p>
+                Create an array of 5 integers and use a
+                <strong>for loop</strong> to print all its elements.
+            </p>
+
+            <button onclick="showHint()">
+                Show Hint
+            </button>
+
+            <p id="hint" class="hint-text"></p>
+
+        </div>
+
+        <!-- Try Yourself -->
+        <div class="coding-card">
+
+            <h2>💻 Try It Yourself</h2>
+
+            <p>
+                Write your C++ code below.
+            </p>
+
+            <textarea
+                id="codeInput"
+                placeholder="Write your C++ code here..."
+            ></textarea>
+
+            <button onclick="showCode()">
+                Check Solution
+            </button>
+
+            <pre id="solutionBox"></pre>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-navigation">
+
+            <a href="cpp-basics.html">
+                ← Back to C++ Basics
+            </a>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function showHint() {
+
+            document.getElementById("hint").textContent =
+                "Hint: Create int arr[5] and use for (int i = 0; i < 5; i++).";
+
+        }
+
+        function showCode() {
+
+            const userCode =
+                document.getElementById("codeInput").value;
+
+            document.getElementById("solutionBox").textContent =
+                userCode;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

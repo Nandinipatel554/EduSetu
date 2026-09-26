@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differential Calculus - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>Differential Calculus</h1>
+        <p>Learn limits and derivatives step by step.</p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>What is Differential Calculus?</h2>
+
+        <p>
+            Differential calculus deals with the rate at which a quantity
+            changes. The main concept used in differential calculus is
+            the <strong>derivative</strong>.
+        </p>
+
+        <p class="math-question">
+            Derivative → Rate of Change
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>1. Limits</h2>
+
+        <p>
+            A limit describes the value that a function approaches when
+            the input approaches a particular value.
+        </p>
+
+        <p class="math-question">
+            lim (x → 2) (x + 3) = 5
+        </p>
+
+        <p>
+            Here, when x approaches 2, the value of x + 3 approaches 5.
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>2. What is a Derivative?</h2>
+
+        <p>
+            The derivative tells us how quickly a function changes with
+            respect to its input.
+        </p>
+
+        <p class="math-question">
+            If y = x²<br><br>
+            dy/dx = 2x
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>3. Basic Differentiation Rules</h2>
+
+        <p class="math-question">
+            d/dx (c) = 0<br><br>
+            d/dx (xⁿ) = nxⁿ⁻¹<br><br>
+            d/dx (x) = 1
+        </p>
+
+        <p>
+            Here, <strong>c</strong> is a constant and <strong>n</strong>
+            is a positive integer.
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>4. Derivatives of Common Functions</h2>
+
+        <p class="math-question">
+            d/dx (sin x) = cos x<br><br>
+            d/dx (cos x) = -sin x<br><br>
+            d/dx (eˣ) = eˣ<br><br>
+            d/dx (ln x) = 1/x
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>5. Product Rule</h2>
+
+        <p>
+            When two functions are multiplied, we use the Product Rule.
+        </p>
+
+        <p class="math-question">
+            d/dx (uv) = u(dv/dx) + v(du/dx)
+        </p>
+
+        <p>
+            In simple words: first function × derivative of second
+            + second function × derivative of first.
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>6. Quotient Rule</h2>
+
+        <p>
+            When one function is divided by another, we use the
+            Quotient Rule.
+        </p>
+
+        <p class="math-question">
+            d/dx (u/v) =
+            [v(du/dx) - u(dv/dx)] / v²
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>7. Chain Rule</h2>
+
+        <p>
+            The Chain Rule is used when one function is inside another
+            function.
+        </p>
+
+        <p class="math-question">
+            d/dx f(g(x)) =
+            f'(g(x)) × g'(x)
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>Example</h2>
+
+        <p>
+            Find the derivative of:
+        </p>
+
+        <p class="math-question">
+            y = x³
+        </p>
+
+        <p>
+            Using the power rule:
+        </p>
+
+        <p class="math-question">
+            dy/dx = 3x²
+        </p>
+    </div>
+
+    <div class="practice-card">
+        <h2>Practice Question</h2>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            Find the derivative of the following function:
+        </p>
+
+        <p class="math-question">
+            y = x⁴
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>Try Yourself</h2>
+
+        <p>
+            Write your answer below:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your answer here..."
+        ></textarea>
+
+        <button onclick="showAnswer()">Submit</button>
+
+        <div id="solutionBox">
+            Your answer will appear here.
+        </div>
+    </div>
+
+    <div class="lesson-navigation">
+        <a href="math-resources.html">← Back to Mathematics</a>
+    </div>
+
+</section>
+
+<script>
+function showHint() {
+    document.getElementById("hint").textContent =
+        "Hint: Use the power rule d/dx(xⁿ) = nxⁿ⁻¹.";
+}
+
+function showAnswer() {
+    const answer = document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent = answer;
+}
+</script>
+
+</body>
+</html>

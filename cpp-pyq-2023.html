@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C++ PYQs - 2023 | EduSetu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #cbd5e1;
+        }
+
+        .info {
+            background: #172554;
+            border-left: 4px solid #38bdf8;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .question-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .question-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .question {
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #0f172a;
+            border-radius: 8px;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 7px;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #334155;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .back-btn:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>📝 C++ & Programming PYQs</h1>
+        <p>Previous Year Questions - 2023</p>
+    </header>
+
+    <div class="info">
+        <strong>EduSetu Practice Section</strong><br>
+        Practice these questions to revise important C++ concepts
+        before your examination.
+    </div>
+
+    <!-- Question 1 -->
+    <div class="question-card">
+        <h3>Question 1</h3>
+
+        <p class="question">
+            What are the basic data types in C++? Explain any four with examples.
+        </p>
+
+        <button onclick="showAnswer(1)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer1">
+            Some basic data types in C++ are:
+
+            <br><br>
+
+            <strong>int</strong> - stores integer values.<br>
+            Example: int age = 20;
+
+            <br><br>
+
+            <strong>float</strong> - stores decimal values.<br>
+            Example: float price = 10.5;
+
+            <br><br>
+
+            <strong>char</strong> - stores a single character.<br>
+            Example: char grade = 'A';
+
+            <br><br>
+
+            <strong>bool</strong> - stores true or false.<br>
+            Example: bool pass = true;
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-card">
+        <h3>Question 2</h3>
+
+        <p class="question">
+            Explain the difference between call by value and call by reference.
+        </p>
+
+        <button onclick="showAnswer(2)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer2">
+            In call by value, a copy of the actual value is passed to the
+            function, so changes inside the function do not affect the
+            original variable.
+
+            <br><br>
+
+            In call by reference, the reference of the original variable
+            is passed, so changes inside the function can affect the
+            original variable.
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-card">
+        <h3>Question 3</h3>
+
+        <p class="question">
+            What is a class and object in C++?
+        </p>
+
+        <button onclick="showAnswer(3)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer3">
+            A <strong>class</strong> is a blueprint or template used to
+            create objects.
+
+            <br><br>
+
+            An <strong>object</strong> is an instance of a class.
+
+            <br><br>
+
+            Example:
+
+            <br><br>
+
+            class Student {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;public:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;int age;<br>
+            };
+
+            <br><br>
+
+            Student s1;
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question-card">
+        <h3>Question 4</h3>
+
+        <p class="question">
+            What is recursion in C++? Give a simple example.
+        </p>
+
+        <button onclick="showAnswer(4)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer4">
+            Recursion is a process in which a function calls itself
+            to solve a problem.
+
+            <br><br>
+
+            Example:
+
+            <br><br>
+
+            int factorial(int n) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if(n == 0)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return n * factorial(n - 1);<br>
+            }
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question-card">
+        <h3>Question 5</h3>
+
+        <p class="question">
+            What is inheritance? Mention its common types in C++.
+        </p>
+
+        <button onclick="showAnswer(5)">
+            Show Answer
+        </button>
+
+        <div class="answer" id="answer5">
+            Inheritance is an OOP feature in which a derived class
+            acquires properties and functions of a base class.
+
+            <br><br>
+
+            Common types include:
+
+            <br><br>
+
+            1. Single inheritance<br>
+            2. Multiple inheritance<br>
+            3. Multilevel inheritance<br>
+            4. Hierarchical inheritance<br>
+            5. Hybrid inheritance
+        </div>
+    </div>
+
+    <a href="previous-year-questions.html" class="back-btn">
+        ← Back to Previous Year Questions
+    </a>
+
+</div>
+
+<script>
+
+function showAnswer(number) {
+
+    const answer = document.getElementById("answer" + number);
+
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+    } else {
+        answer.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

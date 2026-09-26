@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Combined Practice Paper 2025 - EduSetu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", serif;
+            background: #d6d6d6;
+            color: #111;
+            padding: 30px 15px;
+        }
+
+        /* TOP BUTTONS */
+
+        .top-buttons {
+            max-width: 900px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top-buttons button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            background: #222;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .top-buttons button:hover {
+            background: #444;
+        }
+
+        /* PAPER */
+
+        .paper {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 45px 55px;
+            min-height: 1100px;
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+        }
+
+        /* HEADER */
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #111;
+            padding-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 7px;
+        }
+
+        .header h2 {
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 16px;
+        }
+
+        /* PAPER INFORMATION */
+
+        .paper-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 18px 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .title h2 {
+            font-size: 24px;
+            text-decoration: underline;
+        }
+
+        .title p {
+            margin-top: 6px;
+            font-size: 16px;
+        }
+
+        /* INSTRUCTIONS */
+
+        .instructions {
+            border: 1px solid #222;
+            padding: 14px 18px;
+            margin-bottom: 30px;
+        }
+
+        .instructions h3 {
+            margin-bottom: 8px;
+        }
+
+        .instructions ul {
+            padding-left: 22px;
+        }
+
+        .instructions li {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        /* SECTION */
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .section-heading {
+            text-align: center;
+            border-top: 2px solid #111;
+            border-bottom: 2px solid #111;
+            padding: 9px;
+            margin-bottom: 20px;
+        }
+
+        .section-heading h3 {
+            font-size: 19px;
+        }
+
+        .section-heading p {
+            margin-top: 4px;
+            font-size: 15px;
+        }
+
+        /* QUESTIONS */
+
+        .question {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            font-weight: bold;
+        }
+
+        .marks {
+            float: right;
+            font-weight: bold;
+        }
+
+        .sub-question {
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+
+        /* SUBJECT DIVIDER */
+
+        .subject-divider {
+            text-align: center;
+            margin: 40px 0 25px;
+            border-top: 1px solid #555;
+            padding-top: 12px;
+        }
+
+        .subject-divider h2 {
+            font-size: 21px;
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 45px;
+            padding-top: 15px;
+            border-top: 1px solid #555;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* PRINT */
+
+        @media print {
+
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .top-buttons {
+                display: none;
+            }
+
+            .paper {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                padding: 25px 40px;
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .paper {
+                padding: 25px 20px;
+            }
+
+            .paper-info {
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+
+            .header h2 {
+                font-size: 19px;
+            }
+
+            .question {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BUTTONS -->
+
+    <div class="top-buttons">
+
+        <button onclick="window.location.href='previous-year-questions.html'">
+            ← Back
+        </button>
+
+        <button onclick="window.print()">
+            🖨 Print / Save as PDF
+        </button>
+
+    </div>
+
+
+    <!-- PAPER -->
+
+    <div class="paper">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h1>EduSetu</h1>
+
+            <h2>COMBINED PRACTICE QUESTION PAPER</h2>
+
+            <p>Academic Practice Paper – 2025</p>
+
+        </div>
+
+
+        <!-- PAPER INFO -->
+
+        <div class="paper-info">
+
+            <span>Time: 3 Hours</span>
+
+            <span>Maximum Marks: 70</span>
+
+        </div>
+
+
+        <div class="title">
+
+            <h2>C++ &nbsp; | &nbsp; Mathematics &nbsp; | &nbsp; Physics</h2>
+
+            <p>Year-wise Combined Practice – 2025</p>
+
+        </div>
+
+
+        <!-- INSTRUCTIONS -->
+
+        <div class="instructions">
+
+            <h3>Instructions:</h3>
+
+            <ul>
+
+                <li>Attempt all questions.</li>
+
+                <li>Read each question carefully before answering.</li>
+
+                <li>Show necessary steps for numerical problems.</li>
+
+                <li>Use proper units wherever required.</li>
+
+                <li>Draw neat diagrams wherever necessary.</li>
+
+                <li>
+                    This is a practice paper created for EduSetu
+                    and is not an official university question paper.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ================= C++ ================= -->
+
+        <div class="section">
+
+            <div class="subject-divider">
+
+                <h2>SECTION A – C++ & PROGRAMMING</h2>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Very Short Answer Questions</h3>
+
+                <p>5 × 2 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q1.</span>
+
+                What is a variable in C++?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q2.</span>
+
+                What is the difference between <b>while</b> and <b>for</b> loops?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q3.</span>
+
+                What is function overloading?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q4.</span>
+
+                What is an array?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q5.</span>
+
+                What is the purpose of a class in C++?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Short Answer Questions</h3>
+
+                <p>2 × 5 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q6.</span>
+
+                Explain the difference between call by value
+                and call by reference with examples.
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q7.</span>
+
+                Explain the basic concepts of Object-Oriented
+                Programming in C++.
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= MATHEMATICS ================= -->
+
+        <div class="section">
+
+            <div class="subject-divider">
+
+                <h2>SECTION B – MATHEMATICS</h2>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Very Short Answer Questions</h3>
+
+                <p>5 × 2 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q8.</span>
+
+                Find the derivative of
+
+                <b>y = x² + 3x + 5</b>.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q9.</span>
+
+                Solve the equation:
+
+                <b>2x + 5 = 15</b>.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q10.</span>
+
+                Find the determinant of
+
+                <b>| 2  3 |</b><br>
+                <span style="margin-left: 35px;">
+                    <b>| 1  4 |</b>
+                </span>
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q11.</span>
+
+                Find:
+
+                <b>∫ 2x dx</b>.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q12.</span>
+
+                What is the probability of getting a head
+                when a fair coin is tossed once?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Short Answer Questions</h3>
+
+                <p>2 × 5 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q13.</span>
+
+                Solve the following linear equations and
+                show all necessary steps:
+
+                <br>
+
+                <span class="sub-question">
+                    3x + 6 = 18
+                </span>
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q14.</span>
+
+                Differentiate the following function:
+
+                <br>
+
+                <span class="sub-question">
+                    y = 3x³ - 4x² + 2x + 5
+                </span>
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PHYSICS ================= -->
+
+        <div class="section">
+
+            <div class="subject-divider">
+
+                <h2>SECTION C – PHYSICS</h2>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Very Short Answer Questions</h3>
+
+                <p>5 × 2 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q15.</span>
+
+                State Newton's Second Law of Motion.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q16.</span>
+
+                Define work done by a force and write its SI unit.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q17.</span>
+
+                State the First Law of Thermodynamics.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q18.</span>
+
+                Define frequency and write its SI unit.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q19.</span>
+
+                What is the SI unit of electric charge?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Short Answer Questions</h3>
+
+                <p>2 × 5 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q20.</span>
+
+                Explain Newton's laws of motion with suitable examples.
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q21.</span>
+
+                Explain the First Law of Thermodynamics
+                and write its mathematical form.
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            <p>— End of Question Paper —</p>
+
+            <p>EduSetu | Digital Learning Platform</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

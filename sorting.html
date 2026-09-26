@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting - DSA with C++ | EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <!-- HEADER -->
+    <div class="lesson-header">
+        <h1>Sorting <span>with C++</span></h1>
+        <p>Learn how to arrange elements in an array step by step.</p>
+    </div>
+
+
+    <!-- WHAT IS SORTING -->
+    <div class="lesson-card">
+
+        <h2>🔄 What is Sorting?</h2>
+
+        <p>
+            Sorting means arranging elements in a particular order.
+        </p>
+
+        <p>
+            Usually hum numbers ko <strong>ascending order</strong>
+            ya <strong>descending order</strong> me arrange karte hain.
+        </p>
+
+        <h3>Example:</h3>
+
+        <pre>
+Before Sorting:
+{5, 2, 8, 1, 3}
+
+After Sorting:
+{1, 2, 3, 5, 8}
+        </pre>
+
+    </div>
+
+
+    <!-- BUBBLE SORT -->
+    <div class="lesson-card">
+
+        <h2>🫧 1. Bubble Sort</h2>
+
+        <p>
+            Bubble Sort me hum adjacent elements ko compare karte hain.
+            Agar left element bada hai, to dono elements ko swap kar dete hain.
+        </p>
+
+        <h3>Example:</h3>
+
+        <pre>
+Array:
+{5, 2, 4, 1}
+
+First comparison:
+
+5 > 2
+Swap
+
+{2, 5, 4, 1}
+
+Then:
+
+5 > 4
+Swap
+
+{2, 4, 5, 1}
+        </pre>
+
+        <h3>Basic Logic:</h3>
+
+        <pre>
+for(int i = 0; i &lt; n - 1; i++) {
+
+    for(int j = 0; j &lt; n - i - 1; j++) {
+
+        if(arr[j] &gt; arr[j + 1]) {
+
+            swap(arr[j], arr[j + 1]);
+
+        }
+    }
+}
+        </pre>
+
+        <h3>C++ Code:</h3>
+
+        <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+    int arr[] = {5, 2, 4, 1};
+    int n = 4;
+
+    for(int i = 0; i &lt; n - 1; i++) {
+
+        for(int j = 0; j &lt; n - i - 1; j++) {
+
+            if(arr[j] &gt; arr[j + 1]) {
+
+                swap(arr[j], arr[j + 1]);
+
+            }
+        }
+    }
+
+    for(int i = 0; i &lt; n; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+
+    return 0;
+}
+        </pre>
+
+        <div class="output-box">
+            Output: 1 2 4 5
+        </div>
+
+        <h3>Time Complexity:</h3>
+
+        <p>
+            <strong>O(n²)</strong>
+        </p>
+
+    </div>
+
+
+    <!-- SELECTION SORT -->
+    <div class="lesson-card">
+
+        <h2>🎯 2. Selection Sort</h2>
+
+        <p>
+            Selection Sort me hum har position ke liye
+            <strong>minimum element</strong> find karte hain
+            aur usse correct position par rakhte hain.
+        </p>
+
+        <h3>Example:</h3>
+
+        <pre>
+Array:
+{5, 2, 4, 1}
+
+Minimum = 1
+
+1 ko first position par rakhenge:
+
+{1, 2, 4, 5}
+        </pre>
+
+        <h3>Basic Logic:</h3>
+
+        <pre>
+for(int i = 0; i &lt; n - 1; i++) {
+
+    int minIndex = i;
+
+    for(int j = i + 1; j &lt; n; j++) {
+
+        if(arr[j] &lt; arr[minIndex]) {
+            minIndex = j;
+        }
+    }
+
+    swap(arr[i], arr[minIndex]);
+}
+        </pre>
+
+        <h3>C++ Code:</h3>
+
+        <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+    int arr[] = {5, 2, 4, 1};
+    int n = 4;
+
+    for(int i = 0; i &lt; n - 1; i++) {
+
+        int minIndex = i;
+
+        for(int j = i + 1; j &lt; n; j++) {
+
+            if(arr[j] &lt; arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        swap(arr[i], arr[minIndex]);
+    }
+
+    for(int i = 0; i &lt; n; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+
+    return 0;
+}
+        </pre>
+
+        <div class="output-box">
+            Output: 1 2 4 5
+        </div>
+
+        <h3>Time Complexity:</h3>
+
+        <p>
+            <strong>O(n²)</strong>
+        </p>
+
+    </div>
+
+
+    <!-- COMPARISON -->
+    <div class="lesson-card">
+
+        <h2>📌 Bubble Sort vs Selection Sort</h2>
+
+        <div class="data-type-table">
+
+            <div class="data-row data-heading">
+                <div>Bubble Sort</div>
+                <div>Selection Sort</div>
+            </div>
+
+            <div class="data-row">
+                <div>Adjacent elements compare karta hai</div>
+                <div>Minimum element find karta hai</div>
+            </div>
+
+            <div class="data-row">
+                <div>Repeated swapping</div>
+                <div>Usually one swap per position</div>
+            </div>
+
+            <div class="data-row">
+                <div>O(n²)</div>
+                <div>O(n²)</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRACTICE -->
+    <div class="practice-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            Given the array:
+        </p>
+
+        <pre>
+{7, 3, 9, 2, 5}
+        </pre>
+
+        <p>
+            Use <strong>Bubble Sort</strong> to arrange the array
+            in ascending order.
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- TRY YOURSELF -->
+    <div class="lesson-card">
+
+        <h2>💻 Try It Yourself</h2>
+
+        <p>
+            Apna C++ sorting code yahan likho:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your C++ code here..."
+        ></textarea>
+
+        <br><br>
+
+        <button onclick="showCode()">
+            Show My Code
+        </button>
+
+        <pre id="solutionBox"></pre>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <div class="lesson-navigation">
+
+        <a href="dsa.html">
+            ← Back to DSA
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hint").textContent =
+        "Hint: Har pass me adjacent elements compare karo. Agar left element bada ho, dono ko swap karo.";
+
+}
+
+
+function showCode() {
+
+    const userCode =
+        document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent =
+        userCode;
+
+}
+
+</script>
+
+</body>
+</html>

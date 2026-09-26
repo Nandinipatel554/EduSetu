@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability & Statistics - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>Probability & Statistics</h1>
+        <p>Learn the basics of probability and statistics step by step.</p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>What is Probability?</h2>
+
+        <p>
+            Probability is used to measure the chance of an event happening.
+            Its value lies between 0 and 1.
+        </p>
+
+        <p class="math-question">
+            Probability = Favourable Outcomes / Total Outcomes
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>1. Sample Space</h2>
+
+        <p>
+            The sample space is the set of all possible outcomes of an experiment.
+        </p>
+
+        <p>
+            <strong>Example:</strong> When a coin is tossed:
+        </p>
+
+        <p class="math-question">
+            S = {Heads, Tails}
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>2. Events</h2>
+
+        <p>
+            An event is a specific outcome or group of outcomes from
+            the sample space.
+        </p>
+
+        <p>
+            <strong>Example:</strong> Getting a Head when a coin is tossed.
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>3. Basic Probability Formula</h2>
+
+        <p>
+            If all outcomes are equally likely, then:
+        </p>
+
+        <p class="math-question">
+            P(E) = Favourable Outcomes / Total Outcomes
+        </p>
+
+        <p>
+            For example, the probability of getting a Head from a fair coin:
+        </p>
+
+        <p class="math-question">
+            P(Head) = 1/2
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>4. Mean</h2>
+
+        <p>
+            Mean is the average of a set of numbers.
+        </p>
+
+        <p class="math-question">
+            Mean = Sum of all values / Number of values
+        </p>
+
+        <p>
+            Example:
+        </p>
+
+        <p class="math-question">
+            2, 4, 6
+            <br><br>
+            Mean = (2 + 4 + 6) / 3 = 4
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>5. Median</h2>
+
+        <p>
+            Median is the middle value when the data is arranged in
+            ascending or descending order.
+        </p>
+
+        <p class="math-question">
+            2, 4, 6, 8, 10
+            <br><br>
+            Median = 6
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>6. Mode</h2>
+
+        <p>
+            Mode is the value that occurs most frequently in a data set.
+        </p>
+
+        <p class="math-question">
+            2, 3, 3, 4, 5
+            <br><br>
+            Mode = 3
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>7. Variance</h2>
+
+        <p>
+            Variance measures how far the values in a data set are
+            spread from their mean.
+        </p>
+
+        <p class="math-question">
+            Variance = Average of squared differences from the mean
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>8. Standard Deviation</h2>
+
+        <p>
+            Standard deviation tells us how much the values in a data set
+            differ from the mean.
+        </p>
+
+        <p class="math-question">
+            Standard Deviation = √Variance
+        </p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>Example</h2>
+
+        <p>
+            Find the mean of:
+        </p>
+
+        <p class="math-question">
+            5, 10, 15
+        </p>
+
+        <p>
+            Sum = 5 + 10 + 15 = 30
+        </p>
+
+        <p>
+            Number of values = 3
+        </p>
+
+        <p class="math-question">
+            Mean = 30 / 3 = 10
+        </p>
+    </div>
+
+    <div class="practice-card">
+        <h2>Practice Question</h2>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            Find the mean of the following numbers:
+        </p>
+
+        <p class="math-question">
+            6, 8, 10, 12
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+    </div>
+
+    <div class="lesson-card">
+        <h2>Try Yourself</h2>
+
+        <p>
+            Write your answer below:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your answer here..."
+        ></textarea>
+
+        <button onclick="showAnswer()">Submit</button>
+
+        <div id="solutionBox">
+            Your answer will appear here.
+        </div>
+    </div>
+
+    <div class="lesson-navigation">
+        <a href="math-resources.html">← Back to Mathematics</a>
+    </div>
+
+</section>
+
+<script>
+function showHint() {
+    document.getElementById("hint").textContent =
+        "Hint: Add all four numbers and divide the result by 4.";
+}
+
+function showAnswer() {
+    const answer = document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent = answer;
+}
+</script>
+
+</body>
+</html>

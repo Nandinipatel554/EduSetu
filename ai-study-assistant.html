@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSetu | AI Study Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .ai-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .ai-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .ai-heading .section-label {
+            color: #6c63ff;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .ai-heading h1 {
+            font-size: 38px;
+            margin: 10px 0;
+        }
+
+        .ai-heading h1 span {
+            color: #6c63ff;
+        }
+
+        .ai-heading p {
+            color: #666;
+        }
+
+        .ai-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .ai-card label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .ai-card select,
+        .ai-card textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .ai-card textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .ask-btn {
+            margin-top: 20px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #6c63ff;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .ask-btn:hover {
+            opacity: 0.9;
+        }
+
+        .answer-box {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f5f4ff;
+            border-radius: 12px;
+            display: none;
+        }
+
+        .answer-box h3 {
+            margin-top: 0;
+            color: #6c63ff;
+        }
+
+        .back-btn {
+            display: block;
+            width: fit-content;
+            margin: 25px auto 0;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #6c63ff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Edu<span>Setu</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="dashboard.html" class="login-btn">
+                    Dashboard
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- AI Study Assistant -->
+    <main>
+
+        <section class="ai-section">
+
+            <div class="ai-heading">
+
+                <p class="section-label">AI STUDY ASSISTANT</p>
+
+                <h1>
+                    Learn Smarter with <span>AI 🤖</span>
+                </h1>
+
+                <p>
+                    Ask your study questions and get simple learning guidance.
+                </p>
+
+            </div>
+
+
+            <div class="ai-card">
+
+                <label for="subject">
+                    Select Subject
+                </label>
+
+                <select id="subject">
+                    <option value="C++">C++ & Programming</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Physics">Physics</option>
+                </select>
+
+
+                <label for="question">
+                    Ask Your Question
+                </label>
+
+                <textarea
+                    id="question"
+                    placeholder="Example: Explain arrays in simple language..."
+                ></textarea>
+
+
+                <button class="ask-btn" onclick="askAI()">
+                    Ask AI 🤖
+                </button>
+
+
+                <div class="answer-box" id="answerBox">
+
+                    <h3>Study Assistant</h3>
+
+                    <p id="answerText"></p>
+
+                </div>
+
+            </div>
+
+
+            <a href="dashboard.html" class="back-btn">
+                ← Back to Dashboard
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="logo">
+                    Edu<span>Setu</span>
+                </div>
+
+                <p>
+                    Bridging the digital education gap.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 EduSetu. Built for digital inclusion.</p>
+        </div>
+
+    </footer>
+
+
+    <script>
+
+async function askAI() {
+
+    const subject = document.getElementById("subject").value;
+    const question = document.getElementById("question").value.trim();
+
+    const answerBox = document.getElementById("answerBox");
+    const answerText = document.getElementById("answerText");
+
+    if (question === "") {
+        alert("Please enter your question first.");
+        return;
+    }
+
+    answerBox.style.display = "block";
+    answerText.textContent = "🤖 EduSetu AI is thinking...";
+
+    try {
+
+        const response = await fetch("http://localhost:5000/api/ask-ai", {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                question: subject + ": " + question
+            })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+
+            answerText.textContent = data.answer;
+
+        } else {
+
+            answerText.textContent =
+                "Sorry, something went wrong.";
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        answerText.textContent =
+            "Backend se connection nahi ho pa raha.";
+
+    }
+}
+
+</script>
+
+</body>
+
+</html>

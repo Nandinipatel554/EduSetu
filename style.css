@@ -1,0 +1,1407 @@
+/* ================= BASIC RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.logo span {
+    color: #16a34a;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.login-btn {
+    background: white;
+    border: 1px solid #2563eb;
+    color: #2563eb;
+}
+
+.signup-btn {
+    background: #2563eb;
+    border: 1px solid #2563eb;
+    color: white;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    min-height: 600px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-heading {
+    color: #16a34a;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero-description {
+    color: #6b7280;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.primary-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+}
+
+
+/* ================= HERO CARD ================= */
+
+.hero-card {
+    width: 390px;
+    padding: 25px;
+
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header span {
+    font-size: 35px;
+}
+
+.card-header h3 {
+    color: #111827;
+}
+
+.card-header p {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.dashboard-items {
+    margin-top: 20px;
+}
+
+.dashboard-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 5px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dashboard-item > span {
+    font-size: 25px;
+}
+
+.dashboard-item strong {
+    display: block;
+    font-size: 15px;
+}
+
+.dashboard-item small {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features-section {
+    background: #f8fafc;
+    padding: 90px 30px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-heading > p:first-child {
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    margin: 12px 0;
+    color: #111827;
+}
+
+.section-heading h2 span {
+    color: #2563eb;
+}
+
+.section-heading p:last-child {
+    color: #6b7280;
+}
+
+.features-container {
+    max-width: 1100px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.feature-card p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.section-label {
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.about-content h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 15px 0 20px;
+    color: #111827;
+}
+
+.about-content p:not(.section-label) {
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.about-box {
+    min-width: 300px;
+    padding: 30px;
+    background: #eff6ff;
+    border-radius: 18px;
+}
+
+.about-stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px 0;
+    border-bottom: 1px solid #dbeafe;
+}
+
+.about-stat:last-child {
+    border-bottom: none;
+}
+
+.about-stat strong {
+    font-size: 30px;
+}
+
+.about-stat span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* ================= CTA ================= */
+
+.cta-section {
+    text-align: center;
+    padding: 80px 30px;
+    background: #eff6ff;
+}
+
+.cta-section h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.cta-section p {
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111827;
+    color: white;
+    padding: 45px 30px 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content .logo {
+    color: white;
+}
+
+.footer-content .logo span {
+    color: #60a5fa;
+}
+
+.footer-content p {
+    color: #9ca3af;
+    margin-top: 8px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #374151;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-box {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .cta-section h2 {
+        font-size: 30px;
+    }
+
+    .about-section {
+        padding: 70px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+/* ================= LOGIN PAGE ================= */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: #f8fafc;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.auth-logo {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+.auth-logo span {
+    color: #16a34a;
+}
+
+.auth-card h1 {
+    text-align: center;
+    color: #111827;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.form-options label {
+    color: #6b7280;
+}
+
+.form-options a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-btn:hover {
+    background: #1d4ed8;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #e5e7eb;
+}
+
+.signup-text {
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #374151;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-home:hover {
+    color: #2563eb;
+}
+
+
+/* ================= LOGIN MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    .auth-container {
+        padding: 20px;
+    }
+
+    .auth-card {
+        padding: 30px 22px;
+    }
+
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-section {
+    padding: 80px 8%;
+    background: #f8fafc;
+    min-height: 80vh;
+}
+
+.dashboard-welcome {
+    margin-bottom: 45px;
+}
+
+.dashboard-welcome h1 {
+    font-size: 42px;
+    color: #111827;
+    margin: 10px 0;
+}
+
+.dashboard-welcome h1 span {
+    color: #2563eb;
+}
+
+.dashboard-welcome p {
+    color: #6b7280;
+    font-size: 16px;
+    max-width: 650px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-icon {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.dashboard-card h3 {
+    color: #111827;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.dashboard-card button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.dashboard-card button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Dashboard Responsive */
+
+@media (max-width: 900px) {
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-section {
+        padding: 50px 20px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 32px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ================= LEARNING RESOURCES ================= */
+
+.resources-section {
+    padding: 80px 8%;
+    background: #f8fafc;
+    min-height: 80vh;
+}
+
+.resources-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.resources-heading h1 {
+    font-size: 42px;
+    color: #111827;
+    margin: 10px 0;
+}
+
+.resources-heading h1 span {
+    color: #2563eb;
+}
+
+.resources-heading p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.resource-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.resource-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.resource-card h3 {
+    color: #111827;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.resource-card button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.resource-card button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Resources Responsive */
+
+@media (max-width: 900px) {
+
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .resources-section {
+        padding: 50px 20px;
+    }
+
+    .resources-heading h1 {
+        font-size: 32px;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ================= LESSON PAGE ================= */
+
+.lesson-section {
+    padding: 70px 8%;
+    background: #f8fafc;
+    min-height: 80vh;
+}
+
+.lesson-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.lesson-header h1 {
+    font-size: 42px;
+    color: #111827;
+    margin: 10px 0;
+}
+
+.lesson-header h1 span {
+    color: #2563eb;
+}
+
+.lesson-header p {
+    color: #6b7280;
+}
+
+.lesson-card {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.lesson-card h2 {
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.lesson-card p {
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.lesson-card pre {
+    background: #111827;
+    color: #f9fafb;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    line-height: 1.6;
+}
+
+.output-box {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    color: #111827;
+}
+
+.data-type-table {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.data-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 13px 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.data-row:last-child {
+    border-bottom: none;
+}
+
+.data-heading {
+    font-weight: 700;
+    background: #f3f4f6;
+}
+
+.practice-card {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+.practice-card h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.practice-card p {
+    color: #374151;
+    line-height: 1.7;
+}
+
+.practice-card button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.hint-text {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.lesson-navigation {
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.lesson-navigation a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#codeInput {
+    width: 100%;
+    min-height: 220px;
+    padding: 18px;
+    background: #f8fafc;
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+}
+
+#codeInput:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ================= SOLUTION BOX ================= */
+
+#solutionBox {
+    margin-top: 20px;
+    background: #111827;
+    color: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    overflow-x: auto;
+    line-height: 1.6;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    min-height: 50px;
+}
+
+
+/* Mathematics Dark Theme */
+
+.lesson-section {
+    min-height: 100vh;
+    padding: 60px 8%;
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+.lesson-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.lesson-header h1 {
+    color: #ffffff;
+}
+
+.lesson-header p {
+    color: #94a3b8;
+}
+
+.lesson-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 22px;
+}
+
+.lesson-card h2 {
+    color: #ffffff;
+}
+
+.lesson-card p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.lesson-card button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.lesson-card button:hover {
+    background: #1d4ed8;
+}
+
+.lesson-navigation {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.lesson-navigation a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+/* ============================= */
+/*      PHYSICS PAGE STYLE       */
+/* ============================= */
+
+.lesson-section {
+    min-height: 100vh;
+    padding: 70px 8%;
+    background: linear-gradient(135deg, #0f172a, #111827, #172554);
+    color: #f8fafc;
+}
+
+/* Header */
+
+.lesson-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.lesson-header h1 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.lesson-header p {
+    color: #94a3b8;
+    font-size: 17px;
+}
+
+/* Lesson Cards */
+
+.lesson-card {
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid #334155;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* Card Hover */
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.18);
+}
+
+/* Headings */
+
+.lesson-card h2 {
+    color: #60a5fa;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.lesson-card h3 {
+    color: #93c5fd;
+}
+
+/* Paragraph */
+
+.lesson-card p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Formula */
+
+.formula {
+    background: linear-gradient(135deg, #111827, #1e293b);
+    border: 1px solid #3b82f6;
+    color: #ffffff;
+
+    padding: 16px 25px;
+    margin: 18px 0;
+
+    border-radius: 12px;
+
+    display: inline-block;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 20px rgba(37, 99, 235, 0.15);
+}
+
+/* Diagram Box */
+
+.physics-diagram {
+    background: #0b1120;
+    border: 1px solid #334155;
+    border-radius: 16px;
+
+    padding: 25px;
+    margin: 25px 0;
+
+    text-align: center;
+
+    box-shadow:
+        inset 0 0 25px rgba(59, 130, 246, 0.05),
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.physics-diagram:hover {
+    transform: scale(1.01);
+    border-color: #3b82f6;
+}
+
+.physics-diagram svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Buttons */
+
+.lesson-card button {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+
+    border: none;
+    padding: 12px 24px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.lesson-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Practice Answer Box */
+
+#answerBox {
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#answerBox:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Hint */
+
+#hintBox {
+    background: #172554;
+    border-left: 4px solid #3b82f6;
+
+    padding: 18px;
+    border-radius: 8px;
+
+    color: #dbeafe;
+    line-height: 1.7;
+}
+
+/* Result */
+
+#result {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #93c5fd;
+}
+
+/* Navigation */
+
+.lesson-navigation {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.lesson-navigation a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.lesson-navigation a:hover {
+    color: #93c5fd;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .lesson-section {
+        padding: 45px 5%;
+    }
+
+    .lesson-header h1 {
+        font-size: 32px;
+    }
+
+    .lesson-card {
+        padding: 22px;
+    }
+
+    .lesson-card h2 {
+        font-size: 22px;
+    }
+
+    .formula {
+        font-size: 18px;
+    }
+
+    .physics-diagram {
+        padding: 12px;
+    }
+}
+
+.short-note {
+    background: #f8f9ff;
+    border: 1px solid #e5e7ff;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 18px 0;
+}
+
+.short-note h3 {
+    margin-top: 0;
+    color: #4f46e5;
+}
+
+.short-note p {
+    line-height: 1.6;
+    color: #444;
+}
+
+.short-note li {
+    margin: 8px 0;
+}
+
+.code-box {
+    background: #18181b;
+    color: #f4f4f5;
+    padding: 16px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.code-box code {
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+

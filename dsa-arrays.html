@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DSA Arrays - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="lesson-section">
+
+        <!-- Header -->
+        <div class="lesson-header">
+            <p>DSA WITH C++</p>
+            <h1>Arrays <span>Basics</span></h1>
+            <p>Learn the basics of arrays and solve simple problems.</p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="lesson-card">
+            <h2>📘 What is an Array?</h2>
+
+            <p>
+                An array is a data structure used to store multiple values
+                of the same data type.
+            </p>
+
+            <pre>
+int arr[5] = {10, 20, 30, 40, 50};
+            </pre>
+        </div>
+
+        <!-- Indexing -->
+        <div class="lesson-card">
+            <h2>🔢 Array Indexing</h2>
+
+            <p>
+                Array indexing starts from <strong>0</strong>.
+            </p>
+
+            <pre>
+int arr[5] = {10, 20, 30, 40, 50};
+
+cout &lt;&lt; arr[0];
+cout &lt;&lt; arr[2];
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                10 30
+            </div>
+
+            <p>
+                So, for an array of size 5, the indexes are:
+                <strong>0, 1, 2, 3, 4</strong>.
+            </p>
+        </div>
+
+        <!-- Traversal -->
+        <div class="lesson-card">
+            <h2>🔄 Array Traversal</h2>
+
+            <p>
+                Traversal means visiting each element of the array one by one.
+            </p>
+
+            <pre>
+int arr[5] = {10, 20, 30, 40, 50};
+
+for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; arr[i] &lt;&lt; " ";
+}
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                10 20 30 40 50
+            </div>
+        </div>
+
+        <!-- Input -->
+        <div class="lesson-card">
+            <h2>⌨️ Taking Array Input</h2>
+
+            <p>
+                We can take array elements from the user using a loop.
+            </p>
+
+            <pre>
+int arr[5];
+
+for (int i = 0; i &lt; 5; i++) {
+    cin &gt;&gt; arr[i];
+}
+
+for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; arr[i] &lt;&lt; " ";
+}
+            </pre>
+        </div>
+
+        <!-- Maximum -->
+        <div class="lesson-card">
+            <h2>⬆️ Find Maximum Element</h2>
+
+            <p>
+                We can use a loop to find the largest element in an array.
+            </p>
+
+            <pre>
+int arr[5] = {10, 25, 7, 40, 15};
+
+int maximum = arr[0];
+
+for (int i = 1; i &lt; 5; i++) {
+
+    if (arr[i] &gt; maximum) {
+        maximum = arr[i];
+    }
+}
+
+cout &lt;&lt; maximum;
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                40
+            </div>
+        </div>
+
+        <!-- Minimum -->
+        <div class="lesson-card">
+            <h2>⬇️ Find Minimum Element</h2>
+
+            <p>
+                Similarly, we can find the smallest element.
+            </p>
+
+            <pre>
+int arr[5] = {10, 25, 7, 40, 15};
+
+int minimum = arr[0];
+
+for (int i = 1; i &lt; 5; i++) {
+
+    if (arr[i] &lt; minimum) {
+        minimum = arr[i];
+    }
+}
+
+cout &lt;&lt; minimum;
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                7
+            </div>
+        </div>
+
+        <!-- Two Sum -->
+        <div class="lesson-card">
+            <h2>🎯 Two Sum</h2>
+
+            <p>
+                In the Two Sum problem, we need to find two elements
+                whose sum is equal to a given target.
+            </p>
+
+            <pre>
+int arr[5] = {2, 7, 11, 15, 3};
+
+int target = 9;
+
+for (int i = 0; i &lt; 5; i++) {
+
+    for (int j = i + 1; j &lt; 5; j++) {
+
+        if (arr[i] + arr[j] == target) {
+
+            cout &lt;&lt; i &lt;&lt; " " &lt;&lt; j;
+        }
+    }
+}
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                0 1
+            </div>
+
+            <p>
+                Because <strong>arr[0] + arr[1] = 2 + 7 = 9</strong>.
+            </p>
+        </div>
+
+        <!-- Important Points -->
+        <div class="lesson-card">
+            <h2>💡 Important Points</h2>
+
+            <ul>
+                <li>Array stores multiple values of the same type.</li>
+                <li>Indexing starts from 0.</li>
+                <li>Last index is size - 1.</li>
+                <li>Loops are commonly used to traverse arrays.</li>
+                <li>Two nested loops can be used for some basic array problems.</li>
+            </ul>
+        </div>
+
+        <!-- Practice -->
+        <div class="practice-card">
+
+            <h2>🧩 Practice Question</h2>
+
+            <p>
+                Given an array of 5 integers, find and print the
+                <strong>maximum element</strong>.
+            </p>
+
+            <button onclick="showHint()">
+                Show Hint
+            </button>
+
+            <p id="hint" class="hint-text"></p>
+
+        </div>
+
+        <!-- Try Yourself -->
+        <div class="coding-card">
+
+            <h2>💻 Try It Yourself</h2>
+
+            <p>
+                Write your C++ code below.
+            </p>
+
+            <textarea
+                id="codeInput"
+                placeholder="Write your C++ code here..."
+            ></textarea>
+
+            <button onclick="showCode()">
+                Check Solution
+            </button>
+
+            <pre id="solutionBox"></pre>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-navigation">
+
+            <a href="dsa.html">
+                ← Back to DSA
+            </a>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function showHint() {
+
+            document.getElementById("hint").textContent =
+                "Hint: Start maximum with arr[0], then compare every element using a loop.";
+
+        }
+
+        function showCode() {
+
+            const userCode =
+                document.getElementById("codeInput").value;
+
+            document.getElementById("solutionBox").textContent =
+                userCode;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>Algebra</h1>
+        <p>Learn the basics of algebra step by step.</p>
+    </div>
+
+    <!-- What is Algebra -->
+    <div class="lesson-card">
+        <h2>What is Algebra?</h2>
+        <p>
+            Algebra is a branch of mathematics in which letters and symbols
+            are used to represent unknown values.
+        </p>
+
+        <p><strong>Example:</strong></p>
+
+        <pre>
+x + 5 = 10
+        </pre>
+
+        <p>
+            Here, <strong>x</strong> is the unknown value.
+        </p>
+    </div>
+
+    <!-- Variables and Constants -->
+    <div class="lesson-card">
+        <h2>1. Variables & Constants</h2>
+
+        <p>
+            A <strong>variable</strong> represents a value that can change.
+            A <strong>constant</strong> is a fixed value.
+        </p>
+
+        <pre>
+Example:
+
+3x + 7
+
+x → Variable
+3 → Coefficient
+7 → Constant
+        </pre>
+    </div>
+
+    <!-- Expressions -->
+    <div class="lesson-card">
+        <h2>2. Algebraic Expressions</h2>
+
+        <p>
+            An algebraic expression is a combination of variables,
+            constants and mathematical operators.
+        </p>
+
+        <pre>
+Examples:
+
+2x + 5
+3a - 7
+x² + 2x + 1
+        </pre>
+    </div>
+
+    <!-- Linear Equation -->
+    <div class="lesson-card">
+        <h2>3. Linear Equations</h2>
+
+        <p>
+            A linear equation has the highest power of the variable as 1.
+        </p>
+
+        <pre>
+Example:
+
+2x + 4 = 10
+
+2x = 10 - 4
+
+2x = 6
+
+x = 3
+        </pre>
+    </div>
+
+    <!-- Quadratic Equation -->
+    <div class="lesson-card">
+        <h2>4. Quadratic Equations</h2>
+
+        <p>
+            A quadratic equation is generally written in the form:
+        </p>
+
+        <pre>
+ax² + bx + c = 0
+        </pre>
+
+        <p>
+            Here, <strong>a ≠ 0</strong>.
+        </p>
+
+        <p><strong>Example:</strong></p>
+
+        <pre>
+x² + 5x + 6 = 0
+        </pre>
+    </div>
+
+    <!-- Important Formulas -->
+    <div class="lesson-card">
+        <h2>5. Important Algebraic Formulas</h2>
+
+        <pre>
+(a + b)² = a² + 2ab + b²
+
+(a - b)² = a² - 2ab + b²
+
+(a + b)(a - b) = a² - b²
+
+(a + b)³ = a³ + 3a²b + 3ab² + b³
+
+(a - b)³ = a³ - 3a²b + 3ab² - b³
+        </pre>
+    </div>
+
+    <!-- Example -->
+    <div class="lesson-card">
+        <h2>6. Example</h2>
+
+        <p>Solve:</p>
+
+        <pre>
+x + 8 = 15
+
+x = 15 - 8
+
+x = 7
+        </pre>
+
+        <p>
+            Therefore, the value of <strong>x is 7</strong>.
+        </p>
+    </div>
+
+    <!-- Practice -->
+    <div class="practice-card">
+    <h2>Practice Question</h2>
+
+    <p><strong>Question:</strong></p>
+
+    <p>
+        Solve the following linear equation and find the value of x:
+    </p>
+
+    <p class="math-question">
+        3x + 6 = 18
+    </p>
+
+    <button onclick="showHint()">Show Hint</button>
+
+    <p id="hint" class="hint-text"></p>
+</div>
+    <!-- Try Yourself -->
+    <div class="lesson-card">
+        <h2>Try Yourself</h2>
+
+        <p>
+            Write your solution or notes below:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your answer here..."
+        ></textarea>
+
+        <button onclick="showAnswer()">Submit</button>
+
+        <div id="solutionBox">
+            Your answer will appear here.
+        </div>
+    </div>
+
+    <div class="lesson-navigation">
+        <a href="math-resources.html">← Back to Mathematics</a>
+    </div>
+
+</section>
+
+<script>
+function showHint() {
+    document.getElementById("hint").textContent =
+        "Hint: First subtract 6 from both sides, then divide by 3.";
+}
+
+function showAnswer() {
+    const answer = document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent = answer;
+}
+</script>
+
+</body>
+</html>

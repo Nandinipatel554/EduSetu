@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Waves & Oscillations - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .physics-diagram {
+            background: #0b1120;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .formula {
+            background: #111827;
+            border: 1px solid #3b82f6;
+            color: #ffffff;
+            padding: 15px 22px;
+            margin: 15px 0;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .practice-input {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: 2px solid #334155;
+            border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        #hintBox {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #172554;
+            border-left: 4px solid #3b82f6;
+            border-radius: 8px;
+            color: #dbeafe;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>🌊 Waves & Oscillations</h1>
+        <p>Understand waves, oscillations, SHM and important wave concepts.</p>
+    </div>
+
+
+    <!-- What are Waves -->
+    <div class="lesson-card">
+
+        <h2>1. What is a Wave?</h2>
+
+        <p>
+            A wave is a disturbance that transfers energy from one place
+            to another without permanently transferring matter.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="650" height="220" viewBox="0 0 650 220">
+
+                <line x1="40" y1="110"
+                      x2="610" y2="110"
+                      stroke="#64748b"
+                      stroke-width="2"/>
+
+                <path d="
+                    M40 110
+                    C80 30,120 30,160 110
+                    C200 190,240 190,280 110
+                    C320 30,360 30,400 110
+                    C440 190,480 190,520 110
+                    C560 30,590 30,610 110"
+                    fill="none"
+                    stroke="#60a5fa"
+                    stroke-width="4"/>
+
+                <text x="270" y="30"
+                      fill="#ffffff"
+                      font-size="18">
+                    Wave
+                </text>
+
+            </svg>
+
+        </div>
+
+        <p>
+            Examples: sound waves, water waves, light waves and seismic waves.
+        </p>
+
+    </div>
+
+
+    <!-- Oscillation -->
+    <div class="lesson-card">
+
+        <h2>2. Oscillatory Motion</h2>
+
+        <p>
+            Oscillatory motion is a repeated to-and-fro motion of an object
+            about its mean position.
+        </p>
+
+        <p>
+            Example: A simple pendulum moving back and forth.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="500" height="280" viewBox="0 0 500 280">
+
+                <line x1="250" y1="30"
+                      x2="250" y2="70"
+                      stroke="#ffffff"
+                      stroke-width="4"/>
+
+                <circle cx="250" cy="75"
+                        r="6"
+                        fill="#ffffff"/>
+
+                <line x1="250" y1="75"
+                      x2="150" y2="190"
+                      stroke="#60a5fa"
+                      stroke-width="3"/>
+
+                <circle cx="150" cy="190"
+                        r="25"
+                        fill="#3b82f6"/>
+
+                <line x1="250" y1="75"
+                      x2="350" y2="190"
+                      stroke="#94a3b8"
+                      stroke-width="3"
+                      stroke-dasharray="8,6"/>
+
+                <circle cx="350" cy="190"
+                        r="25"
+                        fill="#64748b"
+                        opacity="0.7"/>
+
+                <text x="210" y="240"
+                      fill="#ffffff"
+                      font-size="16">
+                    Mean Position
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- Amplitude -->
+    <div class="lesson-card">
+
+        <h2>3. Amplitude, Time Period & Frequency</h2>
+
+        <p>
+            <b>Amplitude (A):</b> Maximum displacement from the mean position.
+        </p>
+
+        <p>
+            <b>Time Period (T):</b> Time required to complete one oscillation.
+        </p>
+
+        <p>
+            <b>Frequency (f):</b> Number of oscillations completed per second.
+        </p>
+
+        <div class="formula">
+            f = 1 / T
+        </div>
+
+        <p>
+            SI unit of frequency is <b>Hertz (Hz)</b>.
+        </p>
+
+    </div>
+
+
+    <!-- SHM -->
+    <div class="lesson-card">
+
+        <h2>4. Simple Harmonic Motion (SHM)</h2>
+
+        <p>
+            Simple Harmonic Motion is an oscillatory motion in which the
+            restoring force is directly proportional to the displacement
+            and acts towards the mean position.
+        </p>
+
+        <div class="formula">
+            F = -kx
+        </div>
+
+        <p>
+            Here, <b>k</b> is the force constant and <b>x</b> is displacement.
+        </p>
+
+    </div>
+
+
+    <!-- Wave Parameters -->
+    <div class="lesson-card">
+
+        <h2>5. Wavelength & Wave Speed</h2>
+
+        <p>
+            <b>Wavelength (λ):</b> Distance between two consecutive
+            points having the same phase, such as two consecutive crests.
+        </p>
+
+        <p>
+            Wave speed depends on wavelength and frequency.
+        </p>
+
+        <div class="formula">
+            v = fλ
+        </div>
+
+        <div class="physics-diagram">
+
+            <svg width="650" height="230" viewBox="0 0 650 230">
+
+                <path d="
+                    M40 120
+                    C80 40,120 40,160 120
+                    C200 200,240 200,280 120
+                    C320 40,360 40,400 120
+                    C440 200,480 200,520 120
+                    C560 40,600 40,630 120"
+                    fill="none"
+                    stroke="#60a5fa"
+                    stroke-width="4"/>
+
+                <line x1="80" y1="55"
+                      x2="320" y2="55"
+                      stroke="#ffffff"
+                      stroke-width="2"/>
+
+                <text x="175" y="40"
+                      fill="#ffffff"
+                      font-size="18">
+                    Wavelength (λ)
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- Sound -->
+    <div class="lesson-card">
+
+        <h2>6. Sound Waves</h2>
+
+        <p>
+            Sound is a mechanical wave that requires a medium to travel.
+        </p>
+
+        <p>
+            Sound waves in air are generally <b>longitudinal waves</b>.
+        </p>
+
+        <p>
+            They consist of alternating regions of compression and rarefaction.
+        </p>
+
+    </div>
+
+
+    <!-- Example -->
+    <div class="lesson-card">
+
+        <h2>7. Example</h2>
+
+        <p>
+            A wave has a frequency of 5 Hz and wavelength of 2 m.
+            Find its speed.
+        </p>
+
+        <div class="formula">
+            v = fλ
+        </div>
+
+        <p>
+            v = 5 × 2
+        </p>
+
+        <p>
+            <b>v = 10 m/s</b> ✅
+        </p>
+
+    </div>
+
+
+    <!-- Practice -->
+    <div class="lesson-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            A wave has a frequency of <b>10 Hz</b> and wavelength of
+            <b>3 m</b>. What is its speed?
+        </p>
+
+        <button onclick="showHint()">
+            💡 Show Hint
+        </button>
+
+        <div id="hintBox">
+            Use the formula:
+            <br><br>
+            <b>v = fλ</b>
+        </div>
+
+        <input
+            type="text"
+            id="answerBox"
+            class="practice-input"
+            placeholder="Enter your answer in m/s"
+        >
+
+        <br><br>
+
+        <button onclick="checkAnswer()">
+            Check Answer
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+
+
+    <div class="lesson-navigation">
+
+        <a href="physics-resources.html">
+            ← Back to Physics
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hintBox").style.display = "block";
+
+}
+
+
+function checkAnswer() {
+
+    let answer = document.getElementById("answerBox").value
+        .toLowerCase()
+        .replace(/\s/g, "");
+
+    if (
+        answer === "30" ||
+        answer === "30m/s" ||
+        answer === "30mps"
+    ) {
+
+        document.getElementById("result").innerHTML =
+            "Correct! Wave speed = 30 m/s ✅";
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+            "Try again. Use v = fλ";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings - DSA with C++ | EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <!-- HEADER -->
+    <div class="lesson-header">
+        <h1>Strings <span>with C++</span></h1>
+        <p>Learn the basics of strings step by step.</p>
+    </div>
+
+
+    <!-- WHAT IS STRING -->
+    <div class="lesson-card">
+
+        <h2>🔤 What is a String?</h2>
+
+        <p>
+            String characters ka collection hota hai.
+            Hum string ka use words ya sentences store karne ke liye karte hain.
+        </p>
+
+        <h3>Example:</h3>
+
+        <pre>
+string name = "Sakshi";
+
+string city = "Indore";
+        </pre>
+
+        <p>
+            C++ me string use karne ke liye:
+        </p>
+
+        <pre>
+#include &lt;string&gt;
+        </pre>
+
+    </div>
+
+
+    <!-- STRING DECLARATION -->
+    <div class="lesson-card">
+
+        <h2>📝 1. String Declaration</h2>
+
+        <p>
+            String declare karne ke liye <strong>string</strong> keyword use karte hain.
+        </p>
+
+        <pre>
+string name;
+        </pre>
+
+        <p>
+            Value assign karna:
+        </p>
+
+        <pre>
+string name = "Sakshi";
+        </pre>
+
+    </div>
+
+
+    <!-- INPUT OUTPUT -->
+    <div class="lesson-card">
+
+        <h2>⌨️ 2. String Input & Output</h2>
+
+        <h3>Using cin:</h3>
+
+        <pre>
+string name;
+
+cin &gt;&gt; name;
+
+cout &lt;&lt; name;
+        </pre>
+
+        <p>
+            <strong>Note:</strong> <code>cin</code> space ke baad ka text read nahi karta.
+        </p>
+
+        <h3>Using getline:</h3>
+
+        <pre>
+string sentence;
+
+getline(cin, sentence);
+
+cout &lt;&lt; sentence;
+        </pre>
+
+        <p>
+            <code>getline()</code> poori line read kar sakta hai, including spaces.
+        </p>
+
+    </div>
+
+
+    <!-- INDEXING -->
+    <div class="lesson-card">
+
+        <h2>🔢 3. String Indexing</h2>
+
+        <p>
+            String me bhi array ki tarah indexing <strong>0</strong> se start hoti hai.
+        </p>
+
+        <pre>
+string name = "Sakshi";
+
+Index:
+
+S → 0
+a → 1
+k → 2
+s → 3
+h → 4
+i → 5
+        </pre>
+
+        <h3>Access a character:</h3>
+
+        <pre>
+cout &lt;&lt; name[0];
+
+Output:
+S
+        </pre>
+
+    </div>
+
+
+    <!-- LENGTH -->
+    <div class="lesson-card">
+
+        <h2>📏 4. String Length</h2>
+
+        <p>
+            String ki length find karne ke liye <strong>length()</strong>
+            function use kar sakte hain.
+        </p>
+
+        <pre>
+string name = "Sakshi";
+
+cout &lt;&lt; name.length();
+
+Output:
+6
+        </pre>
+
+    </div>
+
+
+    <!-- TRAVERSAL -->
+    <div class="lesson-card">
+
+        <h2>🔁 5. String Traversal</h2>
+
+        <p>
+            String ke har character ko loop ki help se access kar sakte hain.
+        </p>
+
+        <pre>
+string name = "Sakshi";
+
+for(int i = 0; i &lt; name.length(); i++) {
+
+    cout &lt;&lt; name[i] &lt;&lt; " ";
+
+}
+        </pre>
+
+        <div class="output-box">
+            Output: S a k s h i
+        </div>
+
+    </div>
+
+
+    <!-- IMPORTANT FUNCTIONS -->
+    <div class="lesson-card">
+
+        <h2>⭐ Important String Functions</h2>
+
+        <div class="data-type-table">
+
+            <div class="data-row data-heading">
+                <div>Function</div>
+                <div>Use</div>
+            </div>
+
+            <div class="data-row">
+                <div>length()</div>
+                <div>String ki length find karna</div>
+            </div>
+
+            <div class="data-row">
+                <div>size()</div>
+                <div>String ka size find karna</div>
+            </div>
+
+            <div class="data-row">
+                <div>push_back()</div>
+                <div>End me character add karna</div>
+            </div>
+
+            <div class="data-row">
+                <div>pop_back()</div>
+                <div>Last character remove karna</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRACTICE -->
+    <div class="practice-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            Given:
+        </p>
+
+        <pre>
+string name = "Education";
+        </pre>
+
+        <p>
+            1. String ki length find karo.<br>
+            2. First character print karo.<br>
+            3. Last character print karo.
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- TRY YOURSELF -->
+    <div class="lesson-card">
+
+        <h2>💻 Try It Yourself</h2>
+
+        <p>
+            Apna C++ code yahan likho:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your C++ code here..."
+        ></textarea>
+
+        <br><br>
+
+        <button onclick="showCode()">
+            Show My Code
+        </button>
+
+        <pre id="solutionBox"></pre>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <div class="lesson-navigation">
+
+        <a href="dsa.html">
+            ← Back to DSA
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hint").textContent =
+        "Hint: length() se length nikalo, name[0] se first character aur name[name.length()-1] se last character milega.";
+
+}
+
+
+function showCode() {
+
+    const userCode =
+        document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent =
+        userCode;
+
+}
+
+</script>
+
+</body>
+</html>

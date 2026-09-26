@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Electromagnetism - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .physics-diagram {
+            background: #0b1120;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .formula {
+            background: #111827;
+            border: 1px solid #3b82f6;
+            color: #ffffff;
+            padding: 15px 22px;
+            margin: 15px 0;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .practice-input {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: 2px solid #334155;
+            border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        #hintBox {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #172554;
+            border-left: 4px solid #3b82f6;
+            border-radius: 8px;
+            color: #dbeafe;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>⚡ Electromagnetism</h1>
+        <p>Learn electricity, current, resistance, magnetic fields and electromagnetic induction.</p>
+    </div>
+
+
+    <!-- Electric Field -->
+    <div class="lesson-card">
+
+        <h2>1. Electric Field</h2>
+
+        <p>
+            An electric field is the region around an electric charge
+            where another charge experiences an electric force.
+        </p>
+
+        <div class="formula">
+            E = F / q
+        </div>
+
+        <p>
+            Here, <b>E</b> is electric field, <b>F</b> is electric force
+            and <b>q</b> is charge.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="550" height="250" viewBox="0 0 550 250">
+
+                <circle cx="275" cy="125"
+                        r="30"
+                        fill="#ef4444"/>
+
+                <text x="267" y="133"
+                      fill="#ffffff"
+                      font-size="22">
+                    +
+                </text>
+
+                <line x1="275" y1="70"
+                      x2="275" y2="30"
+                      stroke="#60a5fa"
+                      stroke-width="3"/>
+
+                <polygon points="275,20 267,35 283,35"
+                         fill="#60a5fa"/>
+
+                <line x1="275" y1="180"
+                      x2="275" y2="220"
+                      stroke="#60a5fa"
+                      stroke-width="3"/>
+
+                <polygon points="275,230 267,215 283,215"
+                         fill="#60a5fa"/>
+
+                <line x1="220" y1="125"
+                      x2="180" y2="125"
+                      stroke="#60a5fa"
+                      stroke-width="3"/>
+
+                <polygon points="170,125 185,117 185,133"
+                         fill="#60a5fa"/>
+
+                <line x1="330" y1="125"
+                      x2="370" y2="125"
+                      stroke="#60a5fa"
+                      stroke-width="3"/>
+
+                <polygon points="380,125 365,117 365,133"
+                         fill="#60a5fa"/>
+
+                <text x="215" y="245"
+                      fill="#ffffff"
+                      font-size="16">
+                    Electric Field
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- Electric Potential -->
+    <div class="lesson-card">
+
+        <h2>2. Electric Potential</h2>
+
+        <p>
+            Electric potential at a point is the work done per unit
+            positive charge in bringing it from infinity to that point.
+        </p>
+
+        <div class="formula">
+            V = W / q
+        </div>
+
+        <p>
+            The SI unit of electric potential is <b>Volt (V)</b>.
+        </p>
+
+    </div>
+
+
+    <!-- Current -->
+    <div class="lesson-card">
+
+        <h2>3. Electric Current</h2>
+
+        <p>
+            Electric current is the rate of flow of electric charge
+            through a conductor.
+        </p>
+
+        <div class="formula">
+            I = Q / t
+        </div>
+
+        <p>
+            The SI unit of current is <b>Ampere (A)</b>.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="600" height="220" viewBox="0 0 600 220">
+
+                <line x1="80" y1="110"
+                      x2="520" y2="110"
+                      stroke="#94a3b8"
+                      stroke-width="5"/>
+
+                <circle cx="150" cy="110"
+                        r="12"
+                        fill="#60a5fa"/>
+
+                <circle cx="250" cy="110"
+                        r="12"
+                        fill="#60a5fa"/>
+
+                <circle cx="350" cy="110"
+                        r="12"
+                        fill="#60a5fa"/>
+
+                <circle cx="450" cy="110"
+                        r="12"
+                        fill="#60a5fa"/>
+
+                <polygon points="500,110 480,100 480,120"
+                         fill="#22c55e"/>
+
+                <text x="240" y="65"
+                      fill="#ffffff"
+                      font-size="18">
+                    Flow of Charge
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- Resistance -->
+    <div class="lesson-card">
+
+        <h2>4. Resistance & Ohm's Law</h2>
+
+        <p>
+            Resistance is the opposition offered by a conductor to the
+            flow of electric current.
+        </p>
+
+        <div class="formula">
+            V = IR
+        </div>
+
+        <p>
+            Here, <b>V</b> is voltage, <b>I</b> is current and
+            <b>R</b> is resistance.
+        </p>
+
+        <p>
+            The SI unit of resistance is <b>Ohm (Ω)</b>.
+        </p>
+
+    </div>
+
+
+    <!-- Magnetic Field -->
+    <div class="lesson-card">
+
+        <h2>5. Magnetic Field</h2>
+
+        <p>
+            A magnetic field is the region around a magnet or current-carrying
+            conductor where magnetic force can be experienced.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="600" height="280" viewBox="0 0 600 280">
+
+                <rect x="240" y="90"
+                      width="120"
+                      height="80"
+                      rx="10"
+                      fill="#ef4444"/>
+
+                <text x="270" y="140"
+                      fill="#ffffff"
+                      font-size="24">
+                    N
+                </text>
+
+                <rect x="360" y="90"
+                      width="120"
+                      height="80"
+                      rx="10"
+                      fill="#3b82f6"/>
+
+                <text x="405" y="140"
+                      fill="#ffffff"
+                      font-size="24">
+                    S
+                </text>
+
+                <path d="M240 90
+                         C130 20,70 100,120 140
+                         C70 180,130 260,240 170"
+                      fill="none"
+                      stroke="#60a5fa"
+                      stroke-width="3"/>
+
+                <path d="M480 90
+                         C590 20,530 100,580 140
+                         C530 180,590 260,480 170"
+                      fill="none"
+                      stroke="#60a5fa"
+                      stroke-width="3"/>
+
+                <text x="225" y="235"
+                      fill="#ffffff"
+                      font-size="17">
+                    Magnetic Field
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- Electromagnetic Induction -->
+    <div class="lesson-card">
+
+        <h2>6. Electromagnetic Induction</h2>
+
+        <p>
+            Electromagnetic induction is the production of an
+            electromotive force (EMF) due to a change in magnetic flux.
+        </p>
+
+        <div class="formula">
+            ε = - dΦ / dt
+        </div>
+
+        <p>
+            This phenomenon was demonstrated by Michael Faraday.
+        </p>
+
+    </div>
+
+
+    <!-- Electromagnet -->
+    <div class="lesson-card">
+
+        <h2>7. Electromagnet</h2>
+
+        <p>
+            An electromagnet is a temporary magnet produced when electric
+            current flows through a coil of wire.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="600" height="250" viewBox="0 0 600 250">
+
+                <rect x="250" y="70"
+                      width="100"
+                      height="110"
+                      rx="10"
+                      fill="#64748b"/>
+
+                <path d="M200 80
+                         C180 100,180 150,200 170
+                         C220 150,220 100,200 80
+                         M400 80
+                         C420 100,420 150,400 170
+                         C380 150,380 100,400 80"
+                      fill="none"
+                      stroke="#f59e0b"
+                      stroke-width="8"/>
+
+                <text x="270" y="130"
+                      fill="#ffffff"
+                      font-size="18">
+                    Iron Core
+                </text>
+
+                <text x="220" y="220"
+                      fill="#ffffff"
+                      font-size="17">
+                    Current-carrying Coil
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- Example -->
+    <div class="lesson-card">
+
+        <h2>8. Example</h2>
+
+        <p>
+            A circuit has a voltage of 12 V and resistance of 4 Ω.
+            Find the current.
+        </p>
+
+        <div class="formula">
+            I = V / R
+        </div>
+
+        <p>
+            I = 12 / 4
+        </p>
+
+        <p>
+            <b>I = 3 A</b> ✅
+        </p>
+
+    </div>
+
+
+    <!-- Practice -->
+    <div class="lesson-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            A circuit has a voltage of <b>20 V</b> and resistance of
+            <b>5 Ω</b>. What is the current?
+        </p>
+
+        <button onclick="showHint()">
+            💡 Show Hint
+        </button>
+
+        <div id="hintBox">
+            Use Ohm's Law:
+            <br><br>
+            <b>I = V / R</b>
+        </div>
+
+        <input
+            type="text"
+            id="answerBox"
+            class="practice-input"
+            placeholder="Enter your answer in A"
+        >
+
+        <br><br>
+
+        <button onclick="checkAnswer()">
+            Check Answer
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+
+
+    <div class="lesson-navigation">
+
+        <a href="physics-resources.html">
+            ← Back to Physics
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hintBox").style.display = "block";
+
+}
+
+
+function checkAnswer() {
+
+    let answer = document.getElementById("answerBox").value
+        .toLowerCase()
+        .replace(/\s/g, "");
+
+    if (
+        answer === "4" ||
+        answer === "4a"
+    ) {
+
+        document.getElementById("result").innerHTML =
+            "Correct! Current = 4 A ✅";
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+            "Try again. Use I = V / R";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

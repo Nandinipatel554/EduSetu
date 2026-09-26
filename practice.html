@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Problems - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>C++ & DSA <span>Practice Problems</span></h1>
+        <p>Practice what you have learned with simple problems.</p>
+    </div>
+
+
+    <!-- C++ Basics -->
+    <div class="lesson-card">
+
+        <h2>🔹 C++ Basics</h2>
+
+        <p><b>Question 1:</b> Take two numbers as input and print their sum.</p>
+
+        <pre>
+Input:
+10 20
+
+Output:
+30
+        </pre>
+
+        <button onclick="showHint('hint1')">Show Hint</button>
+
+        <p id="hint1" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- If Else -->
+    <div class="lesson-card">
+
+        <h2>🔹 If-Else</h2>
+
+        <p>
+            <b>Question 2:</b> Take a number as input and check whether
+            it is even or odd.
+        </p>
+
+        <button onclick="showHint('hint2')">Show Hint</button>
+
+        <p id="hint2" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- Loop -->
+    <div class="lesson-card">
+
+        <h2>🔹 Loops</h2>
+
+        <p>
+            <b>Question 3:</b> Print numbers from 1 to 10 using a loop.
+        </p>
+
+        <button onclick="showHint('hint3')">Show Hint</button>
+
+        <p id="hint3" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- Arrays -->
+    <div class="lesson-card">
+
+        <h2>🔹 Arrays</h2>
+
+        <p>
+            <b>Question 4:</b> Find the maximum element in the array:
+        </p>
+
+        <pre>
+{5, 12, 7, 20, 3}
+        </pre>
+
+        <button onclick="showHint('hint4')">Show Hint</button>
+
+        <p id="hint4" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- Searching -->
+    <div class="lesson-card">
+
+        <h2>🔍 Searching</h2>
+
+        <p>
+            <b>Question 5:</b> Search for <b>15</b> in:
+        </p>
+
+        <pre>
+{5, 10, 15, 20, 25}
+        </pre>
+
+        <p>
+            Use Linear Search.
+        </p>
+
+        <button onclick="showHint('hint5')">Show Hint</button>
+
+        <p id="hint5" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- Sorting -->
+    <div class="lesson-card">
+
+        <h2>🔄 Sorting</h2>
+
+        <p>
+            <b>Question 6:</b> Sort the following array using Bubble Sort:
+        </p>
+
+        <pre>
+{7, 3, 9, 2, 5}
+        </pre>
+
+        <button onclick="showHint('hint6')">Show Hint</button>
+
+        <p id="hint6" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- Strings -->
+    <div class="lesson-card">
+
+        <h2>🔤 Strings</h2>
+
+        <p>
+            <b>Question 7:</b> Find the length of the string:
+        </p>
+
+        <pre>
+string name = "Education";
+        </pre>
+
+        <button onclick="showHint('hint7')">Show Hint</button>
+
+        <p id="hint7" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- Recursion -->
+    <div class="lesson-card">
+
+        <h2>🔁 Recursion</h2>
+
+        <p>
+            <b>Question 8:</b> Write a recursive function to print numbers
+            from <b>n to 1</b>.
+        </p>
+
+        <button onclick="showHint('hint8')">Show Hint</button>
+
+        <p id="hint8" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- Try Yourself -->
+    <div class="practice-card">
+
+        <h2>💻 Try Yourself</h2>
+
+        <p>
+            Write your C++ code for any practice problem here.
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your C++ code here..."></textarea>
+
+        <button onclick="submitCode()">Submit</button>
+
+        <pre id="solutionBox"></pre>
+
+    </div>
+
+
+    <div class="lesson-navigation">
+        <a href="cpp-resources.html">← Back to C++ Resources</a>
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint(id) {
+
+    const hints = {
+
+        hint1:
+            "Use cin to take two numbers and + operator to calculate their sum.",
+
+        hint2:
+            "Use the modulo operator %. If number % 2 == 0, it is even.",
+
+        hint3:
+            "Use a for loop starting from 1 and continue until 10.",
+
+        hint4:
+            "Start maximum with the first element and compare it with every element.",
+
+        hint5:
+            "Traverse the array one element at a time and compare each element with 15.",
+
+        hint6:
+            "Compare adjacent elements and swap them if they are in the wrong order.",
+
+        hint7:
+            "Use the string function length().",
+
+        hint8:
+            "First print n, then call the function with n-1. Stop when n becomes 0."
+    };
+
+    document.getElementById(id).textContent = hints[id];
+}
+
+
+function submitCode() {
+
+    const userCode =
+        document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent =
+        userCode;
+}
+
+</script>
+
+</body>
+</html>

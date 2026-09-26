@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Combined Practice Paper 2024 - EduSetu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", serif;
+            background: #d6d6d6;
+            color: #111;
+            padding: 30px 15px;
+        }
+
+        .top-buttons {
+            max-width: 900px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top-buttons button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            background: #222;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .top-buttons button:hover {
+            background: #444;
+        }
+
+        .paper {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 45px 55px;
+            min-height: 1100px;
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #111;
+            padding-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 7px;
+        }
+
+        .header h2 {
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 16px;
+        }
+
+        .paper-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 18px 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .title h2 {
+            font-size: 24px;
+            text-decoration: underline;
+        }
+
+        .title p {
+            margin-top: 6px;
+            font-size: 16px;
+        }
+
+        .instructions {
+            border: 1px solid #222;
+            padding: 14px 18px;
+            margin-bottom: 30px;
+        }
+
+        .instructions h3 {
+            margin-bottom: 8px;
+        }
+
+        .instructions ul {
+            padding-left: 22px;
+        }
+
+        .instructions li {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .section-heading {
+            text-align: center;
+            border-top: 2px solid #111;
+            border-bottom: 2px solid #111;
+            padding: 9px;
+            margin-bottom: 20px;
+        }
+
+        .section-heading h3 {
+            font-size: 19px;
+        }
+
+        .section-heading p {
+            margin-top: 4px;
+            font-size: 15px;
+        }
+
+        .question {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            font-weight: bold;
+        }
+
+        .marks {
+            float: right;
+            font-weight: bold;
+        }
+
+        .sub-question {
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+
+        .subject-divider {
+            text-align: center;
+            margin: 40px 0 25px;
+            border-top: 1px solid #555;
+            padding-top: 12px;
+        }
+
+        .subject-divider h2 {
+            font-size: 21px;
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 45px;
+            padding-top: 15px;
+            border-top: 1px solid #555;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .top-buttons {
+                display: none;
+            }
+
+            .paper {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                padding: 25px 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .paper {
+                padding: 25px 20px;
+            }
+
+            .paper-info {
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+
+            .header h2 {
+                font-size: 19px;
+            }
+
+            .question {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-buttons">
+
+        <button onclick="window.location.href='previous-year-questions.html'">
+            ← Back
+        </button>
+
+        <button onclick="window.print()">
+            🖨 Print / Save as PDF
+        </button>
+
+    </div>
+
+
+    <div class="paper">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h1>EduSetu</h1>
+
+            <h2>COMBINED PRACTICE QUESTION PAPER</h2>
+
+            <p>Academic Practice Paper – 2024</p>
+
+        </div>
+
+
+        <div class="paper-info">
+
+            <span>Time: 3 Hours</span>
+
+            <span>Maximum Marks: 70</span>
+
+        </div>
+
+
+        <div class="title">
+
+            <h2>C++ &nbsp; | &nbsp; Mathematics &nbsp; | &nbsp; Physics</h2>
+
+            <p>Year-wise Combined Practice – 2024</p>
+
+        </div>
+
+
+        <!-- INSTRUCTIONS -->
+
+        <div class="instructions">
+
+            <h3>Instructions:</h3>
+
+            <ul>
+
+                <li>Attempt all questions.</li>
+
+                <li>Read each question carefully before answering.</li>
+
+                <li>Show necessary steps for numerical problems.</li>
+
+                <li>Use proper units wherever required.</li>
+
+                <li>Draw neat diagrams wherever necessary.</li>
+
+                <li>
+                    This is a practice paper created for EduSetu
+                    and is not an official university question paper.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- C++ -->
+
+        <div class="section">
+
+            <div class="subject-divider">
+
+                <h2>SECTION A – C++ & PROGRAMMING</h2>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Very Short Answer Questions</h3>
+
+                <p>5 × 2 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q1.</span>
+
+                What is the difference between a compiler and an interpreter?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q2.</span>
+
+                What is the use of the <b>if-else</b> statement in C++?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q3.</span>
+
+                What is recursion?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q4.</span>
+
+                Define inheritance in C++.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q5.</span>
+
+                What is a pointer?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Short Answer Questions</h3>
+
+                <p>2 × 5 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q6.</span>
+
+                Explain arrays in C++ with a suitable example.
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q7.</span>
+
+                Explain the four main principles of Object-Oriented Programming.
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- MATHEMATICS -->
+
+        <div class="section">
+
+            <div class="subject-divider">
+
+                <h2>SECTION B – MATHEMATICS</h2>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Very Short Answer Questions</h3>
+
+                <p>5 × 2 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q8.</span>
+
+                Solve:
+
+                <b>3x − 7 = 11</b>.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q9.</span>
+
+                Differentiate:
+
+                <b>y = 3x² − 4x + 2</b>.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q10.</span>
+
+                Find:
+
+                <b>∫ (3x² + 2) dx</b>.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q11.</span>
+
+                Find the determinant of:
+
+                <br>
+
+                <span class="sub-question">
+                    | 4 &nbsp; 2 |<br>
+                    | 3 &nbsp; 5 |
+                </span>
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q12.</span>
+
+                What is the probability of getting an even number
+                when a fair die is thrown once?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Short Answer Questions</h3>
+
+                <p>2 × 5 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q13.</span>
+
+                Solve the equation:
+
+                <br>
+
+                <span class="sub-question">
+                    4x + 8 = 24
+                </span>
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q14.</span>
+
+                Find the derivative of:
+
+                <br>
+
+                <span class="sub-question">
+                    y = 5x³ − 2x² + 4
+                </span>
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHYSICS -->
+
+        <div class="section">
+
+            <div class="subject-divider">
+
+                <h2>SECTION C – PHYSICS</h2>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Very Short Answer Questions</h3>
+
+                <p>5 × 2 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q15.</span>
+
+                Define velocity and write its SI unit.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q16.</span>
+
+                State the law of conservation of energy.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q17.</span>
+
+                Define specific heat capacity.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q18.</span>
+
+                What is Simple Harmonic Motion?
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q19.</span>
+
+                State Ohm's Law.
+
+                <span class="marks">[2]</span>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h3>Short Answer Questions</h3>
+
+                <p>2 × 5 = 10 Marks</p>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q20.</span>
+
+                Explain the law of conservation of mechanical energy
+                with a suitable example.
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+
+            <div class="question">
+
+                <span class="question-number">Q21.</span>
+
+                Explain Ohm's Law and write its mathematical expression.
+
+                <span class="marks">[5]</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            <p>— End of Question Paper —</p>
+
+            <p>EduSetu | Digital Learning Platform</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

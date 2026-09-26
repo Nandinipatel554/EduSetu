@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSetu | Scholarships</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* Scholarship Section */
+        .scholarship-section {
+            padding: 60px 8%;
+        }
+
+        .scholarship-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-label {
+            color: #6c63ff;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .scholarship-heading h1 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .scholarship-heading h1 span {
+            color: #6c63ff;
+        }
+
+        .scholarship-heading p {
+            color: #666;
+        }
+
+        /* Scholarship Cards */
+        .scholarship-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .scholarship-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eee;
+        }
+
+        .scholarship-icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .scholarship-card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .scholarship-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .scholarship-info {
+            margin-top: 15px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Scholarship Buttons */
+        .scholarship-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 16px;
+            background: #6c63ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .scholarship-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 10px 18px;
+            background: #6c63ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Edu<span>Setu</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="dashboard.html" class="login-btn">
+                    Dashboard
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Scholarships -->
+    <main>
+
+        <section class="scholarship-section">
+
+            <div class="scholarship-heading">
+
+                <p class="section-label">SCHOLARSHIPS</p>
+
+                <h1>
+                    Find <span>Scholarships</span> 🎓
+                </h1>
+
+                <p>
+                    Explore scholarship opportunities and financial support
+                    for higher education.
+                </p>
+
+            </div>
+
+
+            <div class="scholarship-grid">
+
+
+                <!-- Government Scholarships -->
+                <div class="scholarship-card">
+
+                    <div class="scholarship-icon">🎓</div>
+
+                    <h3>Government Scholarships</h3>
+
+                    <p>
+                        Explore scholarships provided by central
+                        and state government schemes.
+                    </p>
+
+                    <a href="https://scholarships.gov.in/"
+                       target="_blank"
+                       class="scholarship-btn">
+                        Visit National Scholarship Portal →
+                    </a>
+
+                </div>
+
+
+                <!-- College Scholarships -->
+                <div class="scholarship-card">
+
+                    <div class="scholarship-icon">🏫</div>
+
+                    <h3>College Scholarships</h3>
+
+                    <p>
+                        Find scholarship opportunities offered by
+                        colleges and educational institutions.
+                    </p>
+
+                    <div class="scholarship-info">
+                        Check your college scholarship notices.
+                    </div>
+                    <a href="https://scholarships.gov.in/"
+   target="_blank"
+   class="scholarship-btn">
+    Find Scholarship Opportunities →
+</a>
+
+                </div>
+
+
+                <!-- Merit-Based Scholarships -->
+                <div class="scholarship-card">
+
+                    <div class="scholarship-icon">💰</div>
+
+                    <h3>Merit-Based Scholarships</h3>
+
+                    <p>
+                        Learn about scholarships based on academic
+                        performance and achievements.
+                    </p>
+
+                    <div class="scholarship-info">
+                        Check merit requirements before applying.
+                    </div>
+
+                    <a href="https://scholarships.gov.in/All-Scholarships"
+                       target="_blank"
+                       class="scholarship-btn">
+                        View Scholarship Schemes →
+                    </a>
+
+                </div>
+
+
+                <!-- Eligibility & Documents -->
+                <div class="scholarship-card">
+
+                    <div class="scholarship-icon">📋</div>
+
+                    <h3>Eligibility & Documents</h3>
+
+                    <p>
+                        Understand common eligibility requirements
+                        and documents needed for applications.
+                    </p>
+
+                    <div class="scholarship-info">
+                        Keep marksheets and required certificates ready.
+                    </div>
+
+                    <a href="https://scholarships.gov.in/"
+                       target="_blank"
+                       class="scholarship-btn">
+                        Check Eligibility & Apply →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Back Button -->
+            <a href="dashboard.html" class="back-btn">
+                ← Back to Dashboard
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="logo">
+                    Edu<span>Setu</span>
+                </div>
+
+                <p>
+                    Bridging the digital education gap.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 EduSetu. Built for digital inclusion.</p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSetu | Student Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Edu<span>Setu</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="career-opportunities.html">Opportunities</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <button class="login-btn" onclick="logout()">
+                    Logout
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Dashboard -->
+    <main>
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-welcome">
+
+                <div>
+                    <p class="section-label">STUDENT DASHBOARD</p>
+
+                    <h1>
+                        Welcome to <span>EduSetu</span> 👋
+                    </h1>
+
+                    <p>
+                        Learn, explore opportunities and grow
+                        from anywhere — even with limited internet.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-grid" id="resources">
+
+                <!-- Learning -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        📚
+                    </div>
+
+                    <h3>Learning Resources</h3>
+
+                    <p>
+                        Access notes, video lectures,
+                        PYQs and study materials.
+                    </p>
+
+                   <button onclick="window.location.href='resources.html'">
+                      Explore →
+                </button>
+
+                </div>
+
+
+                <!-- AI -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🤖
+                    </div>
+
+                    <h3>AI Study Assistant</h3>
+
+                    <p>
+                        Ask questions and understand
+                        difficult topics in simple language.
+                    </p>
+<button onclick="window.location.href='ai-study-assistant.html'">
+    Ask AI →
+</button>
+
+                </div>
+
+
+                
+
+                <!-- Scholarships -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        💰
+                    </div>
+
+                    <h3>Scholarships</h3>
+
+                    <p>
+                        Discover scholarships and
+                        education schemes.
+                    </p>
+
+                   <button onclick="window.location.href='scholarships.html'">
+    View Scholarships →
+</button>
+
+                </div>
+
+
+                <!-- Career -->
+                <div class="dashboard-card" id="opportunities">
+
+                    <div class="dashboard-icon">
+                        💼
+                    </div>
+
+                    <h3>Career Opportunities</h3>
+
+                    <p>
+                        Find internships, hackathons
+                        and competitions.
+                    </p>
+
+                   <button onclick="window.location.href='career-opportunities.html'">
+    Explore Careers →
+</button>
+                </div>
+
+
+                <!-- College -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🎓
+                    </div>
+
+                    <h3>College Resources</h3>
+
+                    <p>
+                        Access notices, assignments,
+                        exam dates and college materials.
+                    </p>
+
+                   <button onclick="window.location.href='college-resources.html'">
+    View Resources →
+</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <div class="logo">
+                    Edu<span>Setu</span>
+                </div>
+
+                <p>
+                    Bridging the digital education gap.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 EduSetu. Built for digital inclusion.</p>
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function showMessage(feature) {
+
+            alert(
+                feature +
+                " will be connected soon!"
+            );
+
+        }
+
+
+        function logout() {
+
+            window.location.href = "index.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

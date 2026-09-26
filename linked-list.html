@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List - DSA with C++ | EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <!-- HEADER -->
+    <div class="lesson-header">
+        <h1>Linked List <span>with C++</span></h1>
+        <p>Learn the basics of Linked List step by step.</p>
+    </div>
+
+
+    <!-- WHAT IS LINKED LIST -->
+    <div class="lesson-card">
+
+        <h2>🔗 What is a Linked List?</h2>
+
+        <p>
+            Linked List ek linear data structure hai jisme
+            elements ko <strong>nodes</strong> ke form me store kiya jata hai.
+        </p>
+
+        <p>
+            Har node ke andar generally do parts hote hain:
+        </p>
+
+        <ul>
+            <li><strong>Data</strong> — actual value store karta hai.</li>
+            <li><strong>Next</strong> — next node ka address store karta hai.</li>
+        </ul>
+
+        <h3>Structure:</h3>
+
+        <pre>
+[10 | next] → [20 | next] → [30 | NULL]
+        </pre>
+
+    </div>
+
+
+    <!-- NODE -->
+    <div class="lesson-card">
+
+        <h2>🧩 1. Node</h2>
+
+        <p>
+            Linked List ka basic building block <strong>Node</strong> hota hai.
+        </p>
+
+        <h3>C++ Node:</h3>
+
+        <pre>
+class Node {
+
+public:
+
+    int data;
+    Node* next;
+
+    Node(int value) {
+
+        data = value;
+        next = NULL;
+    }
+};
+        </pre>
+
+        <p>
+            Yahan <strong>data</strong> value store karta hai aur
+            <strong>next</strong> next node ko point karta hai.
+        </p>
+
+    </div>
+
+
+    <!-- HEAD -->
+    <div class="lesson-card">
+
+        <h2>👑 2. Head</h2>
+
+        <p>
+            Linked List ke first node ko access karne ke liye
+            hum <strong>head</strong> pointer use karte hain.
+        </p>
+
+        <pre>
+Node* head = NULL;
+        </pre>
+
+        <p>
+            Initially agar list empty hai to head <strong>NULL</strong> hota hai.
+        </p>
+
+    </div>
+
+
+    <!-- CREATE NODES -->
+    <div class="lesson-card">
+
+        <h2>🏗️ 3. Creating Nodes</h2>
+
+        <p>
+            Hum dynamically nodes create kar sakte hain.
+        </p>
+
+        <pre>
+Node* first = new Node(10);
+Node* second = new Node(20);
+
+first-&gt;next = second;
+        </pre>
+
+        <h3>Structure:</h3>
+
+        <pre>
+[10 | next] → [20 | NULL]
+        </pre>
+
+    </div>
+
+
+    <!-- TRAVERSAL -->
+    <div class="lesson-card">
+
+        <h2>🚶 4. Traversal</h2>
+
+        <p>
+            Traversal ka matlab Linked List ke har node ko
+            one by one visit karna.
+        </p>
+
+        <h3>C++ Code:</h3>
+
+        <pre>
+Node* temp = head;
+
+while(temp != NULL) {
+
+    cout &lt;&lt; temp-&gt;data &lt;&lt; " ";
+
+    temp = temp-&gt;next;
+}
+        </pre>
+
+        <div class="output-box">
+            Example Output: 10 20 30
+        </div>
+
+    </div>
+
+
+    <!-- INSERTION -->
+    <div class="lesson-card">
+
+        <h2>➕ 5. Insertion</h2>
+
+        <p>
+            Linked List me new node add karna
+            <strong>insertion</strong> kehlata hai.
+        </p>
+
+        <h3>Insert at Beginning:</h3>
+
+        <pre>
+Node* newNode = new Node(5);
+
+newNode-&gt;next = head;
+
+head = newNode;
+        </pre>
+
+        <h3>Before:</h3>
+
+        <pre>
+10 → 20 → 30
+        </pre>
+
+        <h3>After inserting 5:</h3>
+
+        <pre>
+5 → 10 → 20 → 30
+        </pre>
+
+    </div>
+
+
+    <!-- DELETION -->
+    <div class="lesson-card">
+
+        <h2>➖ 6. Deletion</h2>
+
+        <p>
+            Linked List se node remove karna
+            <strong>deletion</strong> kehlata hai.
+        </p>
+
+        <p>
+            Beginning se first node delete karne ka basic idea:
+        </p>
+
+        <pre>
+Node* temp = head;
+
+head = head-&gt;next;
+
+delete temp;
+        </pre>
+
+        <p>
+            Isse old first node remove ho jata hai
+            aur head next node par move ho jata hai.
+        </p>
+
+    </div>
+
+
+    <!-- ARRAY VS LINKED LIST -->
+    <div class="lesson-card">
+
+        <h2>📌 Array vs Linked List</h2>
+
+        <div class="data-type-table">
+
+            <div class="data-row data-heading">
+                <div>Array</div>
+                <div>Linked List</div>
+            </div>
+
+            <div class="data-row">
+                <div>Elements contiguous memory me store hote hain</div>
+                <div>Nodes different memory locations par ho sakte hain</div>
+            </div>
+
+            <div class="data-row">
+                <div>Fixed size commonly used</div>
+                <div>Size dynamically grow/shrink ho sakta hai</div>
+            </div>
+
+            <div class="data-row">
+                <div>Indexing directly possible</div>
+                <div>Sequential traversal required</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMPORTANT POINTS -->
+    <div class="lesson-card">
+
+        <h2>⭐ Important Points</h2>
+
+        <ul>
+            <li>Linked List nodes se banti hai.</li>
+            <li>Har node me data aur next pointer hota hai.</li>
+            <li>Head first node ko point karta hai.</li>
+            <li>Last node ka next usually NULL hota hai.</li>
+            <li>Traversal me nodes ko one by one visit karte hain.</li>
+        </ul>
+
+    </div>
+
+
+    <!-- PRACTICE -->
+    <div class="practice-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            Ek Linked List create karo:
+        </p>
+
+        <pre>
+10 → 20 → 30
+        </pre>
+
+        <p>
+            Aur traversal ki help se saare elements print karo.
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- TRY YOURSELF -->
+    <div class="lesson-card">
+
+        <h2>💻 Try It Yourself</h2>
+
+        <p>
+            Apna C++ Linked List code yahan likho:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your C++ code here..."
+        ></textarea>
+
+        <br><br>
+
+        <button onclick="showCode()">
+            Show My Code
+        </button>
+
+        <pre id="solutionBox"></pre>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <div class="lesson-navigation">
+
+        <a href="dsa.html">
+            ← Back to DSA
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hint").textContent =
+        "Hint: Pehle Node class banao, phir 10, 20 aur 30 ke nodes create karke unhe next pointer se connect karo.";
+
+}
+
+
+function showCode() {
+
+    const userCode =
+        document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent =
+        userCode;
+
+}
+
+</script>
+
+</body>
+</html>

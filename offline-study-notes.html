@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSetu | Short Study Notes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef4ff, #f8f9ff);
+            color: #222;
+        }
+
+        /* Navbar */
+        header {
+            background: white;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .logo span {
+            color: #4f46e5;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .dashboard-btn {
+            text-decoration: none;
+            background: #4f46e5;
+            color: white;
+            padding: 9px 17px;
+            border-radius: 8px;
+        }
+
+        /* Main */
+        .container {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .heading small {
+            color: #4f46e5;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .heading h1 {
+            font-size: 38px;
+            margin: 10px 0;
+        }
+
+        .heading h1 span {
+            color: #4f46e5;
+        }
+
+        .heading p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Notes */
+        .notes-container {
+            display: grid;
+            gap: 28px;
+        }
+
+        .note-box {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 8px 25px rgba(40, 50, 100, 0.08);
+            border-left: 6px solid #4f46e5;
+        }
+
+        .note-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .note-icon {
+            font-size: 30px;
+        }
+
+        .note-title h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Mind map */
+        .mind-map {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin: 20px 0 25px;
+        }
+
+        .main-topic {
+            background: #4f46e5;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .topic {
+            background: #f0f1ff;
+            color: #333;
+            padding: 11px 17px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid #dfe1ff;
+        }
+
+        /* Points */
+        .points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .point {
+            background: #f8f9fc;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+        }
+
+        .point strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #4f46e5;
+        }
+
+        /* Revision tip */
+        .tip {
+            margin-top: 18px;
+            padding: 13px 16px;
+            background: #fff8df;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        /* Back button */
+        .back {
+            text-align: center;
+            margin: 35px 0;
+        }
+
+        .back a {
+            text-decoration: none;
+            background: #222;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #171717;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        footer .logo {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        footer .logo span {
+            color: #818cf8;
+        }
+
+        footer p {
+            margin: 5px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .heading h1 {
+                font-size: 30px;
+            }
+
+            .note-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Edu<span>Setu</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+
+            <a href="dashboard.html" class="dashboard-btn">
+                Dashboard
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <div class="heading">
+
+            <small>QUICK STUDY NOTES</small>
+
+            <h1>
+                Learn <span>Smart & Short</span> 🧠
+            </h1>
+
+            <p>
+                Simple notes and mind-map style revision
+                for quick understanding.
+            </p>
+
+        </div>
+
+
+        <div class="notes-container">
+
+<!-- C++ Short Notes -->
+<section class="note-box">
+
+    <div class="note-title">
+        <div class="note-icon">💻</div>
+        <h2>C++ Short Notes</h2>
+    </div>
+
+    <p>
+        Quick revision notes for important C++ programming concepts.
+    </p>
+
+
+    <!-- 1. Introduction -->
+    <div class="short-note">
+        <h3>1. C++ Introduction</h3>
+
+        <p>
+            C++ is a general-purpose programming language used for
+            software development, problem solving and DSA.
+        </p>
+
+        <div class="code-box">
+            <code>
+                #include &lt;iostream&gt;<br>
+                using namespace std;<br><br>
+
+                int main() {<br>
+                &nbsp;&nbsp;cout &lt;&lt; "Hello World";<br>
+                &nbsp;&nbsp;return 0;<br>
+                }
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 2. Variables -->
+    <div class="short-note">
+        <h3>2. Variables & Data Types</h3>
+
+        <p>
+            A variable is a named memory location used to store data.
+        </p>
+
+        <ul>
+            <li><strong>int</strong> → integer values</li>
+            <li><strong>float</strong> → decimal values</li>
+            <li><strong>char</strong> → single character</li>
+            <li><strong>string</strong> → text</li>
+            <li><strong>bool</strong> → true / false</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                int age = 18;<br>
+                float marks = 85.5;<br>
+                char grade = 'A';
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 3. Input Output -->
+    <div class="short-note">
+        <h3>3. Input & Output</h3>
+
+        <p>
+            <strong>cin</strong> is used for input and
+            <strong>cout</strong> is used for output.
+        </p>
+
+        <div class="code-box">
+            <code>
+                int age;<br>
+                cin &gt;&gt; age;<br>
+                cout &lt;&lt; age;
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 4. Operators -->
+    <div class="short-note">
+        <h3>4. Operators</h3>
+
+        <ul>
+            <li>Arithmetic → +, -, *, /, %</li>
+            <li>Relational → &lt;, &gt;, ==, !=</li>
+            <li>Logical → &amp;&amp;, ||, !</li>
+            <li>Assignment → =, +=, -=</li>
+        </ul>
+    </div>
+
+
+    <!-- 5. If Else -->
+    <div class="short-note">
+        <h3>5. If-Else</h3>
+
+        <p>
+            Used when a program needs to make a decision based on a condition.
+        </p>
+
+        <div class="code-box">
+            <code>
+                if (age &gt;= 18) {<br>
+                &nbsp;&nbsp;cout &lt;&lt; "Adult";<br>
+                } else {<br>
+                &nbsp;&nbsp;cout &lt;&lt; "Minor";<br>
+                }
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 6. Loops -->
+    <div class="short-note">
+        <h3>6. Loops</h3>
+
+        <p>
+            Loops are used to repeat a block of code.
+        </p>
+
+        <ul>
+            <li><strong>for loop</strong> → when repetitions are known</li>
+            <li><strong>while loop</strong> → condition-based repetition</li>
+            <li><strong>do-while</strong> → executes at least once</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                for(int i = 1; i &lt;= 5; i++) {<br>
+                &nbsp;&nbsp;cout &lt;&lt; i;<br>
+                }
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 7. Functions -->
+    <div class="short-note">
+        <h3>7. Functions</h3>
+
+        <p>
+            A function is a reusable block of code that performs a specific task.
+        </p>
+
+        <div class="code-box">
+            <code>
+                int add(int a, int b) {<br>
+                &nbsp;&nbsp;return a + b;<br>
+                }
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 8. Arrays -->
+    <div class="short-note">
+        <h3>8. Arrays</h3>
+
+        <p>
+            An array stores multiple values of the same data type.
+            Indexing starts from <strong>0</strong>.
+        </p>
+
+        <div class="code-box">
+            <code>
+                int arr[5] = {10, 20, 30, 40, 50};<br><br>
+
+                cout &lt;&lt; arr[0]; // 10
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 9. Strings -->
+    <div class="short-note">
+        <h3>9. Strings</h3>
+
+        <p>
+            A string is used to store a sequence of characters.
+        </p>
+
+        <div class="code-box">
+            <code>
+                string name = "Sakshi";<br>
+                cout &lt;&lt; name;
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 10. OOP -->
+    <div class="short-note">
+        <h3>10. OOP Basics</h3>
+
+        <p>
+            Object-Oriented Programming organizes programs using
+            classes and objects.
+        </p>
+
+        <ul>
+            <li>Encapsulation</li>
+            <li>Inheritance</li>
+            <li>Polymorphism</li>
+            <li>Abstraction</li>
+        </ul>
+    </div>
+
+
+    <!-- 11. Class Object -->
+    <div class="short-note">
+        <h3>11. Class & Object</h3>
+
+        <p>
+            A class is a blueprint, while an object is an instance of that class.
+        </p>
+
+        <div class="code-box">
+            <code>
+                class Student {<br>
+                public:<br>
+                &nbsp;&nbsp;string name;<br>
+                };<br><br>
+
+                Student s1;
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 12. Inheritance -->
+    <div class="short-note">
+        <h3>12. Inheritance</h3>
+
+        <p>
+            Inheritance allows one class to acquire properties and
+            functions of another class.
+        </p>
+
+        <div class="code-box">
+            <code>
+                class Child : public Parent {<br>
+                };
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 13. Polymorphism -->
+    <div class="short-note">
+        <h3>13. Polymorphism</h3>
+
+        <p>
+            Polymorphism means "many forms". The same function or
+            operation can behave differently in different situations.
+        </p>
+    </div>
+
+
+    <!-- Mind Map -->
+    <div class="mind-map">
+
+        <div class="main-topic">
+            C++ Revision
+        </div>
+
+        <div class="topic">Basics</div>
+        <div class="topic">Conditions</div>
+        <div class="topic">Loops</div>
+        <div class="topic">Functions</div>
+        <div class="topic">Arrays</div>
+        <div class="topic">Strings</div>
+        <div class="topic">OOP</div>
+
+    </div>
+
+</section>
+            
+
+<!-- Mathematics Short Notes -->
+<section class="note-box">
+
+    <div class="note-title">
+        <div class="note-icon">🧮</div>
+        <h2>Mathematics Short Notes</h2>
+    </div>
+
+    <p>
+        Quick revision notes for important Mathematics concepts.
+    </p>
+
+
+    <!-- 1. Algebra -->
+    <div class="short-note">
+        <h3>1. Algebra</h3>
+
+        <p>
+            Algebra deals with variables, constants and mathematical expressions.
+        </p>
+
+        <ul>
+            <li><strong>Variable</strong> → A quantity whose value can change.</li>
+            <li><strong>Constant</strong> → A fixed value.</li>
+            <li><strong>Expression</strong> → Combination of numbers, variables and operators.</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                3x + 6 = 18<br><br>
+                3x = 12<br>
+                x = 4
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 2. Matrices -->
+    <div class="short-note">
+        <h3>2. Matrices</h3>
+
+        <p>
+            A matrix is an arrangement of numbers in rows and columns.
+        </p>
+
+        <ul>
+            <li><strong>Row</strong> → Horizontal arrangement.</li>
+            <li><strong>Column</strong> → Vertical arrangement.</li>
+            <li><strong>Order</strong> → Number of rows × number of columns.</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                A = [ 1  2 ]<br>
+                    [ 3  4 ]<br><br>
+
+                Order = 2 × 2
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 3. Determinants -->
+    <div class="short-note">
+        <h3>3. Determinants</h3>
+
+        <p>
+            A determinant is a scalar value associated with a square matrix.
+        </p>
+
+        <div class="code-box">
+            <code>
+                | a  b |<br>
+                | c  d |<br><br>
+
+                Determinant = ad - bc
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 4. Differential Calculus -->
+    <div class="short-note">
+        <h3>4. Differential Calculus</h3>
+
+        <p>
+            Differentiation measures the rate of change of a function.
+        </p>
+
+        <div class="code-box">
+            <code>
+                d/dx (xⁿ) = n xⁿ⁻¹<br><br>
+
+                Example:<br>
+                d/dx (x²) = 2x
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 5. Integration -->
+    <div class="short-note">
+        <h3>5. Integral Calculus</h3>
+
+        <p>
+            Integration is used to find accumulated quantities and is
+            closely related to differentiation.
+        </p>
+
+        <div class="code-box">
+            <code>
+                ∫ xⁿ dx = xⁿ⁺¹ / (n+1) + C
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 6. Differential Equations -->
+    <div class="short-note">
+        <h3>6. Differential Equations</h3>
+
+        <p>
+            A differential equation contains a function and its derivatives.
+        </p>
+
+        <div class="code-box">
+            <code>
+                dy/dx = 2x<br><br>
+
+                Integrating:<br>
+                y = x² + C
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 7. Probability -->
+    <div class="short-note">
+        <h3>7. Probability</h3>
+
+        <p>
+            Probability measures the chance of an event occurring.
+        </p>
+
+        <div class="code-box">
+            <code>
+                P(E) = Favourable Outcomes / Total Outcomes
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 8. Statistics -->
+    <div class="short-note">
+        <h3>8. Statistics</h3>
+
+        <p>
+            Statistics deals with collecting, organizing and interpreting data.
+        </p>
+
+        <ul>
+            <li><strong>Mean</strong> → Average of values.</li>
+            <li><strong>Median</strong> → Middle value after arranging data.</li>
+            <li><strong>Mode</strong> → Most frequently occurring value.</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                Mean = Sum of observations / Number of observations
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 9. Numerical Methods -->
+    <div class="short-note">
+        <h3>9. Numerical Methods</h3>
+
+        <p>
+            Numerical methods are techniques used to find approximate
+            solutions to mathematical problems.
+        </p>
+
+        <ul>
+            <li>Bisection Method</li>
+            <li>Newton-Raphson Method</li>
+            <li>Numerical Integration</li>
+        </ul>
+    </div>
+
+
+    <!-- Mind Map -->
+    <div class="mind-map">
+
+        <div class="main-topic">
+            Mathematics Revision
+        </div>
+
+        <div class="topic">Algebra</div>
+        <div class="topic">Matrices</div>
+        <div class="topic">Determinants</div>
+        <div class="topic">Calculus</div>
+        <div class="topic">Integration</div>
+        <div class="topic">Probability</div>
+        <div class="topic">Statistics</div>
+        <div class="topic">Numerical Methods</div>
+
+    </div>
+
+</section>
+
+           <!-- Physics Short Notes -->
+<section class="note-box">
+
+    <div class="note-title">
+        <div class="note-icon">🔬</div>
+        <h2>Physics Short Notes</h2>
+    </div>
+
+    <p>
+        Quick revision notes for important Physics concepts and formulas.
+    </p>
+
+
+    <!-- 1. Mechanics -->
+    <div class="short-note">
+        <h3>1. Mechanics</h3>
+
+        <p>
+            Mechanics deals with motion, force and the effect of forces on objects.
+        </p>
+
+        <ul>
+            <li><strong>Velocity</strong> → Rate of change of displacement.</li>
+            <li><strong>Acceleration</strong> → Rate of change of velocity.</li>
+            <li><strong>Force</strong> → Push or pull acting on an object.</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                F = ma<br>
+                v = u + at<br>
+                s = ut + ½at²
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 2. Work Energy Power -->
+    <div class="short-note">
+        <h3>2. Work, Energy & Power</h3>
+
+        <p>
+            Work is done when a force causes displacement.
+            Energy is the capacity to do work.
+        </p>
+
+        <div class="code-box">
+            <code>
+                Work = Force × Displacement<br><br>
+                Kinetic Energy = ½mv²<br><br>
+                Potential Energy = mgh<br><br>
+                Power = Work / Time
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 3. Thermodynamics -->
+    <div class="short-note">
+        <h3>3. Thermodynamics</h3>
+
+        <p>
+            Thermodynamics deals with heat, temperature, work and energy transfer.
+        </p>
+
+        <ul>
+            <li><strong>System</strong> → Part of the universe being studied.</li>
+            <li><strong>Heat</strong> → Energy transferred due to temperature difference.</li>
+            <li><strong>Temperature</strong> → Measure of thermal state.</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                First Law of Thermodynamics:<br><br>
+                ΔQ = ΔU + W
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 4. Waves -->
+    <div class="short-note">
+        <h3>4. Waves & Oscillations</h3>
+
+        <p>
+            A wave transfers energy from one place to another.
+            Oscillation is a repeated motion about a mean position.
+        </p>
+
+        <div class="code-box">
+            <code>
+                v = fλ<br><br>
+                v = Wave velocity<br>
+                f = Frequency<br>
+                λ = Wavelength
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 5. Electromagnetism -->
+    <div class="short-note">
+        <h3>5. Electromagnetism</h3>
+
+        <p>
+            Electromagnetism studies the relationship between electric
+            and magnetic fields.
+        </p>
+
+        <ul>
+            <li><strong>Current</strong> → Flow of electric charge.</li>
+            <li><strong>Voltage</strong> → Potential difference.</li>
+            <li><strong>Resistance</strong> → Opposition to current.</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                V = IR<br><br>
+                V = Voltage<br>
+                I = Current<br>
+                R = Resistance
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 6. Optics -->
+    <div class="short-note">
+        <h3>6. Optics</h3>
+
+        <p>
+            Optics deals with the behaviour and properties of light.
+        </p>
+
+        <ul>
+            <li>Reflection</li>
+            <li>Refraction</li>
+            <li>Interference</li>
+            <li>Diffraction</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                Refractive Index:<br><br>
+                n = c / v
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 7. Modern Physics -->
+    <div class="short-note">
+        <h3>7. Modern Physics</h3>
+
+        <p>
+            Modern Physics deals with phenomena that cannot be fully
+            explained by classical physics.
+        </p>
+
+        <ul>
+            <li>Quantum Physics</li>
+            <li>Photoelectric Effect</li>
+            <li>Atomic Physics</li>
+            <li>Nuclear Physics</li>
+        </ul>
+
+        <div class="code-box">
+            <code>
+                E = mc²
+            </code>
+        </div>
+    </div>
+
+
+    <!-- 8. Units & Dimensions -->
+    <div class="short-note">
+        <h3>8. Units & Dimensions</h3>
+
+        <p>
+            Units are standard quantities used to measure physical quantities.
+            Dimensions represent a physical quantity in terms of basic quantities.
+        </p>
+
+        <ul>
+            <li>Length → metre (m)</li>
+            <li>Mass → kilogram (kg)</li>
+            <li>Time → second (s)</li>
+            <li>Current → ampere (A)</li>
+        </ul>
+    </div>
+
+
+    <!-- Mind Map -->
+    <div class="mind-map">
+
+        <div class="main-topic">
+            Physics Revision
+        </div>
+
+        <div class="topic">Mechanics</div>
+        <div class="topic">Energy</div>
+        <div class="topic">Thermodynamics</div>
+        <div class="topic">Waves</div>
+        <div class="topic">Electromagnetism</div>
+        <div class="topic">Optics</div>
+        <div class="topic">Modern Physics</div>
+        <div class="topic">Units</div>
+
+    </div>
+
+</section>
+
+        </div>
+
+
+        <div class="back">
+
+            <a href="offline-resources.html">
+                ← Back to Offline Resources
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Edu<span>Setu</span>
+        </div>
+
+        <p>
+            Bridging the digital education gap.
+        </p>
+
+        <p>
+            © 2026 EduSetu. Built for digital inclusion.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

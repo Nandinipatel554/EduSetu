@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Operators - EduSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="lesson-section">
+
+        <!-- Header -->
+        <div class="lesson-header">
+            <p>C++ LEARNING</p>
+            <h1>C++ <span>Operators</span></h1>
+            <p>Learn how to perform different operations in C++.</p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="lesson-card">
+            <h2>📘 What are Operators?</h2>
+            <p>
+                Operators are special symbols used to perform operations
+                on variables and values.
+            </p>
+
+            <p>
+                Example:
+            </p>
+
+            <pre>
+int a = 10;
+int b = 5;
+
+cout &lt;&lt; a + b;
+            </pre>
+
+            <div class="output-box">
+                Output: 15
+            </div>
+        </div>
+
+        <!-- Arithmetic Operators -->
+        <div class="lesson-card">
+            <h2>➕ Arithmetic Operators</h2>
+
+            <p>
+                Arithmetic operators are used for mathematical calculations.
+            </p>
+
+            <div class="data-type-table">
+
+                <div class="data-row data-heading">
+                    <span>Operator</span>
+                    <span>Meaning</span>
+                </div>
+
+                <div class="data-row">
+                    <span>+</span>
+                    <span>Addition</span>
+                </div>
+
+                <div class="data-row">
+                    <span>-</span>
+                    <span>Subtraction</span>
+                </div>
+
+                <div class="data-row">
+                    <span>*</span>
+                    <span>Multiplication</span>
+                </div>
+
+                <div class="data-row">
+                    <span>/</span>
+                    <span>Division</span>
+                </div>
+
+                <div class="data-row">
+                    <span>%</span>
+                    <span>Modulus</span>
+                </div>
+
+            </div>
+
+            <pre>
+int a = 10;
+int b = 3;
+
+cout &lt;&lt; a + b;
+cout &lt;&lt; a - b;
+cout &lt;&lt; a * b;
+cout &lt;&lt; a / b;
+cout &lt;&lt; a % b;
+            </pre>
+        </div>
+
+        <!-- Relational Operators -->
+        <div class="lesson-card">
+            <h2>🔍 Relational Operators</h2>
+
+            <p>
+                Relational operators are used to compare two values.
+                The result is usually <strong>true</strong> or <strong>false</strong>.
+            </p>
+
+            <div class="data-type-table">
+
+                <div class="data-row data-heading">
+                    <span>Operator</span>
+                    <span>Meaning</span>
+                </div>
+
+                <div class="data-row">
+                    <span>==</span>
+                    <span>Equal to</span>
+                </div>
+
+                <div class="data-row">
+                    <span>!=</span>
+                    <span>Not equal to</span>
+                </div>
+
+                <div class="data-row">
+                    <span>&gt;</span>
+                    <span>Greater than</span>
+                </div>
+
+                <div class="data-row">
+                    <span>&lt;</span>
+                    <span>Less than</span>
+                </div>
+
+                <div class="data-row">
+                    <span>&gt;=</span>
+                    <span>Greater than or equal to</span>
+                </div>
+
+                <div class="data-row">
+                    <span>&lt;=</span>
+                    <span>Less than or equal to</span>
+                </div>
+
+            </div>
+
+            <pre>
+int a = 10;
+int b = 5;
+
+cout &lt;&lt; (a &gt; b);
+            </pre>
+
+            <h3>Output:</h3>
+
+            <div class="output-box">
+                1
+            </div>
+
+            <p>
+                In C++, <strong>1</strong> represents true and
+                <strong>0</strong> represents false.
+            </p>
+        </div>
+
+        <!-- Assignment Operators -->
+        <div class="lesson-card">
+            <h2>📝 Assignment Operators</h2>
+
+            <p>
+                Assignment operators are used to assign or update values
+                in variables.
+            </p>
+
+            <pre>
+int a = 10;
+
+a += 5;
+
+cout &lt;&lt; a;
+            </pre>
+
+            <div class="output-box">
+                Output: 15
+            </div>
+        </div>
+
+        <!-- Logical Operators -->
+        <div class="lesson-card">
+            <h2>🧠 Logical Operators</h2>
+
+            <p>
+                Logical operators are commonly used when working with
+                multiple conditions.
+            </p>
+
+            <div class="data-type-table">
+
+                <div class="data-row data-heading">
+                    <span>Operator</span>
+                    <span>Meaning</span>
+                </div>
+
+                <div class="data-row">
+                    <span>&amp;&amp;</span>
+                    <span>AND</span>
+                </div>
+
+                <div class="data-row">
+                    <span>||</span>
+                    <span>OR</span>
+                </div>
+
+                <div class="data-row">
+                    <span>!</span>
+                    <span>NOT</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Practice -->
+        <div class="practice-card">
+            <h2>🧩 Practice Question</h2>
+
+            <p>
+                Create a C++ program that takes two numbers and prints
+                their <strong>sum</strong>, <strong>difference</strong>,
+                and <strong>product</strong>.
+            </p>
+
+            <button onclick="showHint()">
+                Show Hint
+            </button>
+
+            <p id="hint" class="hint-text"></p>
+        </div>
+
+        <!-- Try Yourself -->
+        <div class="coding-card">
+            <h2>💻 Try It Yourself</h2>
+
+            <p>
+                Write your C++ code below.
+            </p>
+
+            <textarea
+                id="codeInput"
+                placeholder="Write your C++ code here..."
+            ></textarea>
+
+            <button onclick="showCode()">
+                Check Solution
+            </button>
+
+            <pre id="solutionBox"></pre>
+        </div>
+
+        <!-- Navigation -->
+        <div class="lesson-navigation">
+
+            <a href="cpp-basics.html">
+                ← Back to C++ Basics
+            </a>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function showHint() {
+
+            document.getElementById("hint").textContent =
+                "Hint: Use int variables, cin for input, and +, -, * operators.";
+
+        }
+
+        function showCode() {
+
+            const userCode =
+                document.getElementById("codeInput").value;
+
+            document.getElementById("solutionBox").textContent =
+                userCode;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

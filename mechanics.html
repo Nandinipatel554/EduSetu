@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanics - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .physics-diagram {
+            background: #111827;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+            overflow-x: auto;
+        }
+
+        .physics-diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .formula {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+            background: #111827;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>Mechanics</h1>
+        <p>Learn the basic concepts of motion, force and Newton's laws.</p>
+    </div>
+
+    <!-- 1 -->
+    <div class="lesson-card">
+        <h2>1. What is Mechanics?</h2>
+
+        <p>
+            Mechanics is the branch of Physics that deals with the motion
+            of objects and the forces acting on them.
+        </p>
+
+        <p>
+            It mainly includes motion, force, energy, momentum and
+            interaction between objects.
+        </p>
+    </div>
+
+    <!-- 2 -->
+    <div class="lesson-card">
+        <h2>2. Motion</h2>
+
+        <p>
+            An object is said to be in motion when its position changes
+            with respect to a reference point with time.
+        </p>
+
+        <p>
+            Example: A moving car changes its position with time.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="600" height="180" viewBox="0 0 600 180">
+
+                <!-- Ground -->
+                <line x1="50" y1="130" x2="550" y2="130"
+                      stroke="#94a3b8" stroke-width="3"/>
+
+                <!-- Car -->
+                <rect x="180" y="80" width="100" height="45"
+                      rx="8" fill="#2563eb"/>
+
+                <circle cx="205" cy="130" r="15"
+                        fill="#111827" stroke="#ffffff" stroke-width="3"/>
+
+                <circle cx="255" cy="130" r="15"
+                        fill="#111827" stroke="#ffffff" stroke-width="3"/>
+
+                <!-- Motion arrow -->
+                <line x1="300" y1="100" x2="470" y2="100"
+                      stroke="#ffffff" stroke-width="4"/>
+
+                <polygon points="470,100 450,90 450,110"
+                         fill="#ffffff"/>
+
+                <text x="350" y="85"
+                      fill="#ffffff"
+                      font-size="18">
+                    Direction of Motion
+                </text>
+
+            </svg>
+
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="lesson-card">
+        <h2>3. Distance and Displacement</h2>
+
+        <p>
+            <b>Distance:</b> Total path travelled by an object.
+        </p>
+
+        <p>
+            <b>Displacement:</b> Shortest distance between the initial
+            and final position, along with direction.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="600" height="220" viewBox="0 0 600 220">
+
+                <!-- Curved path -->
+                <path d="M80 150 Q180 40 300 150 T520 80"
+                      fill="none"
+                      stroke="#60a5fa"
+                      stroke-width="5"/>
+
+                <!-- Initial point -->
+                <circle cx="80" cy="150" r="8" fill="#ffffff"/>
+
+                <!-- Final point -->
+                <circle cx="520" cy="80" r="8" fill="#ffffff"/>
+
+                <!-- Displacement -->
+                <line x1="80" y1="150" x2="520" y2="80"
+                      stroke="#ffffff"
+                      stroke-width="3"
+                      stroke-dasharray="10,7"/>
+
+                <text x="55" y="180"
+                      fill="#ffffff"
+                      font-size="18">
+                    Initial
+                </text>
+
+                <text x="485" y="55"
+                      fill="#ffffff"
+                      font-size="18">
+                    Final
+                </text>
+
+                <text x="250" y="190"
+                      fill="#60a5fa"
+                      font-size="18">
+                    Distance = Actual Path
+                </text>
+
+                <text x="260" y="115"
+                      fill="#ffffff"
+                      font-size="17">
+                    Displacement
+                </text>
+
+            </svg>
+
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="lesson-card">
+        <h2>4. Speed and Velocity</h2>
+
+        <p>
+            <b>Speed</b> tells us how fast an object is moving.
+        </p>
+
+        <p>
+            <b>Velocity</b> tells us how fast an object is moving
+            in a particular direction.
+        </p>
+
+        <div class="formula">
+            Speed = Distance / Time
+        </div>
+
+        <br>
+
+        <div class="formula">
+            Velocity = Displacement / Time
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="lesson-card">
+        <h2>5. Acceleration</h2>
+
+        <p>
+            Acceleration is the rate of change of velocity with time.
+        </p>
+
+        <div class="formula">
+            a = (v - u) / t
+        </div>
+
+        <p>
+            Where:
+            <br>
+            u = Initial velocity
+            <br>
+            v = Final velocity
+            <br>
+            t = Time
+        </p>
+    </div>
+
+    <!-- 6 -->
+    <div class="lesson-card">
+        <h2>6. Newton's Laws of Motion</h2>
+
+        <p>
+            <b>First Law:</b> An object remains at rest or in uniform
+            motion unless an external force acts on it.
+        </p>
+
+        <p>
+            <b>Second Law:</b> Force is related to mass and acceleration.
+        </p>
+
+        <div class="formula">
+            F = ma
+        </div>
+
+        <p>
+            <b>Third Law:</b> For every action, there is an equal and
+            opposite reaction.
+        </p>
+    </div>
+
+    <!-- 7 -->
+    <div class="lesson-card">
+        <h2>7. Force and Momentum</h2>
+
+        <p>
+            Force can change the motion of an object.
+        </p>
+
+        <div class="formula">
+            F = ma
+        </div>
+
+        <p>
+            Momentum is the product of mass and velocity.
+        </p>
+
+        <div class="formula">
+            p = mv
+        </div>
+    </div>
+
+    <!-- 8 FBD -->
+    <div class="lesson-card">
+
+        <h2>8. Free Body Diagram</h2>
+
+        <p>
+            A Free Body Diagram (FBD) represents all the forces acting
+            on an object.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="600" height="300" viewBox="0 0 600 300">
+
+                <!-- Ground -->
+                <line x1="150" y1="230"
+                      x2="450" y2="230"
+                      stroke="#94a3b8"
+                      stroke-width="4"/>
+
+                <!-- Block -->
+                <rect x="250" y="150"
+                      width="100"
+                      height="80"
+                      fill="#2563eb"
+                      rx="8"/>
+
+                <text x="282" y="198"
+                      fill="#ffffff"
+                      font-size="20">
+                    Block
+                </text>
+
+                <!-- Normal force -->
+                <line x1="300" y1="150"
+                      x2="300" y2="75"
+                      stroke="#ffffff"
+                      stroke-width="4"/>
+
+                <polygon points="300,65 290,85 310,85"
+                         fill="#ffffff"/>
+
+                <text x="315" y="80"
+                      fill="#ffffff"
+                      font-size="18">
+                    Normal Force
+                </text>
+
+                <!-- Weight -->
+                <line x1="300" y1="230"
+                      x2="300" y2="275"
+                      stroke="#ffffff"
+                      stroke-width="4"/>
+
+                <polygon points="300,285 290,265 310,265"
+                         fill="#ffffff"/>
+
+                <text x="315" y="275"
+                      fill="#ffffff"
+                      font-size="18">
+                    Weight
+                </text>
+
+                <!-- Applied force -->
+                <line x1="250" y1="190"
+                      x2="145" y2="190"
+                      stroke="#60a5fa"
+                      stroke-width="4"/>
+
+                <polygon points="135,190 155,180 155,200"
+                         fill="#60a5fa"/>
+
+                <text x="55" y="175"
+                      fill="#60a5fa"
+                      font-size="18">
+                    Applied Force
+                </text>
+
+                <!-- Friction -->
+                <line x1="350" y1="190"
+                      x2="455" y2="190"
+                      stroke="#f8fafc"
+                      stroke-width="4"/>
+
+                <polygon points="465,190 445,180 445,200"
+                         fill="#f8fafc"/>
+
+                <text x="405" y="175"
+                      fill="#ffffff"
+                      font-size="18">
+                    Friction
+                </text>
+
+            </svg>
+
+        </div>
+
+        <p>
+            Common forces shown in an FBD include weight, normal force,
+            friction and applied force.
+        </p>
+
+    </div>
+
+    <!-- 9 -->
+    <div class="lesson-card">
+
+        <h2>9. Example</h2>
+
+        <p>
+            A car starts from rest and reaches a velocity of 20 m/s
+            in 5 seconds. Find its acceleration.
+        </p>
+
+        <div class="formula">
+            a = (v - u) / t
+        </div>
+
+        <p>
+            u = 0 m/s, v = 20 m/s, t = 5 s
+        </p>
+
+        <p>
+            a = (20 - 0) / 5
+        </p>
+
+        <p>
+            <b>Acceleration = 4 m/s²</b>
+        </p>
+
+    </div>
+
+    <!-- Practice -->
+    <div class="lesson-card">
+
+        <h2>10. Practice Question</h2>
+
+        <p>
+            A body has an initial velocity of 5 m/s and reaches
+            25 m/s in 4 seconds. Find its acceleration.
+        </p>
+
+        <button onclick="showHint()">
+            Show Hint
+        </button>
+
+        <div id="hintBox"
+             style="display:none; margin-top:20px;">
+            Use the formula:
+            <br><br>
+            <b>a = (v - u) / t</b>
+        </div>
+
+        <br><br>
+
+        <h3>Try Yourself</h3>
+
+        <textarea
+            id="answerBox"
+            placeholder="Write your answer here..."
+            style="
+                width:100%;
+                min-height:120px;
+                padding:15px;
+                border-radius:10px;
+                border:2px solid #334155;
+                background:#111827;
+                color:white;
+                font-size:16px;
+                resize:vertical;
+            "></textarea>
+
+        <br><br>
+
+        <button onclick="checkAnswer()">
+            Submit Answer
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <div class="lesson-navigation">
+        <a href="physics-resources.html">
+            ← Back to Physics
+        </a>
+    </div>
+
+</section>
+
+<script>
+
+function showHint() {
+    document.getElementById("hintBox").style.display = "block";
+}
+
+function checkAnswer() {
+
+    let answer = document.getElementById("answerBox").value
+        .toLowerCase()
+        .replace(/\s/g, "");
+
+    if (answer.includes("5m/s") ||
+        answer.includes("5m/s2") ||
+        answer.includes("5m/s^2") ||
+        answer.includes("5")) {
+
+        document.getElementById("result").innerHTML =
+            "Correct! Acceleration = 5 m/s² ✅";
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+            "Try again. Use a = (v - u) / t";
+    }
+}
+
+</script>
+
+</body>
+</html>

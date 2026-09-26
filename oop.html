@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP with C++ - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>Object Oriented Programming with <span>C++</span></h1>
+        <p>Learn the basic concepts of OOP step by step.</p>
+    </div>
+
+
+    <!-- What is OOP -->
+    <div class="lesson-card">
+        <h2>🏗️ What is OOP?</h2>
+
+        <p>
+            OOP stands for <b>Object Oriented Programming</b>.
+            It is a programming approach based on <b>objects and classes</b>.
+        </p>
+
+        <p>
+            C++ supports OOP concepts such as classes, objects,
+            encapsulation, inheritance and polymorphism.
+        </p>
+    </div>
+
+
+    <!-- Class -->
+    <div class="lesson-card">
+        <h2>📦 Class</h2>
+
+        <p>
+            A <b>class</b> is a blueprint or template used to create objects.
+        </p>
+
+        <pre>
+class Student {
+public:
+    string name;
+    int age;
+};
+        </pre>
+
+        <p>
+            Here, <b>Student</b> is a class.
+        </p>
+    </div>
+
+
+    <!-- Object -->
+    <div class="lesson-card">
+        <h2>🔹 Object</h2>
+
+        <p>
+            An <b>object</b> is an instance of a class.
+        </p>
+
+        <pre>
+Student s1;
+
+s1.name = "Rahul";
+s1.age = 20;
+        </pre>
+
+        <p>
+            Here, <b>s1</b> is an object of the Student class.
+        </p>
+    </div>
+
+
+    <!-- Access Specifiers -->
+    <div class="lesson-card">
+        <h2>🔐 Access Specifiers</h2>
+
+        <p>
+            Access specifiers control where class members can be accessed.
+        </p>
+
+        <ul>
+            <li><b>public</b> → accessible from outside the class</li>
+            <li><b>private</b> → accessible only inside the class</li>
+            <li><b>protected</b> → mainly used with inheritance</li>
+        </ul>
+
+        <pre>
+class Student {
+private:
+    int marks;
+
+public:
+    string name;
+};
+        </pre>
+    </div>
+
+
+    <!-- Constructor -->
+    <div class="lesson-card">
+        <h2>🔧 Constructor</h2>
+
+        <p>
+            A constructor is a special function that is automatically called
+            when an object is created.
+        </p>
+
+        <pre>
+class Student {
+public:
+
+    Student() {
+        cout &lt;&lt; "Constructor called";
+    }
+};
+
+int main() {
+
+    Student s1;
+
+    return 0;
+}
+        </pre>
+
+        <p>
+            The constructor has the same name as the class.
+        </p>
+    </div>
+
+
+    <!-- Encapsulation -->
+    <div class="lesson-card">
+        <h2>🔒 Encapsulation</h2>
+
+        <p>
+            Encapsulation means combining data and functions inside a class
+            and controlling access to that data.
+        </p>
+
+        <pre>
+class Student {
+
+private:
+    int marks;
+
+public:
+
+    void setMarks(int m) {
+        marks = m;
+    }
+
+    int getMarks() {
+        return marks;
+    }
+};
+        </pre>
+
+        <p>
+            Here, <b>marks</b> is private and can be accessed using
+            public functions.
+        </p>
+    </div>
+
+
+    <!-- Inheritance -->
+    <div class="lesson-card">
+        <h2>🌳 Inheritance</h2>
+
+        <p>
+            Inheritance allows one class to acquire properties and
+            functions of another class.
+        </p>
+
+        <pre>
+class Animal {
+
+public:
+    void eat() {
+        cout &lt;&lt; "Eating";
+    }
+};
+
+class Dog : public Animal {
+
+public:
+    void bark() {
+        cout &lt;&lt; "Barking";
+    }
+};
+        </pre>
+
+        <p>
+            Here, <b>Dog</b> inherits from <b>Animal</b>.
+        </p>
+    </div>
+
+
+    <!-- Polymorphism -->
+    <div class="lesson-card">
+        <h2>🔄 Polymorphism</h2>
+
+        <p>
+            Polymorphism means <b>many forms</b>.
+            The same function or operation can behave differently
+            in different situations.
+        </p>
+
+        <p>
+            Two common types are:
+        </p>
+
+        <ul>
+            <li>Compile-time polymorphism</li>
+            <li>Run-time polymorphism</li>
+        </ul>
+
+        <pre>
+class Print {
+
+public:
+
+    void show(int x) {
+        cout &lt;&lt; x;
+    }
+
+    void show(string x) {
+        cout &lt;&lt; x;
+    }
+};
+        </pre>
+
+        <p>
+            This is an example of function overloading.
+        </p>
+    </div>
+
+
+    <!-- OOP Summary -->
+    <div class="lesson-card">
+        <h2>⭐ Important OOP Concepts</h2>
+
+        <ul>
+            <li>Class</li>
+            <li>Object</li>
+            <li>Access Specifiers</li>
+            <li>Constructor</li>
+            <li>Encapsulation</li>
+            <li>Inheritance</li>
+            <li>Polymorphism</li>
+        </ul>
+    </div>
+
+
+    <!-- Practice -->
+    <div class="practice-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            Create a class <b>Student</b> with:
+        </p>
+
+        <ul>
+            <li>name</li>
+            <li>age</li>
+        </ul>
+
+        <p>
+            Create an object and print the student's name and age.
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- Try Yourself -->
+    <div class="practice-card">
+
+        <h2>💻 Try Yourself</h2>
+
+        <p>
+            Write the C++ code for the practice question above.
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your C++ code here..."></textarea>
+
+        <button onclick="showCode()">Submit</button>
+
+        <pre id="solutionBox"></pre>
+
+    </div>
+
+
+    <div class="lesson-navigation">
+        <a href="cpp-resources.html">← Back to C++ Resources</a>
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hint").textContent =
+        "Hint: Create class Student, add name and age as public members, then create an object in main().";
+
+}
+
+function showCode() {
+
+    const userCode =
+        document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent =
+        userCode;
+
+}
+
+</script>
+
+</body>
+</html>

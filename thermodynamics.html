@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamics - EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .physics-diagram {
+            background: #0b1120;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            overflow-x: auto;
+        }
+
+        .physics-diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .formula {
+            background: #111827;
+            border: 1px solid #3b82f6;
+            color: #ffffff;
+            padding: 15px 22px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 12px 0;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .practice-input {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            margin-top: 15px;
+            background: #111827;
+            color: white;
+            border: 2px solid #334155;
+            border-radius: 10px;
+            font-size: 16px;
+            resize: vertical;
+            outline: none;
+        }
+
+        .practice-input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+        }
+
+        #hintBox {
+            display: none;
+            margin-top: 18px;
+            padding: 16px;
+            background: #172554;
+            border-left: 4px solid #3b82f6;
+            border-radius: 8px;
+            color: #dbeafe;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <div class="lesson-header">
+        <h1>Thermodynamics</h1>
+        <p>Understand heat, temperature, energy and the laws of thermodynamics.</p>
+    </div>
+
+
+    <!-- 1 -->
+    <div class="lesson-card">
+
+        <h2>1. What is Thermodynamics?</h2>
+
+        <p>
+            Thermodynamics is the branch of Physics that deals with
+            heat, temperature, work and energy.
+        </p>
+
+        <p>
+            It helps us understand how energy is transferred from one
+            form to another.
+        </p>
+
+    </div>
+
+
+    <!-- 2 -->
+    <div class="lesson-card">
+
+        <h2>2. System, Surroundings and Boundary</h2>
+
+        <p>
+            A <b>system</b> is the part of the universe that we are studying.
+        </p>
+
+        <p>
+            Everything outside the system is called the <b>surroundings</b>.
+            The separation between them is called the <b>boundary</b>.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="600" height="260" viewBox="0 0 600 260">
+
+                <!-- Surroundings -->
+                <rect x="50" y="30"
+                      width="500"
+                      height="200"
+                      rx="15"
+                      fill="#172033"
+                      stroke="#64748b"
+                      stroke-width="3"/>
+
+                <!-- System -->
+                <rect x="190" y="75"
+                      width="220"
+                      height="110"
+                      rx="12"
+                      fill="#2563eb"
+                      stroke="#ffffff"
+                      stroke-width="3"/>
+
+                <text x="270" y="135"
+                      fill="white"
+                      font-size="22">
+                    SYSTEM
+                </text>
+
+                <text x="215" y="215"
+                      fill="#cbd5e1"
+                      font-size="18">
+                    Surroundings
+                </text>
+
+                <!-- Boundary label -->
+                <line x1="190" y1="65"
+                      x2="410" y2="65"
+                      stroke="#60a5fa"
+                      stroke-width="2"
+                      stroke-dasharray="8,5"/>
+
+                <text x="235" y="50"
+                      fill="#60a5fa"
+                      font-size="16">
+                    Boundary
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3 -->
+    <div class="lesson-card">
+
+        <h2>3. Temperature and Heat</h2>
+
+        <p>
+            <b>Temperature</b> tells us how hot or cold an object is.
+        </p>
+
+        <p>
+            <b>Heat</b> is energy transferred from a hotter body to a
+            colder body because of a temperature difference.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="600" height="180" viewBox="0 0 600 180">
+
+                <!-- Hot body -->
+                <rect x="100" y="55"
+                      width="150"
+                      height="70"
+                      rx="10"
+                      fill="#dc2626"/>
+
+                <text x="145" y="98"
+                      fill="white"
+                      font-size="20">
+                    HOT
+                </text>
+
+                <!-- Arrow -->
+                <line x1="260" y1="90"
+                      x2="410" y2="90"
+                      stroke="#ffffff"
+                      stroke-width="5"/>
+
+                <polygon points="420,90 395,77 395,103"
+                         fill="#ffffff"/>
+
+                <!-- Cold body -->
+                <rect x="430" y="55"
+                      width="100"
+                      height="70"
+                      rx="10"
+                      fill="#2563eb"/>
+
+                <text x="455" y="98"
+                      fill="white"
+                      font-size="20">
+                    COLD
+                </text>
+
+                <text x="260" y="145"
+                      fill="#cbd5e1"
+                      font-size="18">
+                    Heat Transfer
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 4 -->
+    <div class="lesson-card">
+
+        <h2>4. Internal Energy</h2>
+
+        <p>
+            Internal energy is the total microscopic energy present
+            inside a system.
+        </p>
+
+        <p>
+            It includes the energy associated with the motion and
+            interactions of particles.
+        </p>
+
+    </div>
+
+
+    <!-- 5 -->
+    <div class="lesson-card">
+
+        <h2>5. Work Done</h2>
+
+        <p>
+            Work can be done when a force causes displacement.
+        </p>
+
+        <p>
+            In thermodynamics, work can occur when a gas expands
+            or is compressed.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="600" height="230" viewBox="0 0 600 230">
+
+                <!-- Cylinder -->
+                <rect x="160" y="80"
+                      width="280"
+                      height="100"
+                      fill="#1e293b"
+                      stroke="#94a3b8"
+                      stroke-width="3"/>
+
+                <!-- Gas -->
+                <rect x="175" y="100"
+                      width="180"
+                      height="80"
+                      fill="#2563eb"
+                      opacity="0.8"/>
+
+                <!-- Piston -->
+                <rect x="350" y="75"
+                      width="25"
+                      height="110"
+                      fill="#cbd5e1"/>
+
+                <!-- Arrow -->
+                <line x1="390" y1="130"
+                      x2="510" y2="130"
+                      stroke="#60a5fa"
+                      stroke-width="5"/>
+
+                <polygon points="520,130 495,117 495,143"
+                         fill="#60a5fa"/>
+
+                <text x="405" y="110"
+                      fill="#60a5fa"
+                      font-size="18">
+                    Expansion
+                </text>
+
+                <text x="225" y="145"
+                      fill="white"
+                      font-size="20">
+                    Gas
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 6 -->
+    <div class="lesson-card">
+
+        <h2>6. First Law of Thermodynamics</h2>
+
+        <p>
+            The first law is based on the principle of conservation
+            of energy.
+        </p>
+
+        <div class="formula">
+            ΔQ = ΔU + W
+        </div>
+
+        <p>
+            Where:
+            <br>
+            ΔQ = Heat supplied to the system
+            <br>
+            ΔU = Change in internal energy
+            <br>
+            W = Work done by the system
+        </p>
+
+    </div>
+
+
+    <!-- 7 -->
+    <div class="lesson-card">
+
+        <h2>7. Second Law of Thermodynamics</h2>
+
+        <p>
+            The second law describes the direction of natural
+            processes and introduces the concept of entropy.
+        </p>
+
+        <p>
+            Heat naturally flows from a hotter body toward a colder
+            body without external work.
+        </p>
+
+    </div>
+
+
+    <!-- 8 -->
+    <div class="lesson-card">
+
+        <h2>8. Heat Engine</h2>
+
+        <p>
+            A heat engine converts some heat energy into useful work.
+        </p>
+
+        <div class="physics-diagram">
+
+            <svg width="650" height="300" viewBox="0 0 650 300">
+
+                <!-- Hot reservoir -->
+                <rect x="40" y="90"
+                      width="140"
+                      height="100"
+                      rx="12"
+                      fill="#dc2626"/>
+
+                <text x="70" y="145"
+                      fill="white"
+                      font-size="20">
+                    Hot
+                </text>
+
+                <text x="65" y="170"
+                      fill="white"
+                      font-size="16">
+                    Reservoir
+                </text>
+
+                <!-- Engine -->
+                <circle cx="325"
+                        cy="140"
+                        r="65"
+                        fill="#2563eb"
+                        stroke="#ffffff"
+                        stroke-width="3"/>
+
+                <text x="280" y="135"
+                      fill="white"
+                      font-size="19">
+                    HEAT
+                </text>
+
+                <text x="288" y="160"
+                      fill="white"
+                      font-size="19">
+                    ENGINE
+                </text>
+
+                <!-- Cold reservoir -->
+                <rect x="470" y="90"
+                      width="140"
+                      height="100"
+                      rx="12"
+                      fill="#2563eb"/>
+
+                <text x="495" y="145"
+                      fill="white"
+                      font-size="20">
+                    Cold
+                </text>
+
+                <text x="492" y="170"
+                      fill="white"
+                      font-size="16">
+                    Reservoir
+                </text>
+
+                <!-- Heat input -->
+                <line x1="180" y1="120"
+                      x2="250" y2="120"
+                      stroke="#ffffff"
+                      stroke-width="4"/>
+
+                <polygon points="260,120 240,110 240,130"
+                         fill="#ffffff"/>
+
+                <text x="190" y="105"
+                      fill="#ffffff"
+                      font-size="16">
+                    Qₕ
+                </text>
+
+                <!-- Heat output -->
+                <line x1="390" y1="120"
+                      x2="460" y2="120"
+                      stroke="#ffffff"
+                      stroke-width="4"/>
+
+                <polygon points="470,120 450,110 450,130"
+                         fill="#ffffff"/>
+
+                <text x="410" y="105"
+                      fill="#ffffff"
+                      font-size="16">
+                    Qc
+                </text>
+
+                <!-- Work -->
+                <line x1="325" y1="205"
+                      x2="325" y2="260"
+                      stroke="#60a5fa"
+                      stroke-width="4"/>
+
+                <polygon points="325,270 315,250 335,250"
+                         fill="#60a5fa"/>
+
+                <text x="340" y="245"
+                      fill="#60a5fa"
+                      font-size="18">
+                    Work Output
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+
+    <!-- 9 -->
+    <div class="lesson-card">
+
+        <h2>9. Example</h2>
+
+        <p>
+            A system receives 500 J of heat and does 200 J of work.
+            Find the change in internal energy.
+        </p>
+
+        <div class="formula">
+            ΔQ = ΔU + W
+        </div>
+
+        <p>
+            500 = ΔU + 200
+        </p>
+
+        <p>
+            ΔU = 500 - 200
+        </p>
+
+        <p>
+            <b>ΔU = 300 J</b>
+        </p>
+
+    </div>
+
+
+    <!-- 10 -->
+    <div class="lesson-card">
+
+        <h2>10. Practice Question</h2>
+
+        <p>
+            A system receives 800 J of heat and does 300 J of work.
+            Find the change in internal energy.
+        </p>
+
+        <button onclick="showHint()">
+            Show Hint
+        </button>
+
+        <div id="hintBox">
+            Use:
+            <br><br>
+            <b>ΔQ = ΔU + W</b>
+        </div>
+
+        <h3 style="margin-top:25px;">
+            Try Yourself
+        </h3>
+
+        <textarea
+            id="answerBox"
+            class="practice-input"
+            placeholder="Write your answer here..."
+        ></textarea>
+
+        <br><br>
+
+        <button onclick="checkAnswer()">
+            Submit Answer
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+
+
+    <div class="lesson-navigation">
+        <a href="physics-resources.html">
+            ← Back to Physics
+        </a>
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+    document.getElementById("hintBox").style.display = "block";
+}
+
+function checkAnswer() {
+
+    let answer = document.getElementById("answerBox").value
+        .toLowerCase()
+        .replace(/\s/g, "");
+
+    if (
+        answer.includes("500j") ||
+        answer.includes("500")
+    ) {
+
+        document.getElementById("result").innerHTML =
+            "Correct! ΔU = 500 J ✅";
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+            "Try again. Use ΔQ = ΔU + W";
+    }
+}
+
+</script>
+
+</body>
+</html>

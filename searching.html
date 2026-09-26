@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching - DSA with C++ | EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="lesson-section">
+
+        <!-- HEADER -->
+        <div class="lesson-header">
+            <h1>Searching <span>with C++</span></h1>
+            <p>Learn Linear Search and Binary Search step by step.</p>
+        </div>
+
+
+        <!-- LINEAR SEARCH -->
+        <div class="lesson-card">
+
+            <h2>🔎 1. Linear Search</h2>
+
+            <p>
+                Linear Search me hum array ke elements ko
+                <strong>one by one</strong> check karte hain.
+            </p>
+
+            <p>
+                Agar required element mil jaye, to uska index return kar dete hain.
+            </p>
+
+            <h3>Example:</h3>
+
+            <pre>
+Array = {10, 20, 30, 40, 50}
+Target = 30
+
+10 → ❌
+20 → ❌
+30 → ✅ Found
+            </pre>
+
+            <h3>C++ Code:</h3>
+
+            <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+    int arr[] = {10, 20, 30, 40, 50};
+    int target = 30;
+
+    for(int i = 0; i &lt; 5; i++) {
+
+        if(arr[i] == target) {
+            cout &lt;&lt; "Element found at index "
+                 &lt;&lt; i;
+            return 0;
+        }
+    }
+
+    cout &lt;&lt; "Element not found";
+
+    return 0;
+}
+            </pre>
+
+            <h3>Time Complexity:</h3>
+
+            <p>
+                <strong>O(n)</strong> — worst case me hume poora array check karna pad sakta hai.
+            </p>
+
+        </div>
+
+
+        <!-- BINARY SEARCH -->
+        <div class="lesson-card">
+
+            <h2>⚡ 2. Binary Search</h2>
+
+            <p>
+                Binary Search sirf <strong>sorted array</strong> par apply hota hai.
+            </p>
+
+            <p>
+                Isme hum baar-baar array ko half me divide karte hain.
+            </p>
+
+            <h3>Example:</h3>
+
+            <pre>
+Array = {10, 20, 30, 40, 50}
+Target = 40
+
+Middle = 30
+40 > 30
+
+Right half me search karo:
+
+40 → ✅ Found
+            </pre>
+
+            <h3>Basic Logic:</h3>
+
+            <pre>
+start = 0
+end = n - 1
+
+while(start &lt;= end)
+
+    mid = (start + end) / 2
+
+    if(arr[mid] == target)
+        found
+
+    else if(arr[mid] &lt; target)
+        start = mid + 1
+
+    else
+        end = mid - 1
+            </pre>
+
+            <h3>C++ Code:</h3>
+
+            <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+    int arr[] = {10, 20, 30, 40, 50};
+
+    int target = 40;
+
+    int start = 0;
+    int end = 4;
+
+    while(start &lt;= end) {
+
+        int mid = (start + end) / 2;
+
+        if(arr[mid] == target) {
+            cout &lt;&lt; "Element found at index "
+                 &lt;&lt; mid;
+            return 0;
+        }
+
+        else if(arr[mid] &lt; target) {
+            start = mid + 1;
+        }
+
+        else {
+            end = mid - 1;
+        }
+    }
+
+    cout &lt;&lt; "Element not found";
+
+    return 0;
+}
+            </pre>
+
+            <h3>Time Complexity:</h3>
+
+            <p>
+                <strong>O(log n)</strong>
+            </p>
+
+        </div>
+
+
+        <!-- COMPARISON -->
+        <div class="lesson-card">
+
+            <h2>📌 Linear Search vs Binary Search</h2>
+
+            <div class="data-type-table">
+
+                <div class="data-row data-heading">
+                    <div>Linear Search</div>
+                    <div>Binary Search</div>
+                </div>
+
+                <div class="data-row">
+                    <div>Works on unsorted array</div>
+                    <div>Requires sorted array</div>
+                </div>
+
+                <div class="data-row">
+                    <div>Checks elements one by one</div>
+                    <div>Divides search space into half</div>
+                </div>
+
+                <div class="data-row">
+                    <div>O(n)</div>
+                    <div>O(log n)</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRACTICE -->
+        <div class="practice-card">
+
+            <h2>📝 Practice Question</h2>
+
+            <p>
+                Given the array:
+            </p>
+
+            <pre>
+{5, 10, 15, 20, 25}
+            </pre>
+
+            <p>
+                Find <strong>20</strong> using Linear Search.
+                Print its index.
+            </p>
+
+            <button onclick="showHint()">Show Hint</button>
+
+            <p id="hint" class="hint-text"></p>
+
+        </div>
+
+
+        <!-- TRY YOURSELF -->
+        <div class="lesson-card">
+
+            <h2>💻 Try It Yourself</h2>
+
+            <p>
+                Apna C++ code yahan likho:
+            </p>
+
+            <textarea id="codeInput"
+                placeholder="Write your C++ code here..."></textarea>
+
+            <br><br>
+
+            <button class="practice-card button"
+                    onclick="showCode()">
+                Show My Code
+            </button>
+
+            <pre id="solutionBox"></pre>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <div class="lesson-navigation">
+
+            <a href="dsa.html">
+                ← Back to DSA
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        function showHint() {
+
+            document.getElementById("hint").textContent =
+                "Hint: Array ke har element ko target 20 ke saath compare karo.";
+
+        }
+
+
+        function showCode() {
+
+            const userCode =
+                document.getElementById("codeInput").value;
+
+            document.getElementById("solutionBox").textContent =
+                userCode;
+
+        }
+
+    </script>
+
+</body>
+</html>

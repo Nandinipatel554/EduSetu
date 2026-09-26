@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack & Queue - DSA with C++ | EduSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="lesson-section">
+
+    <!-- HEADER -->
+    <div class="lesson-header">
+        <h1>Stack & Queue <span>with C++</span></h1>
+        <p>Learn Stack and Queue from the basics.</p>
+    </div>
+
+
+    <!-- STACK -->
+    <div class="lesson-card">
+
+        <h2>📚 1. What is a Stack?</h2>
+
+        <p>
+            Stack ek linear data structure hai jo
+            <strong>LIFO</strong> principle follow karta hai.
+        </p>
+
+        <p>
+            <strong>LIFO = Last In, First Out</strong>
+        </p>
+
+        <h3>Example:</h3>
+
+        <pre>
+10
+20
+30  ← Top
+
+30 sabse last me enter hua,
+isliye sabse pehle bahar niklega.
+        </pre>
+
+    </div>
+
+
+    <!-- PUSH -->
+    <div class="lesson-card">
+
+        <h2>➕ 2. Push Operation</h2>
+
+        <p>
+            Stack me new element add karna
+            <strong>Push</strong> kehlata hai.
+        </p>
+
+        <pre>
+Stack:
+
+10
+20
+30  ← Top
+
+Push(40)
+
+10
+20
+30
+40  ← Top
+        </pre>
+
+    </div>
+
+
+    <!-- POP -->
+    <div class="lesson-card">
+
+        <h2>➖ 3. Pop Operation</h2>
+
+        <p>
+            Stack se top element remove karna
+            <strong>Pop</strong> kehlata hai.
+        </p>
+
+        <pre>
+Before Pop:
+
+10
+20
+30  ← Top
+
+Pop()
+
+After Pop:
+
+10
+20  ← Top
+        </pre>
+
+    </div>
+
+
+    <!-- STACK C++ -->
+    <div class="lesson-card">
+
+        <h2>💻 4. Stack in C++</h2>
+
+        <p>
+            C++ STL me stack available hai.
+        </p>
+
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;stack&gt;
+using namespace std;
+
+int main() {
+
+    stack&lt;int&gt; s;
+
+    s.push(10);
+    s.push(20);
+    s.push(30);
+
+    cout &lt;&lt; s.top() &lt;&lt; endl;
+
+    s.pop();
+
+    cout &lt;&lt; s.top();
+
+    return 0;
+}
+        </pre>
+
+        <div class="output-box">
+            Output: 30<br>
+            After pop: 20
+        </div>
+
+    </div>
+
+
+    <!-- QUEUE -->
+    <div class="lesson-card">
+
+        <h2>🚶 5. What is a Queue?</h2>
+
+        <p>
+            Queue ek linear data structure hai jo
+            <strong>FIFO</strong> principle follow karta hai.
+        </p>
+
+        <p>
+            <strong>FIFO = First In, First Out</strong>
+        </p>
+
+        <h3>Real-life Example:</h3>
+
+        <pre>
+People waiting in a line:
+
+Person 1 → Person 2 → Person 3
+
+Jo pehle line me aaya,
+wo pehle bahar jayega.
+        </pre>
+
+    </div>
+
+
+    <!-- ENQUEUE -->
+    <div class="lesson-card">
+
+        <h2>➕ 6. Enqueue</h2>
+
+        <p>
+            Queue ke end me element add karna
+            <strong>Enqueue</strong> kehlata hai.
+        </p>
+
+        <pre>
+Queue:
+
+10 → 20 → 30
+
+Enqueue(40)
+
+10 → 20 → 30 → 40
+        </pre>
+
+    </div>
+
+
+    <!-- DEQUEUE -->
+    <div class="lesson-card">
+
+        <h2>➖ 7. Dequeue</h2>
+
+        <p>
+            Queue ke front se element remove karna
+            <strong>Dequeue</strong> kehlata hai.
+        </p>
+
+        <pre>
+Before:
+
+10 → 20 → 30
+
+Dequeue()
+
+After:
+
+20 → 30
+        </pre>
+
+    </div>
+
+
+    <!-- QUEUE C++ -->
+    <div class="lesson-card">
+
+        <h2>💻 8. Queue in C++</h2>
+
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;queue&gt;
+using namespace std;
+
+int main() {
+
+    queue&lt;int&gt; q;
+
+    q.push(10);
+    q.push(20);
+    q.push(30);
+
+    cout &lt;&lt; q.front() &lt;&lt; endl;
+
+    q.pop();
+
+    cout &lt;&lt; q.front();
+
+    return 0;
+}
+        </pre>
+
+        <div class="output-box">
+            Output: 10<br>
+            After pop: 20
+        </div>
+
+    </div>
+
+
+    <!-- COMPARISON -->
+    <div class="lesson-card">
+
+        <h2>📌 Stack vs Queue</h2>
+
+        <div class="data-type-table">
+
+            <div class="data-row data-heading">
+                <div>Stack</div>
+                <div>Queue</div>
+            </div>
+
+            <div class="data-row">
+                <div>LIFO</div>
+                <div>FIFO</div>
+            </div>
+
+            <div class="data-row">
+                <div>Last In, First Out</div>
+                <div>First In, First Out</div>
+            </div>
+
+            <div class="data-row">
+                <div>Insertion: Push</div>
+                <div>Insertion: Enqueue</div>
+            </div>
+
+            <div class="data-row">
+                <div>Removal: Pop</div>
+                <div>Removal: Dequeue</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMPORTANT POINTS -->
+    <div class="lesson-card">
+
+        <h2>⭐ Important Points</h2>
+
+        <ul>
+            <li>Stack follows LIFO.</li>
+            <li>Queue follows FIFO.</li>
+            <li>Stack me Push aur Pop operations important hain.</li>
+            <li>Queue me Enqueue aur Dequeue operations important hain.</li>
+            <li>C++ STL me <code>stack</code> aur <code>queue</code> available hain.</li>
+        </ul>
+
+    </div>
+
+
+    <!-- PRACTICE -->
+    <div class="practice-card">
+
+        <h2>📝 Practice Question</h2>
+
+        <p>
+            Ek stack me ye operations perform karo:
+        </p>
+
+        <pre>
+push(10)
+push(20)
+push(30)
+pop()
+        </pre>
+
+        <p>
+            Batao final stack ke top par kaunsa element hoga?
+        </p>
+
+        <button onclick="showHint()">Show Hint</button>
+
+        <p id="hint" class="hint-text"></p>
+
+    </div>
+
+
+    <!-- TRY YOURSELF -->
+    <div class="lesson-card">
+
+        <h2>💻 Try It Yourself</h2>
+
+        <p>
+            Apna C++ Stack/Queue code yahan likho:
+        </p>
+
+        <textarea
+            id="codeInput"
+            placeholder="Write your C++ code here..."
+        ></textarea>
+
+        <br><br>
+
+        <button onclick="showCode()">
+            Show My Code
+        </button>
+
+        <pre id="solutionBox"></pre>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <div class="lesson-navigation">
+
+        <a href="dsa.html">
+            ← Back to DSA
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showHint() {
+
+    document.getElementById("hint").textContent =
+        "Hint: 10, 20, 30 push hone ke baad 30 top par hai. Pop karne par 30 remove hoga.";
+
+}
+
+
+function showCode() {
+
+    const userCode =
+        document.getElementById("codeInput").value;
+
+    document.getElementById("solutionBox").textContent =
+        userCode;
+
+}
+
+</script>
+
+</body>
+</html>
