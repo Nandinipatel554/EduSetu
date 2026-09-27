@@ -124,7 +124,7 @@
                 >
             </div>
 
-            <button type="submit" class="auth-btn">
+            <button type="submit" class="auth-btn" id="loginButton">
                 Login
             </button>
 
@@ -134,22 +134,24 @@
 
     </div>
 
-
     <script>
 
-        // Login form ko select karna
         const loginForm = document.getElementById("loginForm");
+        const loginButton = document.getElementById("loginButton");
 
-        // Form submit hone par backend ko request bhejna
         loginForm.addEventListener("submit", async function(event) {
 
             event.preventDefault();
 
-            const email = document.getElementById("email").value;
+            const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value;
             const status = document.getElementById("status");
 
             status.textContent = "Logging in...";
+            status.style.color = "#2563eb";
+
+            loginButton.disabled = true;
+            loginButton.textContent = "Logging in...";
 
             try {
 
@@ -174,8 +176,8 @@
                 if (data.success) {
 
                     status.textContent = "Login successful!";
+                    status.style.color = "green";
 
-                    // Dashboard par redirect
                     setTimeout(function() {
                         window.location.href = "dashboard.html";
                     }, 500);
@@ -183,7 +185,10 @@
                 } else {
 
                     status.textContent = data.message;
+                    status.style.color = "red";
 
+                    loginButton.disabled = false;
+                    loginButton.textContent = "Login";
                 }
 
             } catch (error) {
@@ -193,6 +198,10 @@
                 status.textContent =
                     "Backend se connection nahi ho pa raha.";
 
+                status.style.color = "red";
+
+                loginButton.disabled = false;
+                loginButton.textContent = "Login";
             }
 
         });

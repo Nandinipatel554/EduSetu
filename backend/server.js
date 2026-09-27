@@ -7,9 +7,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+// ===============================
+// HOME
+// ===============================
+
 app.get("/", (req, res) => {
     res.send("EduSetu Backend Running");
 });
+
+
+// ===============================
+// HEALTH CHECK
+// ===============================
 
 app.get("/api/health", (req, res) => {
     res.json({
@@ -17,8 +27,18 @@ app.get("/api/health", (req, res) => {
         message: "Backend Working"
     });
 });
+
+
+// ===============================
+// LOGIN
+// ===============================
+
 app.post("/api/login", (req, res) => {
+
     const { email, password } = req.body;
+
+    const demoEmail = "student@edusetu.com";
+    const demoPassword = "EduSetu123";
 
     if (!email || !password) {
         return res.status(400).json({
@@ -27,13 +47,26 @@ app.post("/api/login", (req, res) => {
         });
     }
 
-    res.json({
-        success: true,
-        message: "Login successful"
+    if (email === demoEmail && password === demoPassword) {
+        return res.json({
+            success: true,
+            message: "Login successful"
+        });
+    }
+
+    return res.status(401).json({
+        success: false,
+        message: "Invalid email or password"
     });
 });
 
+
+// ===============================
+// AI STUDY ASSISTANT
+// ===============================
+
 app.post("/api/ask-ai", (req, res) => {
+
     const question = req.body.question;
 
     if (!question) {
@@ -48,52 +81,101 @@ app.post("/api/ask-ai", (req, res) => {
     let answer = "";
 
     if (q.includes("array")) {
+
         answer =
-            "📚 An array is a collection of elements of the same data type stored together. " +
+            "📚 Array: An array stores multiple values of the same data type. " +
             "For example, int marks[5] can store 5 integer values. " +
-            "Arrays are useful when we need to store multiple related values.";
+            "Arrays are useful for storing related data together.";
     }
 
     else if (q.includes("variable")) {
+
         answer =
-            "📚 A variable is a named memory location used to store data. " +
-            "For example, int age = 18; creates an integer variable named age.";
+            "📚 Variable: A variable is a named memory location used to store data. " +
+            "Example: int age = 18; Here, age is an integer variable.";
     }
 
     else if (q.includes("loop")) {
+
         answer =
-            "📚 A loop is used to repeat a block of code multiple times. " +
+            "📚 Loop: A loop is used to repeat a block of code. " +
             "Common C++ loops are for, while, and do-while loops.";
     }
 
     else if (q.includes("function")) {
+
         answer =
-            "📚 A function is a reusable block of code that performs a specific task. " +
-            "Functions help make programs easier to organize and reuse.";
+            "📚 Function: A function is a reusable block of code that performs " +
+            "a specific task. Functions make programs easier to organize and reuse.";
     }
 
-    else if (q.includes("if") || q.includes("condition")) {
+    else if (
+        q.includes("if") ||
+        q.includes("else") ||
+        q.includes("condition")
+    ) {
+
         answer =
-            "📚 An if statement is used to execute code only when a condition is true. " +
-            "For example: if (age >= 18) { ... }";
+            "📚 If-Else: An if statement runs code when a condition is true. " +
+            "An else block runs when the condition is false.";
     }
 
-    else if (q.includes("physics")) {
+    else if (q.includes("pointer")) {
+
         answer =
-            "📚 Physics is the study of matter, energy, motion, forces, and their interactions. " +
-            "Try breaking the topic into concepts, formulas, examples, and practice questions.";
+            "📚 Pointer: A pointer is a variable that stores the memory address " +
+            "of another variable. Example: int *p = &x;";
     }
 
-    else if (q.includes("math") || q.includes("mathematics")) {
+    else if (
+        q.includes("class") ||
+        q.includes("object") ||
+        q.includes("oop")
+    ) {
+
         answer =
-            "📚 For Mathematics, first understand the concept, then study the formula, " +
+            "📚 OOP: Object-Oriented Programming uses classes and objects. " +
+            "A class is a blueprint, while an object is an instance of that class.";
+    }
+
+    else if (
+        q.includes("dsa") ||
+        q.includes("data structure")
+    ) {
+
+        answer =
+            "📚 DSA: Data Structures organize data efficiently, while Algorithms " +
+            "are step-by-step methods used to solve problems.";
+    }
+
+    else if (
+        q.includes("physics") ||
+        q.includes("force") ||
+        q.includes("motion")
+    ) {
+
+        answer =
+            "📚 Physics: Start by understanding the concept, then learn the " +
+            "important formula, understand its units, and solve practice questions.";
+    }
+
+    else if (
+        q.includes("math") ||
+        q.includes("mathematics") ||
+        q.includes("formula")
+    ) {
+
+        answer =
+            "📚 Mathematics: First understand the concept, then learn the formula, " +
             "and finally solve practice questions step by step.";
     }
 
     else {
+
         answer =
-            "📚 EduSetu Study Assistant: Start by identifying the main concept in your question. " +
-            "Understand the basic definition, study a simple example, and then practice a few questions.";
+            "📚 EduSetu Study Assistant: Break your question into three steps: " +
+            "understand the basic concept, study a simple example, and then practice " +
+            "a few questions.";
     }
 
     res.json({
@@ -101,6 +183,11 @@ app.post("/api/ask-ai", (req, res) => {
         answer: answer
     });
 });
+
+
+// ===============================
+// START SERVER
+// ===============================
 
 const PORT = process.env.PORT || 5000;
 
