@@ -47,7 +47,10 @@ app.post("/api/login", (req, res) => {
         });
     }
 
-    if (email === demoEmail && password === demoPassword) {
+    if (
+        email.trim() === demoEmail &&
+        password === demoPassword
+    ) {
         return res.json({
             success: true,
             message: "Login successful"
@@ -69,7 +72,7 @@ app.post("/api/ask-ai", (req, res) => {
 
     const question = req.body.question;
 
-    if (!question) {
+    if (!question || !question.trim()) {
         return res.status(400).json({
             success: false,
             message: "Question is required"
@@ -86,6 +89,7 @@ app.post("/api/ask-ai", (req, res) => {
             "📚 Array: An array stores multiple values of the same data type. " +
             "For example, int marks[5] can store 5 integer values. " +
             "Arrays are useful for storing related data together.";
+
     }
 
     else if (q.includes("variable")) {
@@ -93,6 +97,7 @@ app.post("/api/ask-ai", (req, res) => {
         answer =
             "📚 Variable: A variable is a named memory location used to store data. " +
             "Example: int age = 18; Here, age is an integer variable.";
+
     }
 
     else if (q.includes("loop")) {
@@ -100,6 +105,7 @@ app.post("/api/ask-ai", (req, res) => {
         answer =
             "📚 Loop: A loop is used to repeat a block of code. " +
             "Common C++ loops are for, while, and do-while loops.";
+
     }
 
     else if (q.includes("function")) {
@@ -107,6 +113,7 @@ app.post("/api/ask-ai", (req, res) => {
         answer =
             "📚 Function: A function is a reusable block of code that performs " +
             "a specific task. Functions make programs easier to organize and reuse.";
+
     }
 
     else if (
@@ -118,6 +125,7 @@ app.post("/api/ask-ai", (req, res) => {
         answer =
             "📚 If-Else: An if statement runs code when a condition is true. " +
             "An else block runs when the condition is false.";
+
     }
 
     else if (q.includes("pointer")) {
@@ -125,6 +133,7 @@ app.post("/api/ask-ai", (req, res) => {
         answer =
             "📚 Pointer: A pointer is a variable that stores the memory address " +
             "of another variable. Example: int *p = &x;";
+
     }
 
     else if (
@@ -136,6 +145,7 @@ app.post("/api/ask-ai", (req, res) => {
         answer =
             "📚 OOP: Object-Oriented Programming uses classes and objects. " +
             "A class is a blueprint, while an object is an instance of that class.";
+
     }
 
     else if (
@@ -146,6 +156,7 @@ app.post("/api/ask-ai", (req, res) => {
         answer =
             "📚 DSA: Data Structures organize data efficiently, while Algorithms " +
             "are step-by-step methods used to solve problems.";
+
     }
 
     else if (
@@ -157,6 +168,7 @@ app.post("/api/ask-ai", (req, res) => {
         answer =
             "📚 Physics: Start by understanding the concept, then learn the " +
             "important formula, understand its units, and solve practice questions.";
+
     }
 
     else if (
@@ -168,6 +180,7 @@ app.post("/api/ask-ai", (req, res) => {
         answer =
             "📚 Mathematics: First understand the concept, then learn the formula, " +
             "and finally solve practice questions step by step.";
+
     }
 
     else {
@@ -176,6 +189,7 @@ app.post("/api/ask-ai", (req, res) => {
             "📚 EduSetu Study Assistant: Break your question into three steps: " +
             "understand the basic concept, study a simple example, and then practice " +
             "a few questions.";
+
     }
 
     res.json({
